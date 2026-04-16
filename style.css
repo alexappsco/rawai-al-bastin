@@ -1,0 +1,54 @@
+.hidden-anim {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* حركة ناعمة جداً */
+}
+
+.fade-up {
+    transform: translateY(40px);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.show-anim {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+}
+
+.floating-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 15px));
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* section 3 */
+/* Achievement Image Overlay */
+.achievement-overlay {
+    background: linear-gradient(135deg, rgba(10, 109, 102, 0.95) 0%, rgba(10, 109, 102, 0.8) 100%);
+    transition: all 0.5s ease;
+}
+
+/* Hover Effect for Image Cards */
+.relative:hover .achievement-overlay {
+    background: linear-gradient(135deg, rgba(10, 109, 102, 1) 0%, rgba(10, 109, 102, 0.9) 100%);
+}
+
+/* Specific styling for large numbers to ensure readability */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
