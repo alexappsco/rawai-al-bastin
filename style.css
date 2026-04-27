@@ -52,3 +52,106 @@
 .counter {
     font-variant-numeric: tabular-nums;
 }
+
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+.marquee-viewport {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 12.5vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.marquee-item img {
+    max-width: 130px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(10%) opacity(0.9);
+    transition: filter 0.3s ease;
+}
+.marquee-item img:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+.speed-normal { animation-duration: 50s; }
+.speed-slow { animation-duration: 60s; }
+.speed-medium { animation-duration: 55s; }
+
+.dir-reverse { animation-direction: reverse; }
+
+@media (max-width: 768px) {
+  .marquee-item {
+    flex: 0 0 25vw; 
+  }
+}
+
+  .cert-card {
+        opacity: 0;
+        will-change: transform, opacity;
+        user-select: none;
+    }
+
+    .cert-center { transform: translateY(100px); }
+    .cert-left { transform: translate(50px, 100px) rotate(0deg); }
+    .cert-right { transform: translate(-50px, 100px) rotate(0deg); }
+
+    .is-visible .cert-center {
+        opacity: 1;
+        transform: translateY(0) scale(1.05);
+    }
+
+    .is-visible .cert-left {
+        opacity: 1;
+        transform: translateY(15px) translateX(45px) rotate(-8deg); 
+        transition-delay: 0.3s;
+    }
+
+    .is-visible .cert-right {
+        opacity: 1;
+        transform: translateY(15px) translateX(-45px) rotate(8deg); 
+        transition-delay: 0.3s;
+    }
+
+    .cert-card.active-zoom {
+        z-index: 100 !important;
+        transform: scale(1.5) translateY(-20px) rotate(0deg) !important;
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+        cursor: zoom-out;
+    }
+
+    .cert-section-trigger:has(.active-zoom) .cert-card:not(.active-zoom) {
+        filter: blur(4px);
+        opacity: 0.4;
+        z-index: 5 !important;
+    }
+
+    @media (max-width: 768px) {
+        .cert-card.active-zoom {
+            transform: scale(1.8) translateY(0) rotate(0deg) !important;
+            z-index: 200 !important;
+        }
+        
+        .is-visible .cert-left { transform: translateY(10px) translateX(15px) rotate(-5deg); }
+        .is-visible .cert-right { transform: translateY(10px) translateX(-15px) rotate(5deg); }
+    }
