@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. إعداد العدادات (Counters)
     const startCounter = (counterElement) => {
         const target = +counterElement.getAttribute('data-target');
-        const duration = 2000; // مدة العداد (2 ثانية)
-        const frameRate = 16; // تقريباً 60 إطار في الثانية
+        const duration = 2000; 
+        const frameRate = 16; 
         const totalFrames = duration / frameRate;
         const increment = target / totalFrames;
         
@@ -16,17 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 counterElement.innerText = Math.ceil(currentCount);
                 requestAnimationFrame(updateCounter);
             } else {
-                counterElement.innerText = target; // التأكد من الوصول للرقم النهائي
+                counterElement.innerText = target; 
             }
         };
         
         updateCounter();
     };
 
-    // 2. إعداد مراقب العناصر (Intersection Observer)
     const observerOptions = {
         root: null,
-        threshold: 0.1, // يبدأ الأنيميشن عندما يظهر 10% من العنصر
+        threshold: 0.1,  
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -42,23 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     entry.target.classList.add('show-anim');
                 }
 
-                // تشغيل العدادات الموجودة داخل القسم
                 const counters = entry.target.querySelectorAll('.counter');
                 counters.forEach(counter => {
-                    // التأكد من تشغيل العداد مرة واحدة فقط
                     if (!counter.classList.contains('counted')) {
                         startCounter(counter);
                         counter.classList.add('counted');
                     }
                 });
 
-                // إيقاف المراقبة بعد ظهور العنصر لتخفيف الحمل
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // مراقبة الحاوية الرئيسية التي تحتوي على العناصر المراد تحريكها
     const sectionsToAnimate = document.querySelectorAll('.animate-on-scroll');
     sectionsToAnimate.forEach(section => {
         observer.observe(section);
@@ -89,15 +83,103 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = item.querySelector('h3').innerText;
 
             // Animate transition
-            displayImg.style.opacity = '0.4';
             setTimeout(() => {
                 displayImg.src = imgSrc;
                 stepCounter.innerText = step.padStart(2, '0');
                 currentStepNum.innerText = step.padStart(2, '0');
                 stepTitle.innerText = title;
                 stepProgress.style.width = `${(step / 5) * 100}%`;
-                displayImg.style.opacity = '1';
             }, 500);
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const btn = document.getElementById("scrollTopBtn");
+const circle = document.getElementById("progressCircle");
+
+const radius = 16;
+const circumference = 2 * Math.PI * radius;
+
+circle.style.strokeDasharray = circumference;
+circle.style.strokeDashoffset = circumference;
+
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    let progress = scrollTop / docHeight;
+
+    if (progress > 1) progress = 1;
+    if (progress < 0) progress = 0;
+
+    const offset = circumference - (progress * circumference);
+    circle.style.strokeDashoffset = offset;
+});
+
+btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.cert-section-trigger');
+    const cards = document.querySelectorAll(".cert-card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                section.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    if(section) observer.observe(section);
+
+    cards.forEach(card => {
+        card.addEventListener("click", (e) => {
+            e.stopPropagation(); 
+            
+            const isZoomed = card.classList.contains("active-zoom");
+            
+            cards.forEach(c => c.classList.remove("active-zoom"));
+            
+            if (!isZoomed) {
+                card.classList.add("active-zoom");
+            }
+        });
+    });
+
+    document.addEventListener("click", () => {
+        cards.forEach(c => {
+            c.classList.remove("active-zoom");
         });
     });
 });
