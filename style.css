@@ -8,7 +8,11 @@
 }
 
 .slide-right {
-    transform: translateX(50px);
+    transform: translateX(hidden-anim);
+    -webkit-transform: translateX(hidden-anim);
+    -moz-transform: translateX(hidden-anim);
+    -ms-transform: translateX(hidden-anim);
+    -o-transform: translateX(hidden-anim);
 }
 
 .slide-left {
