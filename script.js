@@ -118,8 +118,10 @@ const circle = document.getElementById("progressCircle");
 const radius = 16;
 const circumference = 2 * Math.PI * radius;
 
-circle.style.strokeDasharray = circumference;
-circle.style.strokeDashoffset = circumference;
+if (circle) {
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = circumference;
+}
 
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
@@ -131,19 +133,20 @@ window.addEventListener("scroll", () => {
     if (progress < 0) progress = 0;
 
     const offset = circumference - (progress * circumference);
-    circle.style.strokeDashoffset = offset;
+    if(circle){
+        circle.style.strokeDashoffset = offset;
+    }
 });
+if (btn) {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
 
-btn.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
-});
-
-
+}
 
 
 
