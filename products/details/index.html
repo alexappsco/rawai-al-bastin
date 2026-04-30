@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>روائع البساتين</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/logobastain.png">
+    <link rel="shortcut icon" href="/imgs/logobastain.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Alexandria', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Alexandria", sans-serif;
+        }
+
+        .menu-open {
+            transform: translateX(0) !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+
+    <header class="mx-auto px-4 mt-8 relative z-50">
+        <div
+            class="flex min-h-[73px] w-full items-center justify-between rounded-lg border border-[#eceef2] bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
+
+            <a href="home.html" class="shrink-0">
+                <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+            </a>
+
+            <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2">
+                <a href="/home.html"
+                    class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
+                <a href="/about.html"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من
+                    نحن</a>
+                <a href="/sectors/"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
+                <a href="/solutions.html"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
+                <a href="/store.html"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
+                <a href="/projects.html"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
+                <a href="/blog"
+                    class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
+            </nav>
+
+            <div class="flex items-center gap-2 xl:gap-3 shrink-0">
+
+                <div class="hidden xl:flex items-center gap-2">
+                    <a href="#"
+                        class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
+                        تواصل معنا
+                    </a>
+                    <a href="#"
+                        class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
+                        احصل على سعر مشروعك
+                    </a>
+                </div>
+
+                <a href="/cart"
+                    class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0 inline-flex items-center justify-center">
+                    <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+                </a>
+
+                <div
+                    class="hidden lg:flex items-center bg-[#f4f7f7] p-1 rounded-full border border-[#eceef2] ml-1 xl:ml-4">
+                    <button
+                        class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-white bg-[rgba(10,109,102,1)] rounded-full shadow-sm">عربي</button>
+                    <button
+                        class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition">EN</button>
+                </div>
+
+                <button id="mobile-menu-open" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-7 h-7">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-sidebar"
+            class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 lg:hidden">
+            <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
+                <div class="flex justify-between items-center mb-8 pb-4 border-b">
+                    <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+                    <button id="mobile-menu-close-btn" class="p-2 text-[#6B7280]">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <nav class="flex flex-col gap-4 mb-auto text-right">
+                    <a href="#" class="text-base font-bold text-[rgba(10,109,102,1)]">الرئيسية</a>
+                    <a href="#" class="text-base font-medium text-gray-700">من نحن</a>
+                    <a href="#" class="text-base font-medium text-gray-700">القطاعات</a>
+                    <a href="#" class="text-base font-medium text-gray-700">الخدمات</a>
+                    <a href="#" class="text-base font-medium text-gray-700">المتجر</a>
+                    <a href="#" class="text-base font-medium text-gray-700">المشاريع</a>
+                    <a href="#" class="text-base font-medium text-gray-700">المدونة</a>
+                </nav>
+
+                <div class="pt-6 border-t flex flex-col gap-3">
+                    <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg ">تواصل
+                        معنا</a>
+                    <a href="#"
+                        class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg ">احصل
+                        على سعر مشروعك</a>
+
+                    <div
+                        class="flex items-center bg-[#f4f7f7] p-0.5 rounded-full border border-[#eceef2] w-28 mx-auto mt-2">
+                        <button
+                            class="flex-1 py-1 text-[10px] font-medium text-white bg-[rgba(10,109,102,1)] rounded-full">عربي</button>
+                        <button class="flex-1 py-1 text-[10px] font-medium text-[#6B7280]">EN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="overflow-hidden">
+        <section class="py-12 bg-white font-sans animate-on-scroll">
+            <div class="max-w-7xl mx-auto lg-px:4 px-4 sm:px-6 lg:px-8">
+
+                <!-- مسار التنقل (Breadcrumbs) -->
+                <nav class="flex items-center gap-2 text-[14px] text-[#6B7280] font-medium mb-10 w-full">
+                    <a href="#" class="hover:text-[#0A6D66] transition-colors">الرئيسية</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L6 8L10 4" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    <a href="#" class="hover:text-[#0A6D66] transition-colors">المتجر</a>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 12L6 8L10 4" stroke="#6B7280" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                    <span class="text-[#1A1A1A] font-bold">نجيل صناعي للملاعب</span>
+                </nav>
+
+                <!-- التخطيط الرئيسي (عمودين) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-28 items-start">
+
+                    <!-- العمود الأيمن (الصور) -->
+                    <div class="flex flex-col gap-4 hidden-anim slide-right">
+                        <!-- الصورة الرئيسية -->
+                        <div
+                            class="w-full h-[400px] lg:h-[618px] lg:w-[618px] rounded-[10.5px] overflow-hidden shadow-sm border border-gray-100">
+                            <img src="/imgs/sports-field.svg" alt="نجيل صناعي للملاعب"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <!-- الصور المصغرة -->
+                        <div class="flex gap-4 mt-2">
+                            <!-- صورة مفعلة -->
+                            <div
+                                class="w-20 h-20 md:w-[100.8px] md:h-[100.8px] rounded-[10.5px] overflow-hidden border-2 border-[#0A6D66]  cursor-pointer shadow-sm">
+                                <img src="/imgs/sports-field.svg" class="w-full h-full object-cover rounded-lg"
+                                    alt="صورة 1">
+                            </div>
+                            <!-- صور غير مفعلة -->
+                            <div
+                                class="w-20 h-20 md:w-[100.8px] md:h-[100.8px] rounded-[10.5px] overflow-hidden border border-gray-200 cursor-pointer hover:border-[#0A6D66] transition-colors">
+                                <img src="/imgs/sports-field.svg" class="w-full h-full object-cover" alt="صورة 2">
+                            </div>
+                            <div
+                                class="w-20 h-20 md:w-[100.8px] md:h-[100.8px] rounded-[10.5px] overflow-hidden border border-gray-200 cursor-pointer hover:border-[#0A6D66] transition-colors">
+                                <img src="/imgs/landscaping.svg" class="w-full h-full object-cover" alt="صورة 3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- العمود الأيسر (تفاصيل المنتج) -->
+                    <div class="flex flex-col items-start w-full hidden-anim slide-left">
+
+                        <!-- التصنيف -->
+                        <span class="inline-block bg-[#0A6D661A] text-[#0A6D66] px-4 py-1.5 rounded-full mb-4">
+                            نجيل صناعي
+                        </span>
+
+                        <!-- العنوان -->
+                        <h1 class="text-2xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
+                            نجيل صناعي للملاعب
+                        </h1>
+
+                        <!-- التقييم -->
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="text-[14px] text-[#6B7280]">(89 تقييم)</span>
+                            <div class="flex gap-0.5 text-[#84CC16]">
+                                <!-- نجوم ممتلئة -->
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4555)">
+                                        <path
+                                            d="M9.60404 1.91249C9.64056 1.83871 9.69697 1.7766 9.76692 1.73318C9.83686 1.68976 9.91755 1.66675 9.99987 1.66675C10.0822 1.66675 10.1629 1.68976 10.2328 1.73318C10.3028 1.7766 10.3592 1.83871 10.3957 1.91249L12.3207 5.81166C12.4475 6.0683 12.6347 6.29033 12.8662 6.4587C13.0977 6.62707 13.3666 6.73675 13.6499 6.77833L17.9549 7.40833C18.0364 7.42015 18.1131 7.45455 18.1761 7.50766C18.2391 7.56076 18.2861 7.63045 18.3116 7.70883C18.337 7.78721 18.3401 7.87116 18.3204 7.95119C18.3006 8.03121 18.2589 8.10412 18.1999 8.16166L15.0865 11.1933C14.8812 11.3934 14.7276 11.6404 14.6389 11.913C14.5502 12.1856 14.5291 12.4757 14.5774 12.7583L15.3124 17.0417C15.3268 17.1232 15.318 17.2071 15.287 17.2839C15.2559 17.3607 15.204 17.4272 15.137 17.4758C15.07 17.5245 14.9907 17.5533 14.9081 17.5591C14.8255 17.5648 14.743 17.5472 14.6699 17.5083L10.8215 15.485C10.568 15.3518 10.2859 15.2823 9.99946 15.2823C9.71306 15.2823 9.43094 15.3518 9.17737 15.485L5.32987 17.5083C5.25681 17.547 5.17437 17.5644 5.09191 17.5585C5.00946 17.5527 4.9303 17.5238 4.86345 17.4752C4.7966 17.4266 4.74473 17.3601 4.71375 17.2835C4.68277 17.2069 4.67392 17.1231 4.68821 17.0417L5.42237 12.7592C5.47087 12.4764 5.44986 12.1862 5.36115 11.9134C5.27245 11.6406 5.11871 11.3935 4.91321 11.1933L1.79987 8.16249C1.74037 8.10502 1.6982 8.03199 1.67817 7.95172C1.65815 7.87145 1.66107 7.78717 1.6866 7.70849C1.71214 7.6298 1.75926 7.55986 1.8226 7.50665C1.88594 7.45343 1.96296 7.41907 2.04487 7.40749L6.34904 6.77833C6.63259 6.73708 6.90186 6.62754 7.13369 6.45915C7.36552 6.29076 7.55296 6.06855 7.67987 5.81166L9.60404 1.91249Z"
+                                            fill="#B3D234" stroke="#B3D234" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4555">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4555)">
+                                        <path
+                                            d="M9.60404 1.91249C9.64056 1.83871 9.69697 1.7766 9.76692 1.73318C9.83686 1.68976 9.91755 1.66675 9.99987 1.66675C10.0822 1.66675 10.1629 1.68976 10.2328 1.73318C10.3028 1.7766 10.3592 1.83871 10.3957 1.91249L12.3207 5.81166C12.4475 6.0683 12.6347 6.29033 12.8662 6.4587C13.0977 6.62707 13.3666 6.73675 13.6499 6.77833L17.9549 7.40833C18.0364 7.42015 18.1131 7.45455 18.1761 7.50766C18.2391 7.56076 18.2861 7.63045 18.3116 7.70883C18.337 7.78721 18.3401 7.87116 18.3204 7.95119C18.3006 8.03121 18.2589 8.10412 18.1999 8.16166L15.0865 11.1933C14.8812 11.3934 14.7276 11.6404 14.6389 11.913C14.5502 12.1856 14.5291 12.4757 14.5774 12.7583L15.3124 17.0417C15.3268 17.1232 15.318 17.2071 15.287 17.2839C15.2559 17.3607 15.204 17.4272 15.137 17.4758C15.07 17.5245 14.9907 17.5533 14.9081 17.5591C14.8255 17.5648 14.743 17.5472 14.6699 17.5083L10.8215 15.485C10.568 15.3518 10.2859 15.2823 9.99946 15.2823C9.71306 15.2823 9.43094 15.3518 9.17737 15.485L5.32987 17.5083C5.25681 17.547 5.17437 17.5644 5.09191 17.5585C5.00946 17.5527 4.9303 17.5238 4.86345 17.4752C4.7966 17.4266 4.74473 17.3601 4.71375 17.2835C4.68277 17.2069 4.67392 17.1231 4.68821 17.0417L5.42237 12.7592C5.47087 12.4764 5.44986 12.1862 5.36115 11.9134C5.27245 11.6406 5.11871 11.3935 4.91321 11.1933L1.79987 8.16249C1.74037 8.10502 1.6982 8.03199 1.67817 7.95172C1.65815 7.87145 1.66107 7.78717 1.6866 7.70849C1.71214 7.6298 1.75926 7.55986 1.8226 7.50665C1.88594 7.45343 1.96296 7.41907 2.04487 7.40749L6.34904 6.77833C6.63259 6.73708 6.90186 6.62754 7.13369 6.45915C7.36552 6.29076 7.55296 6.06855 7.67987 5.81166L9.60404 1.91249Z"
+                                            fill="#B3D234" stroke="#B3D234" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4555">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4555)">
+                                        <path
+                                            d="M9.60404 1.91249C9.64056 1.83871 9.69697 1.7766 9.76692 1.73318C9.83686 1.68976 9.91755 1.66675 9.99987 1.66675C10.0822 1.66675 10.1629 1.68976 10.2328 1.73318C10.3028 1.7766 10.3592 1.83871 10.3957 1.91249L12.3207 5.81166C12.4475 6.0683 12.6347 6.29033 12.8662 6.4587C13.0977 6.62707 13.3666 6.73675 13.6499 6.77833L17.9549 7.40833C18.0364 7.42015 18.1131 7.45455 18.1761 7.50766C18.2391 7.56076 18.2861 7.63045 18.3116 7.70883C18.337 7.78721 18.3401 7.87116 18.3204 7.95119C18.3006 8.03121 18.2589 8.10412 18.1999 8.16166L15.0865 11.1933C14.8812 11.3934 14.7276 11.6404 14.6389 11.913C14.5502 12.1856 14.5291 12.4757 14.5774 12.7583L15.3124 17.0417C15.3268 17.1232 15.318 17.2071 15.287 17.2839C15.2559 17.3607 15.204 17.4272 15.137 17.4758C15.07 17.5245 14.9907 17.5533 14.9081 17.5591C14.8255 17.5648 14.743 17.5472 14.6699 17.5083L10.8215 15.485C10.568 15.3518 10.2859 15.2823 9.99946 15.2823C9.71306 15.2823 9.43094 15.3518 9.17737 15.485L5.32987 17.5083C5.25681 17.547 5.17437 17.5644 5.09191 17.5585C5.00946 17.5527 4.9303 17.5238 4.86345 17.4752C4.7966 17.4266 4.74473 17.3601 4.71375 17.2835C4.68277 17.2069 4.67392 17.1231 4.68821 17.0417L5.42237 12.7592C5.47087 12.4764 5.44986 12.1862 5.36115 11.9134C5.27245 11.6406 5.11871 11.3935 4.91321 11.1933L1.79987 8.16249C1.74037 8.10502 1.6982 8.03199 1.67817 7.95172C1.65815 7.87145 1.66107 7.78717 1.6866 7.70849C1.71214 7.6298 1.75926 7.55986 1.8226 7.50665C1.88594 7.45343 1.96296 7.41907 2.04487 7.40749L6.34904 6.77833C6.63259 6.73708 6.90186 6.62754 7.13369 6.45915C7.36552 6.29076 7.55296 6.06855 7.67987 5.81166L9.60404 1.91249Z"
+                                            fill="#B3D234" stroke="#B3D234" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4555">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4555)">
+                                        <path
+                                            d="M9.60404 1.91249C9.64056 1.83871 9.69697 1.7766 9.76692 1.73318C9.83686 1.68976 9.91755 1.66675 9.99987 1.66675C10.0822 1.66675 10.1629 1.68976 10.2328 1.73318C10.3028 1.7766 10.3592 1.83871 10.3957 1.91249L12.3207 5.81166C12.4475 6.0683 12.6347 6.29033 12.8662 6.4587C13.0977 6.62707 13.3666 6.73675 13.6499 6.77833L17.9549 7.40833C18.0364 7.42015 18.1131 7.45455 18.1761 7.50766C18.2391 7.56076 18.2861 7.63045 18.3116 7.70883C18.337 7.78721 18.3401 7.87116 18.3204 7.95119C18.3006 8.03121 18.2589 8.10412 18.1999 8.16166L15.0865 11.1933C14.8812 11.3934 14.7276 11.6404 14.6389 11.913C14.5502 12.1856 14.5291 12.4757 14.5774 12.7583L15.3124 17.0417C15.3268 17.1232 15.318 17.2071 15.287 17.2839C15.2559 17.3607 15.204 17.4272 15.137 17.4758C15.07 17.5245 14.9907 17.5533 14.9081 17.5591C14.8255 17.5648 14.743 17.5472 14.6699 17.5083L10.8215 15.485C10.568 15.3518 10.2859 15.2823 9.99946 15.2823C9.71306 15.2823 9.43094 15.3518 9.17737 15.485L5.32987 17.5083C5.25681 17.547 5.17437 17.5644 5.09191 17.5585C5.00946 17.5527 4.9303 17.5238 4.86345 17.4752C4.7966 17.4266 4.74473 17.3601 4.71375 17.2835C4.68277 17.2069 4.67392 17.1231 4.68821 17.0417L5.42237 12.7592C5.47087 12.4764 5.44986 12.1862 5.36115 11.9134C5.27245 11.6406 5.11871 11.3935 4.91321 11.1933L1.79987 8.16249C1.74037 8.10502 1.6982 8.03199 1.67817 7.95172C1.65815 7.87145 1.66107 7.78717 1.6866 7.70849C1.71214 7.6298 1.75926 7.55986 1.8226 7.50665C1.88594 7.45343 1.96296 7.41907 2.04487 7.40749L6.34904 6.77833C6.63259 6.73708 6.90186 6.62754 7.13369 6.45915C7.36552 6.29076 7.55296 6.06855 7.67987 5.81166L9.60404 1.91249Z"
+                                            fill="#B3D234" stroke="#B3D234" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4555">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                                <!-- نجمة فارغة -->
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4547)">
+                                        <path
+                                            d="M9.60404 1.91249C9.64056 1.83871 9.69697 1.7766 9.76692 1.73318C9.83686 1.68976 9.91755 1.66675 9.99987 1.66675C10.0822 1.66675 10.1629 1.68976 10.2328 1.73318C10.3028 1.7766 10.3592 1.83871 10.3957 1.91249L12.3207 5.81166C12.4475 6.0683 12.6347 6.29033 12.8662 6.4587C13.0977 6.62707 13.3666 6.73675 13.6499 6.77833L17.9549 7.40833C18.0364 7.42014 18.1131 7.45455 18.1761 7.50766C18.2391 7.56076 18.2861 7.63045 18.3116 7.70883C18.337 7.78721 18.3401 7.87116 18.3204 7.95119C18.3006 8.03121 18.2589 8.10412 18.1999 8.16166L15.0865 11.1933C14.8812 11.3934 14.7276 11.6404 14.6389 11.913C14.5502 12.1856 14.5291 12.4757 14.5774 12.7583L15.3124 17.0417C15.3268 17.1232 15.318 17.2071 15.287 17.2839C15.2559 17.3607 15.204 17.4272 15.137 17.4758C15.07 17.5245 14.9907 17.5533 14.9081 17.5591C14.8255 17.5648 14.743 17.5472 14.6699 17.5083L10.8215 15.485C10.568 15.3518 10.2859 15.2823 9.99946 15.2823C9.71306 15.2823 9.43094 15.3518 9.17737 15.485L5.32987 17.5083C5.25681 17.547 5.17437 17.5644 5.09191 17.5585C5.00946 17.5527 4.9303 17.5238 4.86345 17.4752C4.7966 17.4266 4.74473 17.3601 4.71375 17.2835C4.68277 17.2069 4.67392 17.1231 4.68821 17.0417L5.42237 12.7592C5.47087 12.4764 5.44986 12.1862 5.36115 11.9134C5.27245 11.6406 5.11871 11.3935 4.91321 11.1933L1.79987 8.16249C1.74037 8.10502 1.6982 8.03199 1.67817 7.95172C1.65815 7.87145 1.66107 7.78717 1.6866 7.70848C1.71214 7.6298 1.75926 7.55986 1.8226 7.50665C1.88594 7.45343 1.96296 7.41907 2.04487 7.40749L6.34904 6.77833C6.63259 6.73708 6.90186 6.62754 7.13369 6.45915C7.36552 6.29076 7.55296 6.06855 7.67987 5.81166L9.60404 1.91249Z"
+                                            stroke="#E5E7EB" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4547">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </div>
+                            <span class="font-medium text-[#1A1A1A] md:text-[18px] ">4.9</span>
+                        </div>
+
+                        <!-- صندوق السعر -->
+                        <div class="bg-[#E6F4F44D] rounded-[16px] p-6 flex justify-between items-center w-full mb-8">
+                            <span class="text-[#6B7280]">السعر</span>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-2xl md:text-4xl font-bold text-[#0A6D66]">85 ر.س</span>
+                                <span class="text-[#6B7280] ">للمتر المربع</span>
+                            </div>
+                        </div>
+
+                        <!-- الوصف -->
+                        <p class="text-[#6B7280] font-normal leading-relaxed mb-8">
+                            نجيل صناعي احترافي معتمد من FIFA، مثالي للملاعب الرياضية. يوفر أداءً عالياً ومتانة
+                            استثنائية.
+                        </p>
+
+                        <!-- المميزات -->
+                        <h3 class="font-semibold text-[#1A1A1A] mb-5 ">المميزات</h3>
+                        <div class="grid grid-cols-2 gap-y-3 gap-x-6 w-full mb-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#0A6D661A] flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 3L4.5 8.5L2 6" stroke="#0A6D66" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <span class="font-normal text-[#1A1A1A] text-[14px]">معتمد FIFA</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#0A6D661A] flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 3L4.5 8.5L2 6" stroke="#0A6D66" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <span class="font-normal text-[#1A1A1A] text-[14px]">مقاوم للعوامل</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#0A6D661A] flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 3L4.5 8.5L2 6" stroke="#0A6D66" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <span class="font-normal text-[#1A1A1A] text-[14px]">ضمان 5 سنوات</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#0A6D661A] flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 3L4.5 8.5L2 6" stroke="#0A6D66" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <span class="font-normal text-[#1A1A1A] text-[14px]">جودة احترافية</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-[#0A6D661A] flex items-center justify-center shrink-0">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 3L4.5 8.5L2 6" stroke="#0A6D66" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                                <span class="font-normal text-[#1A1A1A] text-[14px]">صديق للبيئة</span>
+                            </div>
+                        </div>
+
+                        <!-- الكمية -->
+                        <div class="w-full mb-1">
+                            <h3 class="font-bold text-[#1A1A1A] text-[17px] mb-3">الكمية (متر مربع)</h3>
+                        </div>
+
+                        <!-- حاوية العداد والكمية المتوفرة -->
+                        <div class="w-full flex flex-col items-end mb-6">
+                            <!-- عداد الكمية (موجود على اليسار) -->
+                            <div
+                                class="flex items-center justify-between w-[216px] bg-[#E6F4F44D] rounded-[10px] p-1.5 h-12 shrink-0">
+
+
+                                <button
+                                    class="w-9 h-9 bg-white flex items-center justify-center text-gray-700 rounded-[10px] shadow-sm transition-colors text-xl font-medium hover:bg-gray-50 pb-1"><svg
+                                        width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.1665 10H15.8332" stroke="#1A1A1A" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <input type="text" value="1"
+                                    class="w-12 text-center bg-transparent font-bold text-[16px] text-[#1A1A1A] focus:outline-none">
+                                <button
+                                    class="w-9 h-9 bg-white flex items-center justify-center text-gray-700 rounded-[10px] shadow-sm transition-colors text-lg font-medium hover:bg-gray-50"><svg
+                                        width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.1665 10H15.8332" stroke="#1A1A1A" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10 4.16675V15.8334" stroke="#1A1A1A" stroke-width="1.66667"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- النص أسفل العداد -->
+                            <span class="text-[12px]  text-[#6B7280] mt-2  w-full">متوفر: 3000
+                                م²</span>
+                        </div>
+
+                        <!-- أزرار الأكشن -->
+                        <div class="flex items-center gap-3 w-full h-14 mb-10">
+                            <!-- زر إضافة المزيد (الأخضر) - يأخذ باقي المساحة -->
+                            <button
+                                class="h-full flex-grow bg-[#0A6D66] text-white rounded-[8px] font-medium text-[15px] md:text-[18px] hover:bg-[#085a54] transition-all flex items-center justify-center gap-2">
+                                إضافة المزيد
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_377_4624)">
+                                        <path
+                                            d="M6.66634 18.3334C7.12658 18.3334 7.49967 17.9603 7.49967 17.5001C7.49967 17.0398 7.12658 16.6667 6.66634 16.6667C6.2061 16.6667 5.83301 17.0398 5.83301 17.5001C5.83301 17.9603 6.2061 18.3334 6.66634 18.3334Z"
+                                            stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M15.8333 18.3334C16.2936 18.3334 16.6667 17.9603 16.6667 17.5001C16.6667 17.0398 16.2936 16.6667 15.8333 16.6667C15.3731 16.6667 15 17.0398 15 17.5001C15 17.9603 15.3731 18.3334 15.8333 18.3334Z"
+                                            stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M1.70801 1.70825H3.37467L5.59134 12.0583C5.67266 12.4373 5.88357 12.7761 6.18777 13.0165C6.49197 13.2568 6.87043 13.3835 7.25801 13.3749H15.408C15.7873 13.3743 16.1551 13.2443 16.4505 13.0064C16.746 12.7686 16.9515 12.437 17.033 12.0666L18.408 5.87492H4.26634"
+                                            stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_377_4624">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </button>
+
+                            <!-- زر عرض السلة (الأبيض) -->
+                            <button
+                                class="h-full px-8 bg-white border border-[#0A6D66] text-[#0A6D66] rounded-[8px] font-medium text-[15px] md:text-[18px] hover:bg-[#F8FCFC] transition-all whitespace-nowrap">
+                                عرض السلة
+                            </button>
+                        </div>
+
+                        <!-- شريط الثقة (Trust Badges) -->
+                        <div class="grid grid-cols-3 d gap-2 w-full bg-[#F8FCFC] rounded-[20px] p-6">
+                            <div class="flex flex-col items-center justify-center gap-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.667 23.9999V7.99992C18.667 7.29267 18.386 6.6144 17.8859 6.1143C17.3858 5.6142 16.7076 5.33325 16.0003 5.33325H5.33366C4.62641 5.33325 3.94814 5.6142 3.44804 6.1143C2.94794 6.6144 2.66699 7.29267 2.66699 7.99992V22.6666C2.66699 23.0202 2.80747 23.3593 3.05752 23.6094C3.30756 23.8594 3.6467 23.9999 4.00033 23.9999H6.66699"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20 24H12" stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M25.3337 24.0001H28.0003C28.3539 24.0001 28.6931 23.8596 28.9431 23.6096C29.1932 23.3595 29.3337 23.0204 29.3337 22.6667V17.8001C29.3331 17.4975 29.2297 17.2041 29.0403 16.9681L24.4003 11.1681C24.2756 11.0119 24.1174 10.8858 23.9374 10.799C23.7574 10.7122 23.5602 10.667 23.3603 10.6667H18.667"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M22.6667 26.6666C24.1394 26.6666 25.3333 25.4727 25.3333 23.9999C25.3333 22.5272 24.1394 21.3333 22.6667 21.3333C21.1939 21.3333 20 22.5272 20 23.9999C20 25.4727 21.1939 26.6666 22.6667 26.6666Z"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M9.33366 26.6666C10.8064 26.6666 12.0003 25.4727 12.0003 23.9999C12.0003 22.5272 10.8064 21.3333 9.33366 21.3333C7.8609 21.3333 6.66699 22.5272 6.66699 23.9999C6.66699 25.4727 7.8609 26.6666 9.33366 26.6666Z"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[12px] font-normal text-[#1A1A1A]">توصيل سريع</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.6663 17.3333C26.6663 23.9999 21.9997 27.3333 16.453 29.2666C16.1626 29.365 15.8471 29.3603 15.5597 29.2533C9.99967 27.3333 5.33301 23.9999 5.33301 17.3333V7.99995C5.33301 7.64633 5.47348 7.30719 5.72353 7.05714C5.97358 6.80709 6.31272 6.66662 6.66634 6.66662C9.33301 6.66662 12.6663 5.06662 14.9863 3.03995C15.2688 2.79861 15.6281 2.66602 15.9997 2.66602C16.3712 2.66602 16.7305 2.79861 17.013 3.03995C19.3463 5.07995 22.6663 6.66662 25.333 6.66662C25.6866 6.66662 26.0258 6.80709 26.2758 7.05714C26.5259 7.30719 26.6663 7.64633 26.6663 7.99995V17.3333Z"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[12px] font-normal text-[#1A1A1A]">ضمان الجودة</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M29.3334 22.56V26.56C29.3349 26.9313 29.2589 27.2989 29.1101 27.6391C28.9613 27.9793 28.7431 28.2848 28.4695 28.5358C28.1959 28.7868 27.8728 28.9779 27.5211 29.0969C27.1693 29.2159 26.7966 29.2601 26.4267 29.2266C22.3239 28.7808 18.3827 27.3788 14.9201 25.1333C11.6985 23.0862 8.96719 20.3549 6.92007 17.1333C4.66671 13.6549 3.2644 9.69463 2.82674 5.5733C2.79342 5.20459 2.83724 4.83298 2.95541 4.48213C3.07357 4.13128 3.2635 3.80889 3.51309 3.53546C3.76269 3.26204 4.06648 3.04358 4.40513 2.894C4.74378 2.74441 5.10986 2.66698 5.48007 2.66663H9.48007C10.1271 2.66026 10.7545 2.8894 11.2451 3.31134C11.7357 3.73328 12.0562 4.31923 12.1467 4.95997C12.3156 6.24006 12.6287 7.49694 13.0801 8.70663C13.2595 9.18387 13.2983 9.70252 13.1919 10.2011C13.0856 10.6998 12.8386 11.1574 12.4801 11.52L10.7867 13.2133C12.6848 16.5514 15.4487 19.3152 18.7867 21.2133L20.4801 19.52C20.8426 19.1615 21.3003 18.9144 21.7989 18.8081C22.2975 18.7018 22.8162 18.7406 23.2934 18.92C24.5031 19.3714 25.76 19.6845 27.0401 19.8533C27.6878 19.9447 28.2793 20.2709 28.7021 20.77C29.125 21.269 29.3496 21.9061 29.3334 22.56Z"
+                                        stroke="#0A6D66" stroke-width="2.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                                <span class="text-[12px] font-normal text-[#1A1A1A]">دعم فني</span>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- قسم المواصفات والفوائد -->
+        <section class="py-12 bg-white font-sans animate-on-scroll">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- التبويب (Tab Header) -->
+                <div class="border-b border-gray-200 mb-10">
+                    <div class="flex">
+                        <h2 class="pb-3 border-b-2 border-[#0A6D66] text-[#1A1A1A] font-medium  translate-y-[1px]">
+                            المواصفات والفوائد
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- شبكة المحتوى (عمودين) -->
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+                    <!-- العمود الأيمن: المواصفات التقنية -->
+                    <div class="lg:col-span-2 flex flex-col gap-4 hidden-anim slide-right"> <!-- عنوان القسم -->
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg class="w-6 h-6 text-[#0A6D66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">المواصفات التقنية</h3>
+                        </div>
+
+                        <!-- قائمة المواصفات -->
+                        <div
+                            class="flex justify-between items-center bg-[#E6F4F44D] rounded-[10px] p-4 hover:bg-[#0A6D661A] transition-colors cursor-default">
+                            <span class="text-[#6B7280] font-normal text-[15px] md:text-[16px]">النوع</span>
+                            <span class="text-[#1A1A1A] font-normal text-[15px]">نجيل احترافي FIFA</span>
+                        </div>
+
+                        <div
+                            class="flex justify-between items-center bg-[#E6F4F44D] rounded-[10px] p-4 hover:bg-[#0A6D661A] transition-colors cursor-default">
+                            <span class="text-[#6B7280] font-normal text-[15px] md:text-[16px]">الارتفاع</span>
+                            <span class="text-[#1A1A1A] font-normal text-[15px]">40-60 مم</span>
+                        </div>
+
+                        <div
+                            class="flex justify-between items-center bg-[#E6F4F44D] rounded-[10px] p-4 hover:bg-[#0A6D661A] transition-colors cursor-default">
+                            <span class="text-[#6B7280] font-normal text-[15px] md:text-[16px]">المادة</span>
+                            <span class="text-[#1A1A1A] font-normal text-[15px]">بولي إيثيلين عالي الجودة</span>
+                        </div>
+
+                        <div
+                            class="flex justify-between items-center bg-[#E6F4F44D] rounded-[10px] p-4 hover:bg-[#0A6D661A] transition-colors cursor-default">
+                            <span class="text-[#6B7280] font-normal text-[15px] md:text-[16px]">مدة التسليم</span>
+                            <span class="text-[#1A1A1A] font-normal text-[15px]">3-5 أيام</span>
+                        </div>
+
+                        <div
+                            class="flex justify-between items-center bg-[#E6F4F44D] rounded-[10px] p-4 hover:bg-[#0A6D661A] transition-colors cursor-default">
+                            <span class="text-[#6B7280] font-normal text-[15px] md:text-[16px]">الضمان</span>
+                            <span class="text-[#1A1A1A] font-normal text-[15px]">5 سنوات</span>
+                        </div>
+                    </div>
+
+                    <!-- العمود الأيسر: الفوائد والمزايا -->
+                    <div class="lg:col-span-3 flex flex-col gap-4 hidden-anim slide-left"> <!-- عنوان القسم -->
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg class="w-6 h-6 text-[#0A6D66]" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">الفوائد والمزايا</h3>
+                        </div>
+
+                        <!-- قائمة الفوائد -->
+                        <div
+                            class="flex items-center gap-3 border border-[#E5E7EB80] rounded-[10px] px-4 py-6 hover:border-[#0A6D66] transition-colors cursor-default">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#0A6D66] shrink-0"></div>
+                            <span class="text-[#1A1A1A] font-normal ">لا يحتاج ري أو قص</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 border border-[#E5E7EB80] rounded-[10px] px-4 py-6 hover:border-[#0A6D66] transition-colors cursor-default">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#0A6D66] shrink-0"></div>
+                            <span class="text-[#1A1A1A] font-normal">يوفر استهلاك المياه</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 border border-[#E5E7EB80] rounded-[10px] px-4 py-6 hover:border-[#0A6D66] transition-colors cursor-default">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#0A6D66] shrink-0"></div>
+                            <span class="text-[#1A1A1A] font-normal">مظهر طبيعي طوال العام</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 border border-[#E5E7EB80] rounded-[10px] px-4 py-6 hover:border-[#0A6D66] transition-colors cursor-default">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#0A6D66] shrink-0"></div>
+                            <span class="text-[#1A1A1A] font-normal">مقاوم للأشعة فوق البنفسجية</span>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-3 border border-[#E5E7EB80] rounded-[10px] px-4 py-6 hover:border-[#0A6D66] transition-colors cursor-default">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#0A6D66] shrink-0"></div>
+                            <span class="text-[#1A1A1A] font-normal">سهل التركيب</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-white pt-16 pb-6 border-t border-gray-100">
+        <div class="container mx-auto px-4 lg:px-[30px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+
+                <div class="flex flex-col">
+                    <img src="/imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
+                    <p class="text-[#6B7280] text-sm leading-relaxed mb-8 max-w-xs">
+                        الشريك الموثوق في تنفيذ مشاريع البنية التحتية والمنشآت الرياضية وتنسيق الحدائق بأعلى معايير
+                        الجودة منذ أكثر من 18 عامًا
+                    </p>
+                    <a href="#"
+                        class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all w-max">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                        </svg>
+                        تحميل الملف التعريفي
+                    </a>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-6">روابط سريعة</h3>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الرئيسية</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">من
+                                نحن</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">القطاعات</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المتجر</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المشاريع</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المدونة</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تواصل
+                                معنا</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الوظائف</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-6">خدماتنا</h3>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المنشآت
+                                الرياضية</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تنسيق
+                                الحدائق</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البنية
+                                التحتية</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المقاولات
+                                العامة</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البيوت
+                                المحمية</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">نجيل
+                                طبيعي وصناعي</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">أنظمة
+                                الري الذكية</a></li>
+                        <li><a href="#"
+                                class="text-[#6B7280] hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الصيانة
+                                الدورية</a></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col">
+                    <h3 class="text-lg font-bold text-[#1A1A1A] mb-6">تواصل معنا</h3>
+
+                    <div class="flex flex-col gap-4 mb-8 text-sm text-[#6B7280]">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.265-3.965-6.861-6.86l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                                </svg>
+                            </div>
+                            <span dir="ltr">+966 50 000 0000</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
+                            </div>
+                            <span>info@rawaealbasateen.sa</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                            </div>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </div>
+                    </div>
+
+                    <h4 class="text-sm font-bold text-[#1A1A1A] mb-4">تابعنا</h4>
+                    <div class="flex flex-wrap items-center gap-2 mb-8">
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/facebook.svg" alt="">
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/x.svg" alt="">
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/instagram.svg" alt="">
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/linkedin.svg" alt="">
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/youtube.svg" alt="">
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                            <img src="/imgs/snapchat.svg" alt="">
+                        </a>
+                    </div>
+
+                    <h4 class="text-sm font-bold text-[#1A1A1A] mb-4">حمل التطبيق</h4>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="#" class="inline-block">
+                            <img src="/imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
+                        </a>
+                        <a href="#" class="inline-block">
+                            <img src="/imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#6B7280]">
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">سياسة الخصوصية</a>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">الشروط والأحكام</a>
+                </div>
+                <p class="text-center md:text-left">© 2026 روائع البساتين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+
+    <script>
+        const sidebar = document.getElementById('mobile-sidebar');
+        const openBtn = document.getElementById('mobile-menu-open');
+        const closeBtn = document.getElementById('mobile-menu-close-btn');
+        const overlay = document.getElementById('mobile-menu-close-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('translate-x-full');
+        }
+
+        openBtn.addEventListener('click', toggleSidebar);
+        closeBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+
+</html>
