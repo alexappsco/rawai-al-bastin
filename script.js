@@ -1,3 +1,31 @@
+//header scroll behavior
+const header = document.getElementById('main-header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    // التمرير للأسفل - إخفاء الهيدر
+    header.classList.add('scroll-down');
+    header.classList.remove('scroll-up');
+  } else {
+    // التمرير للأعلى - إظهار الهيدر
+    header.classList.add('scroll-up');
+    header.classList.remove('scroll-down');
+  }
+  
+  // في حال كان المستخدم في أعلى الصفحة تماماً
+  if (window.scrollY <= 0) {
+    header.classList.remove('scroll-down', 'scroll-up');
+  }
+  
+  lastScrollY = window.scrollY;
+});
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     
     const startCounter = (counterElement) => {
@@ -60,9 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-//section 4
 document.addEventListener('DOMContentLoaded', () => {
+
     const methodItems = document.querySelectorAll('.method-item');
+
     const displayImg = document.getElementById('method-display-img');
     const stepCounter = document.getElementById('step-counter');
     const stepTitle = document.getElementById('step-title');
@@ -70,28 +99,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentStepNum = document.getElementById('current-step-num');
 
     methodItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Remove active class from all
-            methodItems.forEach(i => i.classList.remove('active'));
-            
-            // Add to clicked
-            item.classList.add('active');
 
-            // Update Image & Data
-            const step = item.getAttribute('data-step');
-            const imgSrc = item.getAttribute('data-img');
-            const title = item.querySelector('h3').innerText;
+        const button = item.querySelector('button');
+        const content = item.querySelector('.method-content');
 
-            // Animate transition
-            setTimeout(() => {
-                displayImg.src = imgSrc;
+        button.addEventListener('click', () => {
+
+            const isActive = item.classList.contains('active');
+
+            // close all
+            methodItems.forEach(i => {
+                i.classList.remove('active');
+                const c = i.querySelector('.method-content');
+                if (c) c.style.maxHeight = null;
+            });
+
+            // open current
+            if (!isActive) {
+                item.classList.add('active');
+
+                if (content) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+
+                const step = item.dataset.step;
+                const img = item.dataset.img;
+                const title = item.querySelector('h3')?.innerText || '';
+
+                displayImg.src = img;
                 stepCounter.innerText = step.padStart(2, '0');
                 currentStepNum.innerText = step.padStart(2, '0');
                 stepTitle.innerText = title;
                 stepProgress.style.width = `${(step / 5) * 100}%`;
-            }, 500);
+            }
+
         });
+
     });
+
 });
 
 

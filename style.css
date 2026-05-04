@@ -1,3 +1,13 @@
+/* header */
+#main-header.scroll-down {
+  transform: translateY(-100%);
+}
+
+#main-header.scroll-up {
+  transform: translateY(0);
+}
+
+
 .hidden-anim {
     opacity: 0;
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* حركة ناعمة جداً */
@@ -43,14 +53,14 @@
 /* section 3 */
 /* Achievement Image Overlay */
 .achievement-overlay {
-    background: linear-gradient(135deg, rgba(10, 109, 102, 0.95) 0%, rgba(10, 109, 102, 0.8) 100%);
-    transition: all 0.5s ease;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 109, 102, 0.95) 0%,
+        rgba(10, 109, 102, 0.7) 100%
+    );
 }
 
-/* Hover Effect for Image Cards */
-.relative:hover .achievement-overlay {
-    background: linear-gradient(135deg, rgba(10, 109, 102, 1) 0%, rgba(10, 109, 102, 0.9) 100%);
-}
+
 
 /* Specific styling for large numbers to ensure readability */
 .counter {
@@ -159,3 +169,6 @@
         .is-visible .cert-left { transform: translateY(10px) translateX(15px) rotate(-5deg); }
         .is-visible .cert-right { transform: translateY(10px) translateX(-15px) rotate(5deg); }
     }
+
+
+ 
