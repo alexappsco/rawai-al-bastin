@@ -228,3 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+//open bar filter in page store 

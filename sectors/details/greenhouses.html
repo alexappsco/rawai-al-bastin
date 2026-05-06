@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>روائع البساتين</title>
+<link rel="icon" type="image/png" sizes="32x32" href="imgs/logobastain.png">
+        <link rel="shortcut icon" href="imgs/logobastain.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Alexandria";
+      }
+      .menu-open {
+        transform: translateX(0) !important;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="bg-gray-50 min-h-screen">
+ <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg  bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
+
+    <a href="/home.html" class="shrink-0">
+      <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+    </a>
+
+    <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
+      <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
+      <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
+      <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
+      <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
+      <a href="/store.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
+      <a href="/projects.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
+      <a href="/blog.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
+    </nav>
+
+    <div class="flex items-center gap-2 xl:gap-3 shrink-0">
+      
+      <div class="hidden xl:flex items-center gap-1 ml-10">
+        <!-- <a href="#" class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
+          تواصل معنا
+        </a> -->
+        <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
+          احصل على سعر مشروعك
+        </a>
+         <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
+        <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+      </button>
+      </div>
+
+     
+
+      <div class="hidden lg:flex items-center bg-[#f4f7f7] p-1 rounded-full border border-[#eceef2] ml-1 xl:ml-4">
+        <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-white bg-[rgba(10,109,102,1)] rounded-full shadow-sm">عربي</button>
+        <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-gray-500 hover:text-[rgba(10,109,102,1)] transition">EN</button>
+      </div>
+
+      <button id="mobile-menu-open" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-sidebar" class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 lg:hidden">
+    <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
+      <div class="flex justify-between items-center mb-8 pb-4 border-b">
+        <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+        <button id="mobile-menu-close-btn" class="p-2 text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mb-auto text-right">
+        <a href="/home.html" class="text-base font-bold text-[rgba(10,109,102,1)]">الرئيسية</a>
+        <a href="/about.html" class="text-base font-medium text-gray-700">من نحن</a>
+        <a href="/sectors/index.html" class="text-base font-medium text-gray-700">القطاعات</a>
+        <a href="/solutions.html" class="text-base font-medium text-gray-700">الخدمات</a>
+        <a href="/store.html" class="text-base font-medium text-gray-700">المتجر</a>
+        <a href="/projects.html" class="text-base font-medium text-gray-700">المشاريع</a>
+        <a href="/blog.html" class="text-base font-medium text-gray-700">المدونة</a>
+      </nav>
+
+      <div class="pt-6 border-t flex flex-col gap-3">
+        <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg ">تواصل معنا</a>
+        <a href="#" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg ">احصل على سعر مشروعك</a>
+        
+        <div class="flex items-center bg-[#f4f7f7] p-0.5 rounded-full border border-[#eceef2] w-28 mx-auto mt-2">
+            <button class="flex-1 py-1 text-[10px] font-medium text-white bg-[rgba(10,109,102,1)] rounded-full">عربي</button>
+            <button class="flex-1 py-1 text-[10px] font-medium text-gray-500">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Hero Section -->
+<section class="py-12 mt-12 md:py-20 relative animate-on-scroll" 
+         style="background: linear-gradient(180deg, #E6F4F4 0%, #EAF6F6 7.14%, #EDF7F7 14.29%, #F1F9F9 21.43%, #F4FAFA 28.57%, #F8FCFC 35.71%, #FBFDFD 42.86%, #FFFFFF 50%, #FFFFFF 100%);">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        <!-- Breadcrumbs (شريط المسار العلوي) -->
+        <nav class="flex justify-center space-x-2 space-x-reverse text-gray-500 text-sm mb-12">
+            <a href="/home.html" class="hover:text-[#0A6D66]">الرئيسية</a>
+            <span>&gt;</span>
+            <a href="/sectors/index.html" class="hover:text-[#0A6D66]">القطاعات</a>
+            <span>&gt;</span>
+            <span class="text-gray-900 font-medium">البيوت المحمية</span>
+        </nav>
+
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <!-- جهة الصورة (ستظهر في المتصفح حسب طلبك في الجهة المقابلة للنص) -->
+            <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="/imgs/building.jpg" alt="Building" class="w-full h-auto object-cover min-h-[300px] md:min-h-[450px]">
+                </div>
+            </div>
+
+            <!-- جهة المحتوى النصي -->
+            <div class="w-full lg:w-1/2 text-right order-2 lg:order-1">
+                <!-- Tag -->
+                <div class="mb-4">
+                    <span class="inline-flex items-center gap-2 bg-[#D9EBEA] text-[#0A6D66] px-4 py-1.5 rounded-full text-sm font-medium">
+                        <img width="14px" height="14px" src="/imgs/plant3.svg" alt="">
+                         البيوت المحمية
+                    </span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-4xl  font-medium text-gray-900 mb-6">
+                    البيوت المحمية
+                </h1>
+
+                <!-- Description -->
+                <p class="text-gray-500 text-lg mb-6 leading-relaxed max-w-xl">
+                   تصميم وإنشاء بيوت محمية زراعية متطورة بأنظمة تحكم حديثة
+                </p>
+
+                <!-- Stats Grid (الأرقام أسفل النص) -->
+                <div class="flex flex-wrap items-center gap-8  ">
+                    <div class="text-center lg:text-right">
+                        <div class="text-[#0A6D66] text-2xl font-bold mb-1">+35</div>
+                        <p class="text-gray-500 text-xs">بيت محمي</p>
+                    </div>
+                    
+                    <div class="text-center lg:text-right  ">
+                        <div class="text-[#0A6D66] text-2xl font-bold mb-1">+150K</div>
+                        <p class="text-gray-500 text-xs">متر مربع</p>
+                    </div>
+
+                    <div class="text-center lg:text-right">
+                        <div class="text-[#0A6D66] text-2xl font-bold mb-1">+25</div>
+                        <p class="text-gray-500 text-xs">مزارع راضٍ</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Section: Expertize and Features -->
+<section class="py-16 md:py-24 bg-white" >
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        
+        <!-- Header Part -->
+        <div class="text-right mb-16">
+            <div class="mb-4">
+                <span class="inline-block bg-[#E6F4F4] text-[#0A6D66] px-4 py-1.5 rounded-full text-sm font-medium">
+                    نبذة عن القطاع
+                </span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-medium text-gray-900 mb-6">
+                خبرة ومهنية عالية
+            </h2>
+            <p class="text-gray-500 text-lg leading-relaxed max-w-4xl font-normal">
+                تصميم وتنفيذ بيوت محمية زراعية حديثة مجهزة بأنظمة تحكم متطورة في درجة الحرارة والرطوبة والتهوية، لضمان زراعة مستدامة ومثمرة على مدار العام. نقدم حلولاً متكاملة من التصميم إلى التشغيل.
+            </p>
+        </div>
+
+        <!-- Statistics Strip (الشريط الأبيض المرتفع) -->
+       <div class="bg-[rgba(230,244,244,0.2)] rounded-3xl shadow-[0_10px_50px_rgba(0,0,0,0.05)] p-8 md:p-12 mb-20 flex flex-wrap justify-between items-center gap-8 text-center">
+            <div class="flex-1 min-w-[120px]">
+                <div class="text-[#0A6D66] text-3xl md:text-4xl font-bold mb-2">+35</div>
+                <p class="text-gray-500 text-sm md:text-base">بيت محمي</p>
+            </div>
+            <div class="flex-1 min-w-[120px]">
+                <div class="text-[#0A6D66] text-3xl md:text-4xl font-bold mb-2">+150K</div>
+                <p class="text-gray-500 text-sm md:text-base">متر مربع</p>
+            </div>
+            <div class="flex-1 min-w-[120px]">
+                <div class="text-[#0A6D66] text-3xl md:text-4xl font-bold mb-2">+25</div>
+                <p class="text-gray-500 text-sm md:text-base">مزارع راضٍ</p>
+            </div>
+            <div class="flex-1 min-w-[120px]">
+                <div class="text-[#0A6D66] text-3xl md:text-4xl font-bold mb-2">+180%</div>
+                <p class="text-gray-500 text-sm md:text-base">نسبة الإنتاجية</p>
+            </div>
+        </div>
+
+        <!-- Features Grid (ما يميزنا) -->
+        <div class="text-right">
+            <h3 class="text-2xl font-semibold text-gray-900 mb-10">ما يميزنا في هذا القطاع</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                
+                <!-- Feature 1 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-[#E6F4F4] rounded-xl flex items-center justify-center shrink-0">
+                       <img src="/imgs/fast.svg" alt="">
+                    </div>
+                    <div class="flex-grow text-right">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">تقنيات ذكية</h4>
+                        <p class="text-gray-500 text-sm">أنظمة تحكم أوتوماتيكية متطورة</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-[#E6F4F4] rounded-xl flex items-center justify-center shrink-0">
+                        <img width="20px" height="20px" src="/imgs/shieldgreen.svg" alt="">
+                    </div>
+                    <div class="flex-grow text-right">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">جودة عالية</h4>
+                        <p class="text-gray-500 text-sm">مواد مستوردة عالية الجودة</p>
+                    </div>
+                    
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                     <div class="w-12 h-12 bg-[#E6F4F4] rounded-xl flex items-center justify-center shrink-0">
+                        <img  src="/imgs/row-up.svg" alt="">
+                    </div>
+
+                    <div class="flex-grow text-right">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">إنتاجية عالية</h4>
+                        <p class="text-gray-500 text-sm">زراعة مستدامة طوال العام</p>
+                    </div>
+                  
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors">
+                    <div class="w-12 h-12 bg-[#E6F4F4] rounded-xl flex items-center justify-center shrink-0">
+                        <img height="20px" width="20px" src="/imgs/medelia.svg" alt="">
+                    </div>
+                    <div class="flex-grow text-right">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-1">خبرة متخصصة</h4>
+                        <p class="text-gray-500 text-sm">فريق متخصص في الزراعة المحمية</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Section: Featured Projects -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <!-- Header Part: محاذاة النص (ستظهر لك يمين لأنني وضعتها يسار في الكود) -->
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-16 gap-6">
+            <div class="lg:order-1 text-right lg:text-right">
+                <div class="mb-4">
+                    <span class="inline-block bg-[#E6F4F4] text-[#0A6D66] px-4 py-1.5 rounded-full text-sm font-medium">
+                        آخر مشاريعنا
+                    </span>
+                </div>
+                <h2 class="text-3xl  font-medium text-gray-900 mb-4 tracking-tight">
+                    مشاريع مميزة في البيوت المحمية
+                </h2>
+                <p class="text-gray-400  font-normal max-w-xl">
+                 تعرف على آخر 3 مشاريع منجزة في هذا القطاع
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            
+            <!-- Project Card 1 -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/imgs/building.jpg" alt="مشروع تبوك" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8 text-right">
+                    <h3 class=" font-semibold text-gray-900 mb-3">مشروع البيوت المحمية - تبوك</h3>
+                    <div class="flex items-center justify-end gap-2 text-gray-400">
+                        <span class="text-sm font-normal">تبوك</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/imgs/plantgreen.jpg" alt="مجمع القصيم" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8 text-right">
+                    <h3 class=" font-semibold text-gray-900 mb-3">مجمع البيوت المحمية الذكية</h3>
+                    <div class="flex items-center justify-end gap-2 text-gray-400">
+                        <span class="text-sm font-normal">القصيم</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="group bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/imgs/palm.jpg" alt="بيوت نيوم" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-8 text-right">
+                    <h3 class=" font-semibold text-gray-900 mb-3">البيوت المحمية المتطورة - نيوم</h3>
+                    <div class="flex items-center justify-end gap-2 text-gray-400">
+                        <span class="text-sm font-normal">نيوم</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex justify-center">
+            <a href="#" class="inline-flex items-center gap-3 px-8 py-3 border-2 border-[#0A6D66] text-[#0A6D66] rounded-xl hover:bg-[#0A6D66] hover:text-white transition-all duration-300 font-medium group">
+                عرض جميع المشاريع
+                <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+    <!-- رأس السكشن -->
+    <div class="flex flex-col items-start mb-10">
+        <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
+            <img width="14px" height="14px" src="/imgs/row-up.svg" alt="">
+            مقالات مفيدة
+        </div>
+        <h3 class="text-2xl font-medium text-gray-800">مقالات مرتبطة بالقطاع</h3>
+        <p class="text-gray-500 text-sm mt-2 font-normal">تعرف أكثر على تفاصيل وخبراتنا في هذا المجال</p>
+    </div>
+
+    <!-- شبكة المقالات -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        
+        <!-- كرت مقال 1 -->
+        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="relative h-56">
+                <img src="/imgs/garden-private.jpg" class="w-full h-full object-cover" alt="صيانة الملاعب">
+                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
+                    5 دقائق
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3" dir="ltr">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    15 مارس 2026
+                </div>
+                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">أفضل ممارسات صيانة الملاعب الرياضية في الصيف</h4>
+                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">نصائح وإرشادات للحفاظ على جودة الملاعب خلال فصل الصيف الحار.</p>
+                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
+                    <span><img src="/imgs/row.svg" alt=""></span>
+                    اقرأ المزيد 
+                </a>
+            </div>
+        </div>
+
+        <!-- كرت مقال 2 -->
+        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="relative h-56">
+                <img src="/imgs/shoes.jpg" class="w-full h-full object-cover" alt="معايير FIFA">
+                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
+                    10 دقائق
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3" dir="ltr">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    25 فبراير 2026
+                </div>
+                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تصميم الملاعب الرياضية وفق معايير FIFA</h4>
+                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">شرح مفصل لمتطلبات ومعايير FIFA في تصميم وإنشاء ملاعب كرة القدم.</p>
+                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
+                    <span><img src="/imgs/row.svg" alt=""></span>
+                    اقرأ المزيد 
+                    
+                </a>
+            </div>
+        </div>
+
+        <!-- كرت مقال 3 -->
+        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+            <div class="relative h-56">
+                <img src="/imgs/football.jpg" class="w-full h-full object-cover" alt="إضاءة الملاعب">
+                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                   <img width="14px" height="14px" src="/imgs/clock.svg" alt="">
+                    7 دقائق
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3" dir="ltr">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    1 فبراير 2026
+                </div>
+                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تقنيات الإضاءة الحديثة للملاعب الرياضية</h4>
+                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">كيف تختار نظام الإضاءة المناسب للملاعب لتحقيق أفضل أداء.</p>
+                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
+                    <span><img src="/imgs/row.svg" alt=""></span>
+                    اقرأ المزيد 
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- زر عرض جميع المقالات -->
+    <div class="flex justify-center">
+        <button class="px-10 py-3 border-2 border-[#0a6d66] text-[#0a6d66] rounded-xl font-bold text-sm hover:bg-[#0a6d66] hover:text-white transition-all shadow-sm">
+            عرض جميع المقالات
+        </button>
+    </div>
+</div>
+</section>
+ <section class="max-w-7xl mx-auto px-4 sm:px-6 mb-20 animate-on-scroll">
+  <div class="rounded-[22px] p-8 md:p-12 flex flex-col items-center justify-center text-center hidden-anim fade-up shadow-lg"
+    style="background: linear-gradient(135deg, #0A6D66 0%, #207466 7.14%, #2F7B65 14.29%, #3B8364 21.43%, #478A63 28.57%, #539161 35.71%, #5E985F 42.86%, #689F5D 50%, #73A65A 57.14%, #7EAE56 64.29%, #88B552 71.43%, #93BC4D 78.57%, #9EC346 85.71%, #A8CB3E 92.86%, #B3D234 100%);">
+
+    <h2 class="text-2xl md:text-3xl font-medium text-white mb-4 drop-shadow-sm">
+      هل لديك مشروع في البيوت المحمية؟
+    </h2>
+
+    <p class="text-[#FFFFFFE5] md:text-[18px] font-[400] mb-10 max-w-2xl mx-auto">
+      دعنا نساعدك في تحويل رؤيتك إلى واقع ملموس بأعلى معايير الجودة
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-xl justify-center items-center">
+
+      <!-- الزر الأساسي -->
+      <button type="submit"
+        class="w-full sm:w-auto bg-white text-[#0A6D66] px-8 py-3.5 rounded-xl font-medium hover:bg-gray-50 hover:shadow-lg transition-all hover:-translate-y-1 whitespace-nowrap">
+        احصل على عرض سعر
+      </button>
+
+      <!-- الحقل (outline style) -->
+     <button type="button"
+  class="w-full sm:w-auto bg-transparent border border-white/70 text-white px-8 py-3.5 rounded-xl font-medium hover:bg-white/10 transition-all whitespace-nowrap">
+  عرض المشاريع السابقة
+</button>
+
+    </div>
+
+  </div>
+</section>
+ <footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(220,240,240,0.4)_100%)]">
+    <!--<footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(200,230,230,0.6)_100%)]">-->
+    <div class="container mx-auto px-4 lg:px-[30px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            
+            <div class="flex flex-col">
+                <img src="/imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 max-w-xs">
+                    الشريك الموثوق في تنفيذ مشاريع البنية التحتية والمنشآت الرياضية وتنسيق الحدائق بأعلى معايير الجودة منذ أكثر من 18 عامًا
+                </p>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+                    تحميل الملف التعريفي
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <img width="20px" height="20px" src="/imgs/company.svg" alt="">
+                   الحسابات البنكية
+                </a>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-6">روابط سريعة</h3>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الرئيسية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">من نحن</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">القطاعات</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المتجر</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المشاريع</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المدونة</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تواصل معنا</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الوظائف</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-6">خدماتنا</h3>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المنشآت الرياضية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تنسيق الحدائق</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البنية التحتية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المقاولات العامة</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البيوت المحمية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">نجيل طبيعي وصناعي</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">أنظمة الري الذكية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الصيانة الدورية</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col">
+                <h3 class="text-lg font-bold text-gray-900 mb-6">تواصل معنا</h3>
+                
+                <div class="flex flex-col gap-4 mb-8 text-sm text-gray-500">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.265-3.965-6.861-6.86l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+                        </div>
+                        <span dir="ltr">+966 50 000 0000</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                        </div>
+                        <span>info@rawaealbasateen.sa</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+                        </div>
+                        <span>الرياض، المملكة العربية السعودية</span>
+                    </div>
+                </div>
+
+                <h4 class="text-sm font-bold text-gray-900 mb-4">تابعنا</h4>
+                <div class="flex flex-wrap items-center gap-2 mb-8">
+                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/x.svg" alt="X">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/instagram.svg" alt="Instagram">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/linkedin.svg" alt="LinkedIn">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/youtube.svg" alt="YouTube">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/snapchat.svg" alt="Snapchat">
+                    </a>
+                </div>
+
+                <h4 class="text-sm font-bold text-gray-900 mb-4">حمل التطبيق</h4>
+             <div class="flex flex-wrap items-center gap-3">
+    <a href="#" class="inline-block">
+        <img src="/imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
+    </a>
+    <a href="#" class="inline-block">
+        <img src="/imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
+    </a>
+</div>
+            </div>
+            
+        </div>
+
+        <div class="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-4">
+                <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">سياسة الخصوصية</a>
+                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">الشروط والأحكام</a>
+            </div>
+            <p class="text-center md:text-left">© 2026 روائع البساتين. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+
+    <script>
+      const sidebar = document.getElementById('mobile-sidebar');
+      const openBtn = document.getElementById('mobile-menu-open');
+      const closeBtn = document.getElementById('mobile-menu-close-btn');
+      const overlay = document.getElementById('mobile-menu-close-overlay');
+
+      function toggleSidebar() {
+        sidebar.classList.toggle('translate-x-full');
+      }
+
+      openBtn.addEventListener('click', toggleSidebar);
+      closeBtn.addEventListener('click', toggleSidebar);
+      overlay.addEventListener('click', toggleSidebar);
+    </script>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>روائع البساتين - المدونة</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/logobastain.png">
+    <link rel="shortcut icon" href="/imgs/logobastain.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Alexandria', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .menu-open {
+            transform: translateX(0) !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+
+    <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg  bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
+
+    <a href="/home.html" class="shrink-0">
+      <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+    </a>
+
+    <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
+      <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
+      <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
+      <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
+      <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
+      <a href="/store.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
+      <a href="/projects.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
+      <a href="/blog.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
+    </nav>
+
+    <div class="flex items-center gap-2 xl:gap-3 shrink-0">
+      
+      <div class="hidden xl:flex items-center gap-1 ml-10">
+        <!-- <a href="#" class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
+          تواصل معنا
+        </a> -->
+        <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
+          احصل على سعر مشروعك
+        </a>
+         <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
+        <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+      </button>
+      </div>
+
+     
+
+      <div class="hidden lg:flex items-center bg-[#f4f7f7] p-1 rounded-full border border-[#eceef2] ml-1 xl:ml-4">
+        <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-white bg-[rgba(10,109,102,1)] rounded-full shadow-sm">عربي</button>
+        <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-gray-500 hover:text-[rgba(10,109,102,1)] transition">EN</button>
+      </div>
+
+      <button id="mobile-menu-open" class="lg:hidden p-2 rounded-md hover:bg-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-sidebar" class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 lg:hidden">
+    <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
+      <div class="flex justify-between items-center mb-8 pb-4 border-b">
+        <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+        <button id="mobile-menu-close-btn" class="p-2 text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 mb-auto text-right">
+        <a href="/home.html" class="text-base font-bold text-[rgba(10,109,102,1)]">الرئيسية</a>
+        <a href="/about.html" class="text-base font-medium text-gray-700">من نحن</a>
+        <a href="/sectors/index.html" class="text-base font-medium text-gray-700">القطاعات</a>
+        <a href="/solutions.html" class="text-base font-medium text-gray-700">الخدمات</a>
+        <a href="/store.html" class="text-base font-medium text-gray-700">المتجر</a>
+        <a href="/projects.html" class="text-base font-medium text-gray-700">المشاريع</a>
+        <a href="/blog.html" class="text-base font-medium text-gray-700">المدونة</a>
+      </nav>
+
+      <div class="pt-6 border-t flex flex-col gap-3">
+        <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg ">تواصل معنا</a>
+        <a href="#" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg ">احصل على سعر مشروعك</a>
+        
+        <div class="flex items-center bg-[#f4f7f7] p-0.5 rounded-full border border-[#eceef2] w-28 mx-auto mt-2">
+            <button class="flex-1 py-1 text-[10px] font-medium text-white bg-[rgba(10,109,102,1)] rounded-full">عربي</button>
+            <button class="flex-1 py-1 text-[10px] font-medium text-gray-500">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main class="bg-white min-h-screen pt-8 pb-20 mt-20"  dir="rtl">
+        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <nav class="flex items-center gap-2 text-[15px] text-gray-500 font-medium mb-8">
+                <a href="#" class="hover:text-[#0A6D66] transition-colors">الرئيسية</a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ltr:rotate-180 text-gray-400" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                <a href="#" class="hover:text-[#0A6D66] transition-colors">المدونة</a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ltr:rotate-180 text-gray-400" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                <span class="text-gray-800 truncate">دليل شامل لاختيار النجيل المناسب لمشروعك </span>
+            </nav>
+
+            <header class="mb-10 flex flex-col items-start text-right">
+
+                <a href="#"
+                    class="inline-block bg-[#e5f0ef] text-[#0A6D66] px-4 py-2 rounded-full text-[13px] font-bold mb-5 hover:bg-[#0A6D66] hover:text-white transition-all">
+                    تنسيق الحدائق
+                </a>
+
+                <h1
+                    class="text-3xl md:text-4xl lg:text-[44px] font-bold text-gray-900 mb-6 leading-tight lg:leading-snug">
+                    دليل شامل لاختيار النجيل المناسب لمشروعك
+                </h1>
+
+                <div
+                    class="flex flex-wrap justify-end items-center gap-6 text-[15px] text-gray-500 font-medium pb-6 w-full">
+<div class="flex items-center gap-1.5">
+                       
+                        <span>2150 مشاهدة</span>
+                         <svg class="w-4 h-4 text-[#0A6D66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                   
+
+                    <div class="flex items-center gap-1.5">
+                        
+                        <span>7 دقائق</span>
+                        <svg class="w-4 h-4 text-[#0A6D66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+
+                     <div class="flex items-center gap-1.5">
+                       
+                        <span>10 مارس 2026</span>
+                         <svg class="w-4 h-4 text-[#0A6D66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="mb-12">
+                <img src="/imgs/landscaping.svg" alt="اختيار النجيل"
+                    class="w-full h-[300px] md:h-[450px] lg:h-[500px] object-cover rounded-[24px] shadow-sm" />
+            </div>
+
+            <div class="max-w-3xl mx-auto text-right font-sans">
+
+                <p class=" text-gray-500 leading-relaxed mb-8">
+                    اختيار النوع المناسب من النجيل يعد من أهم القرارات في أي مشروع تنسيق حدائق أو إنشاء ملاعب. في هذا
+                    الدليل
+                    الشامل، نستعرض كل ما تحتاج معرفته لاتخاذ القرار الصحيح.
+                </p>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl md:text-[28px] font-bold text-gray-900 mb-8">أنواع النجيل الطبيعي</h2>
+
+                    <div class="mb-10">
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-4">1. نجيل برمودا (Bermuda Grass)</h3>
+                        <p class="text-[16px] text-gray-500 mb-5">النوع الأكثر شيوعاً في المملكة، ويتميز بـ:</p>
+                        <div class="flex flex-col gap-3 text-[16px] text-gray-500">
+                            <span>مقاومة عالية للحرارة والجفاف</span>
+                            <span>نمو سريع وقوي</span>
+                            <span>مناسب للملاعب الرياضية</span>
+                            <span>يحتاج صيانة منتظمة</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-4">2. نجيل الباسبالوم (Paspalum)</h3>
+                        <p class="text-[16px] text-gray-500 mb-5">خيار ممتاز للمناطق الساحلية:</p>
+                        <div class="flex flex-col gap-3 text-[16px] text-gray-500">
+                            <span>يتحمل الملوحة العالية</span>
+                            <span>مناسب للري بمياه البحر المعالجة</span>
+                            <span>مظهر جمالي راقي</span>
+                            <span>يحتاج عناية متوسطة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl md:text-[28px] font-bold text-gray-900 mb-8">النجيل الصناعي</h2>
+
+                    <div class="mb-10">
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-5">مميزات النجيل الصناعي</h3>
+                        <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                            <span>لا يحتاج ري أو قص</span>
+                            <span>مظهر أخضر طوال العام</span>
+                            <span>يوفر 90% من استهلاك المياه</span>
+                            <span>متانة عالية وعمر طويل</span>
+                            <span>صيانة بسيطة</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-5">عيوب النجيل الصناعي</h3>
+                        <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                            <span>تكلفة أولية أعلى</span>
+                            <span>يمكن أن يسخن في الصيف</span>
+                            <span>يحتاج تنظيف دوري</span>
+                            <span>ليس صديقاً للبيئة مثل الطبيعي</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl md:text-[28px] font-bold text-gray-900 mb-8">معايير الاختيار</h2>
+
+                    <div class="mb-10">
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-4">1. الغرض من الاستخدام</h3>
+                        <p class="text-[16px] text-gray-500 mb-5">اسأل نفسك:</p>
+                        <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                            <span>هل هو لحديقة منزلية؟</span>
+                            <span>أم ملعب رياضي؟</span>
+                            <span>أم منطقة عامة؟</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-5">2. المناخ والموقع</h3>
+                        <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                            <span>درجة الحرارة السائدة</span>
+                            <span>مستوى الرطوبة</span>
+                            <span>ساعات الشمس المباشرة</span>
+                            <span>جودة التربة</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[20px] font-semibold text-gray-900 mb-5">3. الميزانية</h3>
+                        <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                            <span>تكلفة الشراء والتركيب</span>
+                            <span>تكاليف الصيانة الدورية</span>
+                            <span>تكاليف المياه والكهرباء</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl md:text-[28px] font-bold text-gray-900 mb-8">نصائح الخبراء</h2>
+                    <div class="flex flex-col gap-4 text-[16px] text-gray-500">
+                        <span>استشر متخصصين قبل اتخاذ القرار</span>
+                        <span>اطلب عينات ومعاينة مشاريع سابقة</span>
+                        <span>احسب التكلفة الإجمالية على 5 سنوات</span>
+                        <span>تأكد من جودة المنتج والضمان</span>
+                        <span>اختر مورداً موثوقاً</span>
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl md:text-[28px] font-bold text-gray-900 mb-6">الخلاصة</h2>
+                    <p class=" text-gray-500 leading-loose">
+                        لا يوجد نوع "أفضل" من النجيل بشكل مطلق، بل يعتمد على احتياجاتك وظروفك الخاصة. في روائع البساتين،
+                        نساعدك في اختيار وتركيب النوع الأمثل لمشروعك مع ضمان أعلى مستويات الجودة.
+                    </p>
+                </div>
+
+            </div>
+            <hr class="border-gray-100 my-12">
+
+            <div class="flex flex-col gap-8 w-full pb-10 max-w-4xl mx-auto">
+
+                <div class="flex items-center flex-wrap gap-3">
+                    <div class="flex items-center gap-1.5 text-gray-900 font-bold ml-2">
+                        <svg class="w-5 h-5 text-[#0A6D66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+                            </path>
+                        </svg>
+                        الوسوم:
+                    </div>
+                    <a href="#"
+                        class="bg-[#E6F4F480] text-[#1A1A1A] px-5 py-2 rounded-xl text-[14px] hover:bg-[#0A6D66] hover:text-white transition-colors">نجيل
+                        طبيعي</a>
+                    <a href="#"
+                        class="bg-[#E6F4F480] text-[#1A1A1A] px-5 py-2 rounded-xl text-[14px] hover:bg-[#0A6D66] hover:text-white transition-colors">نجيل
+                        صناعي</a>
+                    <a href="#"
+                        class="bg-[#E6F4F480] text-[#1A1A1A] px-5 py-2 rounded-xl text-[14px] hover:bg-[#0A6D66] hover:text-white transition-colors">تنسيق
+                        حدائق</a>
+                    <a href="#"
+                        class="bg-[#E6F4F480] text-[#1A1A1A] px-5 py-2 rounded-xl text-[14px] hover:bg-[#0A6D66] hover:text-white transition-colors">اختيار
+                        النجيل</a>
+                </div>
+
+                <div
+                    class="flex flex-col md:flex-row items-center justify-between bg-[#E6F4F44D] px-6 py-4 rounded-2xl w-full border border-gray-50 gap-4">
+
+                    <div class="flex items-center gap-3 flex-row-reverse">
+                        <a href="#"
+                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-500 hover:text-[#0A6D66] shadow-sm transition-colors">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 10C0 4.47715 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V30C40 35.5228 35.5228 40 30 40H10C4.47715 40 0 35.5228 0 30V10Z"
+                                    fill="white" />
+                                <path
+                                    d="M23.3333 16.6665C24.6593 16.6665 25.9311 17.1933 26.8688 18.131C27.8065 19.0687 28.3333 20.3404 28.3333 21.6665V27.4998H24.9999V21.6665C24.9999 21.2245 24.8243 20.8006 24.5118 20.488C24.1992 20.1754 23.7753 19.9998 23.3333 19.9998C22.8912 19.9998 22.4673 20.1754 22.1547 20.488C21.8422 20.8006 21.6666 21.2245 21.6666 21.6665V27.4998H18.3333V21.6665C18.3333 20.3404 18.86 19.0687 19.7977 18.131C20.7354 17.1933 22.0072 16.6665 23.3333 16.6665Z"
+                                    stroke="#1A1A1A" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M15.0001 17.5H11.6667V27.5H15.0001V17.5Z" stroke="#1A1A1A"
+                                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M13.3334 14.9998C14.2539 14.9998 15.0001 14.2536 15.0001 13.3332C15.0001 12.4127 14.2539 11.6665 13.3334 11.6665C12.4129 11.6665 11.6667 12.4127 11.6667 13.3332C11.6667 14.2536 12.4129 14.9998 13.3334 14.9998Z"
+                                    stroke="#1A1A1A" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-500 hover:text-[#0A6D66] shadow-sm transition-colors">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 10C0 4.47715 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V30C40 35.5228 35.5228 40 30 40H10C4.47715 40 0 35.5228 0 30V10Z"
+                                    fill="white" />
+                                <path
+                                    d="M28.3334 13.3332C28.3334 13.3332 27.7501 15.0832 26.6667 16.1665C28.0001 24.4999 18.8334 30.5832 11.6667 25.8332C13.5001 25.9165 15.3334 25.3332 16.6667 24.1665C12.5001 22.9165 10.4167 17.9999 12.5001 14.1665C14.3334 16.3332 17.1667 17.5832 20.0001 17.4999C19.2501 13.9999 23.3334 11.9999 25.8334 14.3332C26.7501 14.3332 28.3334 13.3332 28.3334 13.3332Z"
+                                    stroke="#1A1A1A" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-500 hover:text-[#0A6D66] shadow-sm transition-colors">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 10C0 4.47715 4.47715 0 10 0H30C35.5228 0 40 4.47715 40 10V30C40 35.5228 35.5228 40 30 40H10C4.47715 40 0 35.5228 0 30V10Z"
+                                    fill="white" />
+                                <path
+                                    d="M24.9999 11.6665H22.4999C21.3948 11.6665 20.335 12.1055 19.5536 12.8869C18.7722 13.6683 18.3333 14.7281 18.3333 15.8332V18.3332H15.8333V21.6665H18.3333V28.3332H21.6666V21.6665H24.1666L24.9999 18.3332H21.6666V15.8332C21.6666 15.6122 21.7544 15.4002 21.9107 15.2439C22.0669 15.0876 22.2789 14.9998 22.4999 14.9998H24.9999V11.6665Z"
+                                    stroke="#1A1A1A" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="text-gray-900 font-medium flex items-center gap-2 text-[15px]">
+                        شارك المقال
+                        <svg class="w-5 h-5 text-[#0A6D66]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z">
+                            </path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+        </article>
+    </main>
+    <footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(220,240,240,0.4)_100%)]">
+    <!--<footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(200,230,230,0.6)_100%)]">-->
+    <div class="container mx-auto px-4 lg:px-[30px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            
+            <div class="flex flex-col">
+                <img src="/imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
+                <p class="text-gray-500 text-sm leading-relaxed mb-8 max-w-xs">
+                    الشريك الموثوق في تنفيذ مشاريع البنية التحتية والمنشآت الرياضية وتنسيق الحدائق بأعلى معايير الجودة منذ أكثر من 18 عامًا
+                </p>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+                    تحميل الملف التعريفي
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <img width="20px" height="20px" src="/imgs/company.svg" alt="">
+                   الحسابات البنكية
+                </a>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-6">روابط سريعة</h3>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الرئيسية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">من نحن</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">القطاعات</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المتجر</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المشاريع</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المدونة</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تواصل معنا</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الوظائف</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-6">خدماتنا</h3>
+                <ul class="flex flex-col gap-4">
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المنشآت الرياضية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">تنسيق الحدائق</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البنية التحتية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">المقاولات العامة</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">البيوت المحمية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">نجيل طبيعي وصناعي</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">أنظمة الري الذكية</a></li>
+                    <li><a href="#" class="text-gray-500 hover:text-[rgba(10,109,102,1)] transition-colors text-sm">الصيانة الدورية</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col">
+                <h3 class="text-lg font-bold text-gray-900 mb-6">تواصل معنا</h3>
+                
+                <div class="flex flex-col gap-4 mb-8 text-sm text-gray-500">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.596-5.265-3.965-6.861-6.86l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+                        </div>
+                        <span dir="ltr">+966 50 000 0000</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                        </div>
+                        <span>info@rawaealbasateen.sa</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>
+                        </div>
+                        <span>الرياض، المملكة العربية السعودية</span>
+                    </div>
+                </div>
+
+                <h4 class="text-sm font-bold text-gray-900 mb-4">تابعنا</h4>
+                <div class="flex flex-wrap items-center gap-2 mb-8">
+                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/facebook.svg" alt="">
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/x.svg" alt="">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/instagram.svg" alt="">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/linkedin.svg" alt="">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/youtube.svg" alt="">
+                    </a>
+                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
+                        <img src="/imgs/snapchat.svg" alt="">
+                    </a>
+                </div>
+
+                <h4 class="text-sm font-bold text-gray-900 mb-4">حمل التطبيق</h4>
+             <div class="flex flex-wrap items-center gap-3">
+    <a href="#" class="inline-block">
+        <img src="/imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
+    </a>
+    <a href="#" class="inline-block">
+        <img src="/imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
+    </a>
+</div>
+            </div>
+            
+        </div>
+
+        <div class="pt-6 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+            <div class="flex items-center gap-4">
+                <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">سياسة الخصوصية</a>
+                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                <a href="#" class="hover:text-[rgba(10,109,102,1)] transition-colors">الشروط والأحكام</a>
+            </div>
+            <p class="text-center md:text-left">© 2026 روائع البساتين. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</footer>
+    <script src="/script.js"></script>
+    <script>
+        const sidebar = document.getElementById("mobile-sidebar");
+        const openBtn = document.getElementById("mobile-menu-open");
+        const closeBtn = document.getElementById("mobile-menu-close-btn");
+        const overlay = document.getElementById("mobile-menu-close-overlay");
+
+        function toggleSidebar() {
+            sidebar.classList.toggle("translate-x-full");
+        }
+
+        if (openBtn) openBtn.addEventListener("click", toggleSidebar);
+        if (closeBtn) closeBtn.addEventListener("click", toggleSidebar);
+        if (overlay) overlay.addEventListener("click", toggleSidebar);
+    </script>
+</body>
+
+</html>

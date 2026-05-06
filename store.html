@@ -26,17 +26,17 @@
 
   <body class="bg-gray-50 min-h-screen">
 
-  <header class="mx-auto px-4 mt-8 relative z-50">
-  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg border border-[#eceef2] bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
+   <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg  bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
 
-    <a href="home.html" class="shrink-0">
-      <img src="imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+    <a href="/home.html" class="shrink-0">
+      <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
     </a>
 
-    <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2">
+    <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
       <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
       <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
-      <a href="/sectors/index.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
+      <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
       <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
       <a href="/store.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
       <a href="/projects.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
@@ -45,18 +45,19 @@
 
     <div class="flex items-center gap-2 xl:gap-3 shrink-0">
       
-      <div class="hidden xl:flex items-center gap-2">
-        <a href="/contact.html" class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
+      <div class="hidden xl:flex items-center gap-1 ml-10">
+        <!-- <a href="#" class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
           تواصل معنا
-        </a>
-        <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
+        </a> -->
+        <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
           احصل على سعر مشروعك
         </a>
+         <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
+        <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+      </button>
       </div>
 
-      <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
-        <img src="imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
-      </button>
+     
 
       <div class="hidden lg:flex items-center bg-[#f4f7f7] p-1 rounded-full border border-[#eceef2] ml-1 xl:ml-4">
         <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-white bg-[rgba(10,109,102,1)] rounded-full shadow-sm">عربي</button>
@@ -75,7 +76,7 @@
     <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
     <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
       <div class="flex justify-between items-center mb-8 pb-4 border-b">
-        <img src="imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+        <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
         <button id="mobile-menu-close-btn" class="p-2 text-gray-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -139,10 +140,11 @@
             </div>
 
             <!-- Filter Button -->
-            <button class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm hover:bg-gray-50 transition-all text-gray-900 font-medium">
-                <span>تصفية</span>
-                <img src="imgs/filter.svg" alt="filter" class="w-5 h-5">
-            </button>
+            <button id="openFilter"
+class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm hover:bg-gray-50 transition-all text-gray-900 font-medium">
+    <span>تصفية</span>
+    <img src="imgs/filter.svg" alt="filter" class="w-5 h-5">
+</button>
 
         </div>
 
@@ -216,8 +218,10 @@
     </aside>
 
     <!-- PRODUCTS -->
-   <main class="w-full">
-    <!-- أضفنا xl:grid-cols-4 لتقليل عرض الكارد الواحد في الشاشات الكبيرة -->
+  <main class="w-full">
+    <p class=" mb-5 text-sm  font-normal text-gray-500">
+        عرض 9 منتج
+    </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
 
      
@@ -678,9 +682,35 @@
     </div>
 </div>
     </div>
+    <div class="flex justify-center my-10">
+    <button class="px-8 py-3 rounded-xl text-sm md:text-base font-semibold
+                   border-2 border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)]
+                   hover:bg-[rgba(10,109,102,1)] hover:text-white transition">
+        تحميل المزيد
+    </button>
+</div>
 </main>
 
 </div>
+<section class="w-full px-4 md:px-6">
+  <div class="w-full rounded-2xl py-12 md:py-16 px-6 md:px-10 text-center text-white
+              bg-[linear-gradient(99.89deg,#0A6D66_72.11%,#B3D234_103.32%)]">
+
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">
+      هل تحتاج كميات كبيرة؟
+    </h2>
+
+    <p class="text-sm md:text-base text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+      احصل على أسعار خاصة للمشاريع الكبيرة والطلبات بالجملة
+    </p>
+
+    <button class="bg-white text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl text-sm md:text-base font-semibold
+                   shadow-md hover:shadow-lg hover:bg-gray-100 transition">
+      اطلب عرض سعر خاص
+    </button>
+
+  </div>
+</section>
 <style>
 .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -691,18 +721,23 @@
 }
 </style>
         
-<footer class="bg-white pt-16 pb-6 border-t border-gray-100">
+ <footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(220,240,240,0.4)_100%)]">
+    <!--<footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(200,230,230,0.6)_100%)]">-->
     <div class="container mx-auto px-4 lg:px-[30px]">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
             
             <div class="flex flex-col">
-                <img src="imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
+                <img src="/imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
                 <p class="text-gray-500 text-sm leading-relaxed mb-8 max-w-xs">
                     الشريك الموثوق في تنفيذ مشاريع البنية التحتية والمنشآت الرياضية وتنسيق الحدائق بأعلى معايير الجودة منذ أكثر من 18 عامًا
                 </p>
-                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all w-max">
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
                     تحميل الملف التعريفي
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <img width="20px" height="20px" src="/imgs/company.svg" alt="">
+                   الحسابات البنكية
                 </a>
             </div>
 
@@ -761,32 +796,32 @@
                 <h4 class="text-sm font-bold text-gray-900 mb-4">تابعنا</h4>
                 <div class="flex flex-wrap items-center gap-2 mb-8">
                     <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/facebook.svg" alt="">
+                        <img src="/imgs/facebook.svg" alt="Facebook">
                     </a>
                     <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/x.svg" alt="">
+                        <img src="/imgs/x.svg" alt="X">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/instagram.svg" alt="">
+                        <img src="/imgs/instagram.svg" alt="Instagram">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/linkedin.svg" alt="">
+                        <img src="/imgs/linkedin.svg" alt="LinkedIn">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/youtube.svg" alt="">
+                        <img src="/imgs/youtube.svg" alt="YouTube">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/snapchat.svg" alt="">
+                        <img src="/imgs/snapchat.svg" alt="Snapchat">
                     </a>
                 </div>
 
                 <h4 class="text-sm font-bold text-gray-900 mb-4">حمل التطبيق</h4>
              <div class="flex flex-wrap items-center gap-3">
     <a href="#" class="inline-block">
-        <img src="imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
+        <img src="/imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
     </a>
     <a href="#" class="inline-block">
-        <img src="imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
+        <img src="/imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
     </a>
 </div>
             </div>
@@ -803,7 +838,156 @@
         </div>
     </div>
 </footer>
-    <script src="script.js"></script>
+<!-- OVERLAY + SIDEBAR -->
+<!-- OVERLAY + SIDEBAR -->
+<div id="filterOverlay"
+     class="fixed inset-0 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300 z-50"
+     style="
+     background-image:
+     linear-gradient(270deg, #0A6D66 1.04%, rgba(10, 109, 102, 0.67) 13.51%, rgba(10, 109, 102, 0.01) 64.51%),
+     linear-gradient(129.28deg, rgba(179, 210, 52, 0) 72.17%, #B3D234 100%);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     ">
+
+    <!-- SIDEBAR -->
+    <div id="filterSidebar"
+         class="absolute right-4 top-4 bottom-4 h-auto w-[90%] sm:w-[400px] bg-white rounded-3xl shadow-2xl
+                translate-x-full transition-all duration-300 flex flex-col overflow-hidden">
+
+        <!-- HEADER -->
+        <div class="flex items-center justify-between p-6">
+            <h2 class="font-bold text-xl text-[#0a142f]">تصفية المنتجات</h2>
+            <button id="closeFilter" class="text-gray-400 hover:text-black transition-colors text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="p-6 overflow-y-auto flex-1 text-right space-y-8">
+
+            <!-- نوع المنتج -->
+            <div>
+                <h3 class="font-semibold text-[#0a142f] mb-4">نوع المنتج</h3>
+                <div class="space-y-4 mr-4">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">نجيل طبيعي</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">نجيل صناعي</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">أشجار</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">شجيرات</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- السعر -->
+            <div>
+                <h3 class="font-semibold text-[#0a142f] mb-4">السعر</h3>
+                <div class="space-y-4 mr-4">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="price" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">جميع الأسعار</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="price" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">أقل من 50 ر.س</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="price" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black">50 - 100 ر.س</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- التقييم -->
+            <div>
+                <h3 class="font-semibold text-[#0a142f] mb-4">التقييم</h3>
+                <div class="space-y-4 mr-4">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="rate" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <span class="text-gray-600 group-hover:text-black text-sm">جميع التقييمات</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="rate" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <div class="flex items-center gap-1">
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-gray-600">4 نجوم فأكثر</span>
+                        </div>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                        <input type="radio" name="rate" class="w-5 h-5 border-gray-300 text-[#0a6d66] focus:ring-[#0a6d66]">
+                        <div class="flex items-center gap-1">
+                            <span class="text-yellow-400">★</span>
+                            <span class="text-gray-600">3 نجوم فأكثر</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- الميزات -->
+            <div>
+                <h3 class="font-semibold text-[#0a142f] mb-4">الميزات</h3>
+                <div class="flex flex-wrap gap-2 mr-4">
+                    <span class="bg-teal-50 text-[#0a6d66] px-4 py-2 rounded-full text-sm font-medium">ضمان</span>
+                    <span class="bg-teal-50 text-[#0a6d66] px-4 py-2 rounded-full text-sm font-medium">جودة عالية</span>
+                    <span class="bg-teal-50 text-[#0a6d66] px-4 py-2 rounded-full text-sm font-medium">مقاوم للعوامل</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="p-6 border-t flex gap-4 bg-gray-50/50">
+            <button class="flex-1 bg-[#0a6d66] text-white rounded-xl py-3 font-semibold hover:bg-[#085a54] transition-colors">
+                تطبيق التصفية
+            </button>
+            <button class="flex-1 border border-teal-200 text-[#0a6d66] bg-white rounded-xl py-3 font-semibold hover:bg-teal-50 transition-colors">
+                إعادة ضبط
+            </button>
+        </div>
+
+    </div>
+</div>
+ <script src="script.js"></script>
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+const openBtn = document.getElementById('openFilter');
+const closeBtn = document.getElementById('closeFilter');
+const overlay = document.getElementById('filterOverlay');
+const sidebar = document.getElementById('filterSidebar');
+
+openBtn.onclick = () => {
+    overlay.classList.remove('opacity-0','pointer-events-none');
+    sidebar.classList.remove('translate-x-full');
+};
+
+closeBtn.onclick = () => {
+    overlay.classList.add('opacity-0','pointer-events-none');
+    sidebar.classList.add('translate-x-full');
+};
+
+overlay.onclick = (e) => {
+    if (e.target === overlay) {
+        overlay.classList.add('opacity-0','pointer-events-none');
+        sidebar.classList.add('translate-x-full');
+    }
+};
+
+});
+</script>
 
     <script>
       const sidebar = document.getElementById('mobile-sidebar');
@@ -820,5 +1004,6 @@
       overlay.addEventListener('click', toggleSidebar);
     </script>
     </script>
+
   </body>
 </html>

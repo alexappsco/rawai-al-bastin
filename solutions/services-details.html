@@ -21,7 +21,7 @@
         transform: translateX(0) !important;
       }
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 
   <body class="bg-gray-50 min-h-screen">
@@ -29,12 +29,12 @@
   <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
   <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg  bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
 
-    <a href="home.html" class="shrink-0">
-      <img src="imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+    <a href="/home.html" class="shrink-0">
+      <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
     </a>
 
     <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
-      <a href="home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
+      <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
       <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
       <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
       <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
@@ -53,7 +53,7 @@
           احصل على سعر مشروعك
         </a>
          <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
-        <img src="imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+        <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
       </button>
       </div>
 
@@ -76,7 +76,7 @@
     <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
     <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
       <div class="flex justify-between items-center mb-8 pb-4 border-b">
-        <img src="imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+        <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
         <button id="mobile-menu-close-btn" class="p-2 text-gray-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -108,7 +108,7 @@
 </header>
 <section class="relative h-[450px] md:h-[550px] w-full overflow-hidden flex items-end">
     <!-- الصورة الخلفية -->
-    <img src="imgs/servicesdetails.jpg" alt="تنسيق الحدائق" class="absolute inset-0 w-full h-full object-cover">
+    <img src="/imgs/servicesdetails.jpg" alt="تنسيق الحدائق" class="absolute inset-0 w-full h-full object-cover">
     
     <!-- التدرج اللوني المطلوب (Overlay) -->
     <div class="absolute inset-0" style="background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);"></div>
@@ -117,7 +117,7 @@
     <div class="container mx-auto px-4 md:px-12 lg:px-24 relative z-10 pb-12 text-right" >
         
         <!-- العودة للخدمات -->
-        <a href="#" class="inline-flex items-center text-white/80 hover:text-white transition-colors mb-6 group text-sm md:text-base">
+        <a href="index.html" class="inline-flex items-center text-white/80 hover:text-white transition-colors mb-6 group text-sm md:text-base">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -142,25 +142,19 @@
         </p>
 
         <!-- شريط المعلومات (التنفيذ، الضمان، المعايير) -->
-        <div class="flex flex-wrap items-center gap-6 text-white/80 text-sm md:text-base border-t border-white/20 pt-6">
+        <div class="flex flex-wrap items-center gap-6 text-white/80 text-sm md:text-base ">
             <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a6d66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+                <img src="/imgs/clockwhite.svg" alt="">
                 <span>مدة التنفيذ: 1-2 شهر</span>
             </div>
             
             <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a6d66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+               <img src="/imgs/madaliawhite.svg" alt="">
                 <span>الضمان: سنة واحدة</span>
             </div>
 
             <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#0a6d66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
+               <img width="20px" height="20px" src="/imgs/shield.svg" alt="">
                 <span>معايير دولية</span>
             </div>
         </div>
@@ -187,27 +181,27 @@
                 <h3 class="text-xl  font-bold mb-6">ما نقدمه</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">تصميم مخصص للحديقة</span>
                     </div>
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">نجيل طبيعي عالي الجودة</span>
                     </div>
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">نوافير وبرك مائية</span>
                     </div>
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">إضاءة ديكورية</span>
                     </div>
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">أنظمة ري اتوماتيكية</span>
                     </div>
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
-                        <img src="imgs/cuircal-true.svg" alt="">
+                        <img src="/imgs/cuircal-true.svg" alt="">
                         <span class="text-gray-800 font-normal">صيانة دورية</span>
                     </div>
                 </div>
@@ -254,11 +248,11 @@
                 <p class="text-white/90 mb-8 text-xs leading-relaxed">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لمشروعك</p>
                 <div class="flex flex-col gap-4">
                     <button class="bg-white text-[#0a6d66] py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors w-full flex items-center justify-center gap-2">
-  <img src="imgs/call.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/call.svg" alt="" class="w-4 h-4">
   <span>اتصل بنا</span>
 </button>
                     <button class="border-2 border-white/40 text-white py-3 rounded-lg font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-2">
-  <img src="imgs/mailwhite.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/mailwhite.svg" alt="" class="w-4 h-4">
   <span>راسلنا</span>
 </button>
                 </div>
@@ -275,11 +269,11 @@
                      <div class="flex justify-between items-center border-b border-gray-50 pb-2">
                         <span class="text-gray-500">التقييم</span>
 <span class="font-bold text-xl text-[#0a6d66] flex items-center gap-1">
-  <img src="imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="imgs/stars.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
+  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
 </span>                    </div>
                     <div class="flex justify-between items-center">
                         <span class="text-gray-500">رضا العملاء</span>
@@ -293,23 +287,23 @@
                 <h4 class="text-lg font-bold mb-4">لماذا تختارنا؟</h4>
                 <ul class="space-y-3">
                     <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="imgs/trueopen.svg" alt="">
+                        <img src="/imgs/trueopen.svg" alt="">
                         خبرة أكثر من 15 عاماً
                     </li>
                     <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="imgs/trueopen.svg" alt="">
+                        <img src="/imgs/trueopen.svg" alt="">
                       فريق مهنندسين محترفين
                     </li>
                      <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="imgs/trueopen.svg" alt="">
+                        <img src="/imgs/trueopen.svg" alt="">
                      معدات حديثة ومتطورة
                     </li>
                     <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="imgs/trueopen.svg" alt="">
+                        <img src="/imgs/trueopen.svg" alt="">
                     ضمان طويل الأمد
                     </li>
                      <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="imgs/trueopen.svg" alt="">
+                        <img src="/imgs/trueopen.svg" alt="">
                    أسعار تنافسية
                     </li>
                 </ul>
@@ -449,7 +443,7 @@
     <!-- رأس السكشن -->
     <div class="flex flex-col items-start mb-10">
         <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
-            <img width="14px" height="14px" src="imgs/row-up.svg" alt="">
+            <img width="14px" height="14px" src="/imgs/row-up.svg" alt="">
             خدمات مشابهة
         </div>
         <h3 class="text-2xl font-medium text-gray-800">خدمات قد تهمك</h3>
@@ -461,7 +455,7 @@
         <!-- كرت خدمة 1 -->
         <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
             <div class="relative h-48 overflow-hidden">
-                <img src="imgs/natural-grass.jpg" alt="تنسيق حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="/imgs/natural-grass.jpg" alt="تنسيق حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-6">
                 <h4 class="font-semibold text-gray-800 text-lg mb-2">تنسيق الحدائق العامة</h4>
@@ -469,7 +463,7 @@
                 <div class="flex items-center justify-between border-t border-gray-50 pt-4">
                     <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
                         اعرف المزيد
-                        <span><img src="imgs/row.svg" alt=""></span>
+                        <span><img src="/imgs/row.svg" alt=""></span>
                     </a>
                     <div class="flex items-center gap-1 text-gray-400 text-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -484,7 +478,7 @@
         <!-- كرت خدمة 2 -->
         <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
             <div class="relative h-48 overflow-hidden">
-                <img src="imgs/natural-grass.jpg" alt="أنظمة الري" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="/imgs/natural-grass.jpg" alt="أنظمة الري" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-6">
                 <h4 class="font-semibold text-gray-800 text-lg mb-2">تركيب أنظمة الري الذكية</h4>
@@ -492,7 +486,7 @@
                 <div class="flex items-center justify-between border-t border-gray-50 pt-4">
                     <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
                         اعرف المزيد
-                        <span><img src="imgs/row.svg" alt=""></span>
+                        <span><img src="/imgs/row.svg" alt=""></span>
                     </a>
                     <div class="flex items-center gap-1 text-gray-400 text-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -507,7 +501,7 @@
         <!-- كرت خدمة 3 -->
         <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
             <div class="relative h-48 overflow-hidden">
-                <img src="imgs/natural-grass.jpg" alt="صيانة حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <img src="/imgs/natural-grass.jpg" alt="صيانة حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
             <div class="p-6">
                 <h4 class="font-semibold text-gray-800 text-lg mb-2">صيانة الحدائق الدورية</h4>
@@ -515,7 +509,7 @@
                 <div class="flex items-center justify-between border-t border-gray-50 pt-4">
                     <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
                         اعرف المزيد
-                        <span><img src="imgs/row.svg" alt=""></span>
+                        <span><img src="/imgs/row.svg" alt=""></span>
                     </a>
                     <div class="flex items-center gap-1 text-gray-400 text-xs">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -530,11 +524,11 @@
     </div>
 </div>
 <!-- سكشن المقالات -->
-<div class="mt-24 text-right" dir="rtl">
+<div class="mt-24 text-right">
     <!-- رأس السكشن -->
     <div class="flex flex-col items-start mb-10">
         <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
-            <img width="14px" height="14px" src="imgs/row-up.svg" alt="">
+            <img width="14px" height="14px" src="/imgs/row-up.svg" alt="">
             مقالات مفيدة
         </div>
         <h3 class="text-2xl font-medium text-gray-800">مقالات مرتبطة بالقطاع</h3>
@@ -547,9 +541,9 @@
         <!-- كرت مقال 1 -->
         <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
             <div class="relative h-56">
-                <img src="imgs/garden-private.jpg" class="w-full h-full object-cover" alt="صيانة الملاعب">
+                <img src="/imgs/garden-private.jpg" class="w-full h-full object-cover" alt="صيانة الملاعب">
                 <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                    <img width="14px" height="14px" src="imgs/clock.svg" alt="الوقت">
+                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
                     5 دقائق
                 </div>
             </div>
@@ -563,7 +557,7 @@
                 <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">أفضل ممارسات صيانة الملاعب الرياضية في الصيف</h4>
                 <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">نصائح وإرشادات للحفاظ على جودة الملاعب خلال فصل الصيف الحار.</p>
                 <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="imgs/row.svg" alt=""></span>
+                    <span><img src="/imgs/row.svg" alt=""></span>
                     اقرأ المزيد 
                 </a>
             </div>
@@ -572,9 +566,9 @@
         <!-- كرت مقال 2 -->
         <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
             <div class="relative h-56">
-                <img src="imgs/shoes.jpg" class="w-full h-full object-cover" alt="معايير FIFA">
+                <img src="/imgs/shoes.jpg" class="w-full h-full object-cover" alt="معايير FIFA">
                 <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                    <img width="14px" height="14px" src="imgs/clock.svg" alt="الوقت">
+                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
                     10 دقائق
                 </div>
             </div>
@@ -588,7 +582,7 @@
                 <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تصميم الملاعب الرياضية وفق معايير FIFA</h4>
                 <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">شرح مفصل لمتطلبات ومعايير FIFA في تصميم وإنشاء ملاعب كرة القدم.</p>
                 <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="imgs/row.svg" alt=""></span>
+                    <span><img src="/imgs/row.svg" alt=""></span>
                     اقرأ المزيد 
                     
                 </a>
@@ -598,9 +592,9 @@
         <!-- كرت مقال 3 -->
         <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
             <div class="relative h-56">
-                <img src="imgs/football.jpg" class="w-full h-full object-cover" alt="إضاءة الملاعب">
+                <img src="/imgs/football.jpg" class="w-full h-full object-cover" alt="إضاءة الملاعب">
                 <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                   <img width="14px" height="14px" src="imgs/clock.svg" alt="">
+                   <img width="14px" height="14px" src="/imgs/clock.svg" alt="">
                     7 دقائق
                 </div>
             </div>
@@ -614,7 +608,7 @@
                 <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تقنيات الإضاءة الحديثة للملاعب الرياضية</h4>
                 <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">كيف تختار نظام الإضاءة المناسب للملاعب لتحقيق أفضل أداء.</p>
                 <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="imgs/row.svg" alt=""></span>
+                    <span><img src="/imgs/row.svg" alt=""></span>
                     اقرأ المزيد 
                 </a>
             </div>
@@ -651,18 +645,23 @@
 
 
 
-<footer class="bg-white pt-16 pb-6 border-t border-gray-100">
+ <footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(220,240,240,0.4)_100%)]">
+    <!--<footer class="pt-16 pb-6 border-t border-gray-100 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(200,230,230,0.6)_100%)]">-->
     <div class="container mx-auto px-4 lg:px-[30px]">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
             
             <div class="flex flex-col">
-                <img src="imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
+                <img src="/imgs/logo.svg" alt="روائع البساتين" class="h-10 w-max mb-6" />
                 <p class="text-gray-500 text-sm leading-relaxed mb-8 max-w-xs">
                     الشريك الموثوق في تنفيذ مشاريع البنية التحتية والمنشآت الرياضية وتنسيق الحدائق بأعلى معايير الجودة منذ أكثر من 18 عامًا
                 </p>
-                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all w-max">
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
                     تحميل الملف التعريفي
+                </a>
+                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                    <img width="20px" height="20px" src="/imgs/company.svg" alt="">
+                   الحسابات البنكية
                 </a>
             </div>
 
@@ -721,32 +720,32 @@
                 <h4 class="text-sm font-bold text-gray-900 mb-4">تابعنا</h4>
                 <div class="flex flex-wrap items-center gap-2 mb-8">
                     <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/facebook.svg" alt="">
+                        <img src="/imgs/facebook.svg" alt="Facebook">
                     </a>
                     <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/x.svg" alt="">
+                        <img src="/imgs/x.svg" alt="X">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/instagram.svg" alt="">
+                        <img src="/imgs/instagram.svg" alt="Instagram">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/linkedin.svg" alt="">
+                        <img src="/imgs/linkedin.svg" alt="LinkedIn">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/youtube.svg" alt="">
+                        <img src="/imgs/youtube.svg" alt="YouTube">
                     </a>
                       <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="imgs/snapchat.svg" alt="">
+                        <img src="/imgs/snapchat.svg" alt="Snapchat">
                     </a>
                 </div>
 
                 <h4 class="text-sm font-bold text-gray-900 mb-4">حمل التطبيق</h4>
              <div class="flex flex-wrap items-center gap-3">
     <a href="#" class="inline-block">
-        <img src="imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
+        <img src="/imgs/storeplay.svg" alt="Google Play" class="h-10 w-auto">
     </a>
     <a href="#" class="inline-block">
-        <img src="imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
+        <img src="/imgs/storeapple.svg" alt="App Store" class="h-10 w-auto">
     </a>
 </div>
             </div>
@@ -763,7 +762,7 @@
         </div>
     </div>
 </footer>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 
     <script>
       const sidebar = document.getElementById('mobile-sidebar');
