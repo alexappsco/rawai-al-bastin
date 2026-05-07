@@ -36,11 +36,11 @@
     <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
       <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
       <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
-      <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
-      <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
+      <a href="/sectors/index.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
+      <a href="/solutions/index.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
       <a href="/store.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
       <a href="/projects.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
-      <a href="/blog.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
+      <a href="/blog/index.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
     </nav>
 
     <div class="flex items-center gap-2 xl:gap-3 shrink-0">
@@ -88,10 +88,10 @@
         <a href="/home.html" class="text-base font-bold text-[rgba(10,109,102,1)]">الرئيسية</a>
         <a href="/about.html" class="text-base font-medium text-gray-700">من نحن</a>
         <a href="/sectors/index.html" class="text-base font-medium text-gray-700">القطاعات</a>
-        <a href="/solutions.html" class="text-base font-medium text-gray-700">الخدمات</a>
+        <a href="/solutions/index.html" class="text-base font-medium text-gray-700">الخدمات</a>
         <a href="/store.html" class="text-base font-medium text-gray-700">المتجر</a>
         <a href="/projects.html" class="text-base font-medium text-gray-700">المشاريع</a>
-        <a href="/blog.html" class="text-base font-medium text-gray-700">المدونة</a>
+        <a href="/blog/index.html" class="text-base font-medium text-gray-700">المدونة</a>
       </nav>
 
       <div class="pt-6 border-t flex flex-col gap-3">
@@ -106,7 +106,7 @@
     </div>
   </div>
 </header>
-<section class="relative h-[450px] md:h-[550px] w-full overflow-hidden flex items-end">
+<section class="relative h-[450px] md:h-[550px] w-full overflow-hidden flex items-end mt-16">
     <!-- الصورة الخلفية -->
     <img src="/imgs/servicesdetails.jpg" alt="تنسيق الحدائق" class="absolute inset-0 w-full h-full object-cover">
     
@@ -163,22 +163,23 @@
 
 
 <section class="container mx-auto px-4 md:px-12 lg:px-24 py-16" dir="rtl">
-    <!-- استخدمت نظام grid بدلاً من flex للتحكم الدقيق في العرض -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+    <!-- شبكة Grid تجمع المحتوى والعمود الجانبي -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
-        <!-- المحتوى الرئيسي (النصوص والقوائم) - يأخذ 8 أعمدة من 12 -->
+        <!-- العمود الأيمن: المحتوى الرئيسي (يستمر السكرول فيه) -->
         <div class="lg:col-span-8 order-1 text-right">
             
             <!-- نبذة عن الخدمة -->
             <div class="mb-12">
-                <h2 class="text-2xl  font-bold mb-4">نبذة عن الخدمة</h2>
+                <h2 class="text-2xl font-bold mb-4">نبذة عن الخدمة</h2>
                 <p class="text-gray-500 leading-relaxed mr-2">
                     نحول حديقتك المنزلية إلى واحة خضراء خاصة بك. نصمم حدائق فاخرة تعكس ذوقك الشخصي وتتناسب مع طراز منزلك. من النوافير المائية إلى مناطق الجلوس، نهتم بكل التفاصيل لخلق مساحة استرخاء مثالية.
                 </p>
             </div>
 
+            <!-- ما نقدمه -->
             <div class="mb-12">
-                <h3 class="text-xl  font-bold mb-6">ما نقدمه</h3>
+                <h3 class="text-xl font-bold mb-6">ما نقدمه</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-gray-100 p-4 rounded-xl flex items-center gap-1 border border-gray-100 shadow-sm">
                         <img src="/imgs/cuircal-true.svg" alt="">
@@ -208,8 +209,8 @@
             </div>
 
             <!-- ما ستحصل عليه -->
-            <div>
-                <h3 class="text-xl  font-bold mb-6">ما ستحصل عليه</h3>
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-6">ما ستحصل عليه</h3>
                 <div class="space-y-4">
                     <div class="flex items-center gap-1 p-5 border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors group">
                         <span class="w-8 h-8 rounded-full bg-[rgba(10,109,102,0.1)] flex items-center justify-center text-[#0a6d66] font-bold border border-gray-100 group-hover:bg-white">1</span>
@@ -237,92 +238,15 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- العمود الجانبي (البطاقات) - يأخذ 4 أعمدة من 12 ليملأ المساحة بشكل أفضل -->
-        <div class="lg:col-span-4 order-2 flex flex-col gap-6 h-fit">
-            
-            <!-- بطاقة عرض السعر - جعلتها تملأ العرض المخصص لها بالكامل -->
-            <div class="bg-gradient-to-br from-[#0a6d66] to-[#a3cc39] rounded-2xl p-8 text-white text-center shadow-lg w-full">
-                <h3 class="text-2xl font-bold mb-4 text-right">احصل على عرض سعر</h3>
-                <p class="text-white/90 mb-8 text-xs leading-relaxed">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لمشروعك</p>
-                <div class="flex flex-col gap-4">
-                    <button class="bg-white text-[#0a6d66] py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors w-full flex items-center justify-center gap-2">
-  <img src="/imgs/call.svg" alt="" class="w-4 h-4">
-  <span>اتصل بنا</span>
-</button>
-                    <button class="border-2 border-white/40 text-white py-3 rounded-lg font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-2">
-  <img src="/imgs/mailwhite.svg" alt="" class="w-4 h-4">
-  <span>راسلنا</span>
-</button>
-                </div>
-            </div>
-
-            <!-- إحصائيات الخدمة -->
-            <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-right w-full">
-                <h4 class="text-lg font-bold mb-4">إحصائيات الخدمة</h4>
-                <div class="space-y-6">
-                    <div class="flex justify-between items-center border-b border-gray-50 pb-2">
-                        <span class="text-gray-500">المشاريع المنفذة</span>
-                        <span class="font-bold text-xl text-[#0a6d66]">+50</span>
-                    </div>
-                     <div class="flex justify-between items-center border-b border-gray-50 pb-2">
-                        <span class="text-gray-500">التقييم</span>
-<span class="font-bold text-xl text-[#0a6d66] flex items-center gap-1">
-  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
-  <img src="/imgs/stars.svg" alt="" class="w-4 h-4">
-</span>                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-gray-500">رضا العملاء</span>
-                        <span class="font-bold text-xl text-[#0a6d66]">98%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- لماذا تختارنا؟ -->
-            <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-right w-full">
-                <h4 class="text-lg font-bold mb-4">لماذا تختارنا؟</h4>
-                <ul class="space-y-3">
-                    <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="/imgs/trueopen.svg" alt="">
-                        خبرة أكثر من 15 عاماً
-                    </li>
-                    <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="/imgs/trueopen.svg" alt="">
-                      فريق مهنندسين محترفين
-                    </li>
-                     <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="/imgs/trueopen.svg" alt="">
-                     معدات حديثة ومتطورة
-                    </li>
-                    <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="/imgs/trueopen.svg" alt="">
-                    ضمان طويل الأمد
-                    </li>
-                     <li class="flex items-center gap-2 text-gray-800 text-sm">
-                        <img src="/imgs/trueopen.svg" alt="">
-                   أسعار تنافسية
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-        
-    </div>
-<div class="mt-16 text-right" >
+           <!-- steps -->
+<div class="mt-16 text-right" id="steps-container">
     <h3 class="text-xl font-bold mb-10">خطوات التنفيذ</h3>
-    
     <div class="space-y-0"> 
-        
         <!-- خطوة 1 -->
-        <div class="relative flex items-start gap-3 pb-12">
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3 pb-12">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    1
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">1</span>
                 <div class="w-[2px] h-[85px] absolute top-5 z-10" style="background: rgba(10, 109, 102, 0.2);"></div>
             </div>
             <div class="pt-1">
@@ -332,11 +256,9 @@
         </div>
 
         <!-- خطوة 2 -->
-        <div class="relative flex items-start gap-3 pb-12">
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3 pb-12">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    2
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">2</span>
                 <div class="w-[2px] h-[85px] absolute top-5 z-10" style="background: rgba(10, 109, 102, 0.2);"></div>
             </div>
             <div class="pt-1">
@@ -345,12 +267,10 @@
             </div>
         </div>
 
-        <!-- خطوة 3 (تم تعديلها لتطابق 1 و 2) -->
-        <div class="relative flex items-start gap-3 pb-12">
+        <!-- خطوة 3 -->
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3 pb-12">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    3
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">3</span>
                 <div class="w-[2px] h-[85px] absolute top-5 z-10" style="background: rgba(10, 109, 102, 0.2);"></div>
             </div>
             <div class="pt-1">
@@ -360,11 +280,9 @@
         </div>
 
         <!-- خطوة 4 -->
-        <div class="relative flex items-start gap-3 pb-12">
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3 pb-12">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    4
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">4</span>
                 <div class="w-[2px] h-[85px] absolute top-5 z-10" style="background: rgba(10, 109, 102, 0.2);"></div>
             </div>
             <div class="pt-1">
@@ -373,12 +291,10 @@
             </div>
         </div>
 
-        <!-- خطوة 5 (جديدة بنفس النمط) -->
-        <div class="relative flex items-start gap-3 pb-12">
+        <!-- خطوة 5 -->
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3 pb-12">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    5
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">5</span>
                 <div class="w-[2px] h-[85px] absolute top-5 z-10" style="background: rgba(10, 109, 102, 0.2);"></div>
             </div>
             <div class="pt-1">
@@ -387,241 +303,258 @@
             </div>
         </div>
 
-        <!-- خطوة 6 (النهاية) -->
-        <div class="relative flex items-start gap-3">
+        <!-- خطوة 6 -->
+        <div class="step-item opacity-0 transform translate-y-8 transition-all duration-700 ease-out relative flex items-start gap-3">
             <div class="relative flex flex-col items-center shrink-0 w-10">
-                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">
-                    6
-                </span>
+                <span class="w-10 h-10 rounded-full bg-[#0a6d66] flex items-center justify-center text-white font-bold z-20 shadow-sm">6</span>
             </div>
             <div class="pt-1">
                 <h4 class="font-semibold text-gray-800 mb-1 text-lg">الصيانة</h4>
                 <p class="text-gray-500 text-sm font-normal leading-relaxed max-w-xs">برنامج صيانة شهري</p>
             </div>
         </div>
-
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            root: null,
+            // threshold: 0.5 تعني أن الأنميشن يبدأ عندما يظهر نصف العنصر تقريباً
+            threshold: 0.5 
+        };
 
-            <div class="mt-16 max-w-3xl ">
-    <h3 class="text-xl font-bold mb-8">الأسئلة الشائعة</h3>
+        const stepObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // تفعيل الظهور للعنصر الذي وصل إليه المستخدم فقط
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    // التوقف عن مراقبة هذا العنصر لأنه ظهر بالفعل
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
 
-    <div class="space-y-4">
-        <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
-            <h4 class="font-semibold mb-2 flex items-center gap-2">
-                <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
-                هل يمكنني اختيار نباتات معينة؟
-            </h4>
-            <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">
-                بالتأكيد! نعمل معك لاختيار النباتات التي تناسب ذوقك.
-            </p>
-        </div>
+        // مراقبة كل خطوة بشكل مستقل
+        document.querySelectorAll('.step-item').forEach(step => {
+            stepObserver.observe(step);
+        });
+    });
+</script>
 
-        <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
-            <h4 class="font-semibold mb-2 flex items-center gap-2">
-                <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
-                كم مدة تنفيذ حديقة منزلية؟
-            </h4>
-            <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">
-                من شهر إلى شهرين حسب حجم الحديقة والتصميم.
-            </p>
-        </div>
-
-        <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
-            <h4 class="font-semibold mb-2 flex items-center gap-2">
-                <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
-                هل توفرون خدمة الصيانة؟
-            </h4>
-            <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">
-                نعم، نقدم عقود صيانة شهرية للحفاظ على جمال حديقتك.
-            </p>
-        </div>
-    </div>
-</div>
-<!-- سكشن خدمات قد تهمك -->
-<div class="mt-24 text-right" dir="rtl">
-    <!-- رأس السكشن -->
-    <div class="flex flex-col items-start mb-10">
-        <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
-            <img width="14px" height="14px" src="/imgs/row-up.svg" alt="">
-            خدمات مشابهة
-        </div>
-        <h3 class="text-2xl font-medium text-gray-800">خدمات قد تهمك</h3>
-    </div>
-
-    <!-- شبكة الخدمات -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- كرت خدمة 1 -->
-        <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div class="relative h-48 overflow-hidden">
-                <img src="/imgs/natural-grass.jpg" alt="تنسيق حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-6">
-                <h4 class="font-semibold text-gray-800 text-lg mb-2">تنسيق الحدائق العامة</h4>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">تصميم وتنفيذ الحدائق العامة والمتنزهات والمساحات الخضراء الحضرية بأعلى المعايير.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-                    <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
-                        اعرف المزيد
-                        <span><img src="/imgs/row.svg" alt=""></span>
-                    </a>
-                    <div class="flex items-center gap-1 text-gray-400 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        2-4 أشهر
+            <!-- الأسئلة الشائعة -->
+            <div class="mt-16 max-w-3xl">
+                <h3 class="text-xl font-bold mb-8">الأسئلة الشائعة</h3>
+                <div class="space-y-4">
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold mb-2 flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
+                            هل يمكنني اختيار نباتات معينة؟
+                        </h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">بالتأكيد! نعمل معك لاختيار النباتات التي تناسب ذوقك.</p>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold mb-2 flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
+                            كم مدة تنفيذ حديقة منزلية؟
+                        </h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">من شهر إلى شهرين حسب حجم الحديقة والتصميم.</p>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                        <h4 class="font-semibold mb-2 flex items-center gap-2">
+                            <span class="w-1 h-1 rounded-full bg-[rgba(10,109,102,1)]"></span>
+                            هل توفرون خدمة الصيانة؟
+                        </h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mr-4 font-normal">نعم، نقدم عقود صيانة شهرية للحفاظ على جمال حديقتك.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- كرت خدمة 2 -->
-        <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div class="relative h-48 overflow-hidden">
-                <img src="/imgs/natural-grass.jpg" alt="أنظمة الري" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <!-- العمود الأيسر: العناصر الثابتة -->
+        <div class="lg:col-span-4 order-2 flex flex-col gap-6 h-fit lg:sticky lg:top-8">
+            <!-- بطاقة عرض السعر -->
+            <div class="bg-gradient-to-br from-[#0a6d66] to-[#a3cc39] rounded-2xl p-8 text-white text-center shadow-lg w-full">
+                <h3 class="text-2xl font-bold mb-4 text-right">احصل على عرض سعر</h3>
+                <p class="text-white/90 mb-8 text-xs leading-relaxed">تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر مخصص لمشروعك</p>
+                <div class="flex flex-col gap-4">
+                    <button class="bg-white text-[#0a6d66] py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors w-full flex items-center justify-center gap-2">
+                        <img src="/imgs/call.svg" alt="" class="w-4 h-4"><span>اتصل بنا</span>
+                    </button>
+                    <button class="border-2 border-white/40 text-white py-3 rounded-lg font-medium hover:bg-white/10 transition-colors w-full flex items-center justify-center gap-2">
+                        <img src="/imgs/mailwhite.svg" alt="" class="w-4 h-4"><span>راسلنا</span>
+                    </button>
+                </div>
             </div>
-            <div class="p-6">
-                <h4 class="font-semibold text-gray-800 text-lg mb-2">تركيب أنظمة الري الذكية</h4>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">حلول ري متطورة وموفرة للمياه تعمل تلقائياً لضمان استدامة وجمال حديقتك طوال العام.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-                    <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
-                        اعرف المزيد
-                        <span><img src="/imgs/row.svg" alt=""></span>
-                    </a>
-                    <div class="flex items-center gap-1 text-gray-400 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        1-2 أسبوع
+
+            <!-- إحصائيات الخدمة -->
+            <div class=" rounded-2xl p-6 border border-[rgba(229,231,235,1)] shadow-sm text-right w-full">
+                <h4 class="text-lg font-bold mb-4">إحصائيات الخدمة</h4>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center border-b border-gray-50 pb-2">
+                        <span class="text-gray-500">المشاريع المنفذة</span>
+                        <span class="font-bold text-xl text-[#0a6d66]">+50</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-50 pb-2">
+                        <span class="text-gray-500">التقييم</span>
+                        <span class="font-bold text-xl text-[#0a6d66] flex items-center gap-1">
+                            <img src="/imgs/stars.svg" alt="" class="w-4 h-4"><img src="/imgs/stars.svg" alt="" class="w-4 h-4"><img src="/imgs/stars.svg" alt="" class="w-4 h-4"><img src="/imgs/stars.svg" alt="" class="w-4 h-4"><img src="/imgs/stars.svg" alt="" class="w-4 h-4">
+                        </span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500">رضا العملاء</span>
+                        <span class="font-bold text-xl text-[#0a6d66]">98%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- لماذا تختارنا؟ -->
+            <div class="bg-[rgba(230,244,244,0.3)] rounded-2xl p-6 border border-gray-100 shadow-sm text-right w-full">
+                <h4 class="text-lg font-bold mb-4">لماذا تختارنا؟</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-2 text-gray-800 text-sm"><img src="/imgs/trueopen.svg" alt=""> خبرة أكثر من 15 عاماً</li>
+                    <li class="flex items-center gap-2 text-gray-800 text-sm"><img src="/imgs/trueopen.svg" alt=""> فريق مهندسين محترفين</li>
+                    <li class="flex items-center gap-2 text-gray-800 text-sm"><img src="/imgs/trueopen.svg" alt=""> معدات حديثة ومتطورة</li>
+                    <li class="flex items-center gap-2 text-gray-800 text-sm"><img src="/imgs/trueopen.svg" alt=""> ضمان طويل الأمد</li>
+                    <li class="flex items-center gap-2 text-gray-800 text-sm"><img src="/imgs/trueopen.svg" alt=""> أسعار تنافسية</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- نهاية Grid الرئيسي -->
+
+    <!-- الأقسام السفلية (خارج نطاق الستيكي) -->
+    <div class="mt-24 text-right" dir="rtl">
+        <div class="flex flex-col items-start mb-10">
+            <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
+                <img width="14px" height="14px" src="/imgs/row-up.svg" alt=""> خدمات مشابهة
+            </div>
+            <h3 class="text-2xl font-medium text-gray-800">خدمات قد تهمك</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- كرت خدمة 1 -->
+            <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/imgs/natural-grass.jpg" alt="تنسيق حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">تنسيق الحدائق العامة</h4>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">تصميم وتنفيذ الحدائق العامة والمتنزهات والمساحات الخضراء الحضرية بأعلى المعايير.</p>
+                    <div class="flex items-center justify-between border-t border-gray-50 pt-4">
+                        <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">اعرف المزيد <span><img src="/imgs/row.svg" alt=""></span></a>
+                        <div class="flex items-center gap-1 text-gray-400 text-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 2-4 أشهر
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- كرت خدمة 2 -->
+            <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/imgs/natural-grass.jpg" alt="أنظمة الري" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">تركيب أنظمة الري الذكية</h4>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">حلول ري متطورة وموفرة للمياه تعمل تلقائياً لضمان استدامة وجمال حديقتك طوال العام.</p>
+                    <div class="flex items-center justify-between border-t border-gray-50 pt-4">
+                        <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">اعرف المزيد <span><img src="/imgs/row.svg" alt=""></span></a>
+                        <div class="flex items-center gap-1 text-gray-400 text-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 1-2 أسبوع
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- كرت خدمة 3 -->
+            <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="/imgs/natural-grass.jpg" alt="صيانة حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-6">
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">صيانة الحدائق الدورية</h4>
+                    <p class="text-gray-500 text-sm mb-6 leading-relaxed">برامج صيانة شاملة تشمل القص، التسميد، ومعالجة النباتات للحفاظ على رونق الحديقة.</p>
+                    <div class="flex items-center justify-between border-t border-gray-50 pt-4">
+                        <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">اعرف المزيد <span><img src="/imgs/row.svg" alt=""></span></a>
+                        <div class="flex items-center gap-1 text-gray-400 text-xs">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> عقود سنوية
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- كرت خدمة 3 -->
-        <div class="group bg-white rounded-3xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
-            <div class="relative h-48 overflow-hidden">
-                <img src="/imgs/natural-grass.jpg" alt="صيانة حدائق" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+    <!-- سكشن المقالات -->
+    <div class="mt-24 text-right">
+        <div class="flex flex-col items-start mb-10">
+            <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
+                <img width="14px" height="14px" src="/imgs/row-up.svg" alt=""> مقالات مفيدة
             </div>
-            <div class="p-6">
-                <h4 class="font-semibold text-gray-800 text-lg mb-2">صيانة الحدائق الدورية</h4>
-                <p class="text-gray-500 text-sm mb-6 leading-relaxed">برامج صيانة شاملة تشمل القص، التسميد، ومعالجة النباتات للحفاظ على رونق الحديقة.</p>
-                <div class="flex items-center justify-between border-t border-gray-50 pt-4">
-                    <a href="#" class="text-[#0a6d66] font-medium text-sm flex items-center gap-1 hover:underline">
-                        اعرف المزيد
-                        <span><img src="/imgs/row.svg" alt=""></span>
-                    </a>
-                    <div class="flex items-center gap-1 text-gray-400 text-xs">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        عقود سنوية
+            <h3 class="text-2xl font-medium text-gray-800">مقالات مرتبطة بالقطاع</h3>
+            <p class="text-gray-500 text-sm mt-2 font-normal">تعرف أكثر على تفاصيل وخبراتنا في هذا المجال</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- مقال 1 -->
+            <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div class="relative h-56"><img src="/imgs/garden-private.jpg" class="w-full h-full object-cover" alt=""><div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm"><img width="14px" height="14px" src="/imgs/clock.svg" alt=""> 5 دقائق</div></div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg> 15 مارس 2026</div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">أفضل ممارسات صيانة الملاعب الرياضية في الصيف</h4>
+                    <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">نصائح وإرشادات للحفاظ على جودة الملاعب خلال فصل الصيف الحار.</p>
+                    <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all"><span><img src="/imgs/row.svg" alt=""></span> اقرأ المزيد</a>
+                </div>
+            </div>
+            <!-- كرت مقال 2 -->
+            <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div class="relative h-56">
+                    <img src="/imgs/shoes.jpg" class="w-full h-full object-cover" alt="معايير FIFA">
+                    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                        <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
+                        10 دقائق
                     </div>
                 </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        25 فبراير 2026
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تصميم الملاعب الرياضية وفق معايير FIFA</h4>
+                    <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">شرح مفصل لمتطلبات ومعايير FIFA في تصميم وإنشاء ملاعب كرة القدم.</p>
+                    <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
+                        <span><img src="/imgs/row.svg" alt=""></span>
+                        اقرأ المزيد 
+                        
+                    </a>
+                </div>
+            </div>
+
+            <!-- كرت مقال 3 -->
+            <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div class="relative h-56">
+                    <img src="/imgs/football.jpg" class="w-full h-full object-cover" alt="إضاءة الملاعب">
+                    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
+                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="">
+                        7 دقائق
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        1 فبراير 2026
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تقنيات الإضاءة الحديثة للملاعب الرياضية</h4>
+                    <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">كيف تختار نظام الإضاءة المناسب للملاعب لتحقيق أفضل أداء.</p>
+                    <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
+                        <span><img src="/imgs/row.svg" alt=""></span>
+                        اقرأ المزيد 
+                    </a>
+                </div>
             </div>
         </div>
-
+        <div class="flex justify-center"><button class="px-10 py-3 border-2 border-[#0a6d66] text-[#0a6d66] rounded-xl font-bold text-sm hover:bg-[#0a6d66] hover:text-white transition-all shadow-sm">عرض جميع المقالات</button></div>
     </div>
-</div>
-<!-- سكشن المقالات -->
-<div class="mt-24 text-right">
-    <!-- رأس السكشن -->
-    <div class="flex flex-col items-start mb-10">
-        <div class="flex items-center gap-2 bg-[rgba(10,109,102,0.1)] text-[#0a6d66] px-4 py-2 rounded-full text-xs font-medium mb-3">
-            <img width="14px" height="14px" src="/imgs/row-up.svg" alt="">
-            مقالات مفيدة
-        </div>
-        <h3 class="text-2xl font-medium text-gray-800">مقالات مرتبطة بالقطاع</h3>
-        <p class="text-gray-500 text-sm mt-2 font-normal">تعرف أكثر على تفاصيل وخبراتنا في هذا المجال</p>
-    </div>
-
-    <!-- شبكة المقالات -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        
-        <!-- كرت مقال 1 -->
-        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div class="relative h-56">
-                <img src="/imgs/garden-private.jpg" class="w-full h-full object-cover" alt="صيانة الملاعب">
-                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
-                    5 دقائق
-                </div>
-            </div>
-            <div class="p-6">
-                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    15 مارس 2026
-                </div>
-                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">أفضل ممارسات صيانة الملاعب الرياضية في الصيف</h4>
-                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">نصائح وإرشادات للحفاظ على جودة الملاعب خلال فصل الصيف الحار.</p>
-                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="/imgs/row.svg" alt=""></span>
-                    اقرأ المزيد 
-                </a>
-            </div>
-        </div>
-
-        <!-- كرت مقال 2 -->
-        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div class="relative h-56">
-                <img src="/imgs/shoes.jpg" class="w-full h-full object-cover" alt="معايير FIFA">
-                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                    <img width="14px" height="14px" src="/imgs/clock.svg" alt="الوقت">
-                    10 دقائق
-                </div>
-            </div>
-            <div class="p-6">
-                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    25 فبراير 2026
-                </div>
-                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تصميم الملاعب الرياضية وفق معايير FIFA</h4>
-                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">شرح مفصل لمتطلبات ومعايير FIFA في تصميم وإنشاء ملاعب كرة القدم.</p>
-                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="/imgs/row.svg" alt=""></span>
-                    اقرأ المزيد 
-                    
-                </a>
-            </div>
-        </div>
-
-        <!-- كرت مقال 3 -->
-        <div class="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div class="relative h-56">
-                <img src="/imgs/football.jpg" class="w-full h-full object-cover" alt="إضاءة الملاعب">
-                <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-[10px] font-medium flex items-center gap-1 shadow-sm">
-                   <img width="14px" height="14px" src="/imgs/clock.svg" alt="">
-                    7 دقائق
-                </div>
-            </div>
-            <div class="p-6">
-                <div class="flex items-center gap-2 text-gray-400 text-[10px] mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    1 فبراير 2026
-                </div>
-                <h4 class="font-bold text-gray-800 text-lg mb-2 leading-tight">تقنيات الإضاءة الحديثة للملاعب الرياضية</h4>
-                <p class="text-gray-500 text-[11px] font-normal mb-6 leading-relaxed">كيف تختار نظام الإضاءة المناسب للملاعب لتحقيق أفضل أداء.</p>
-                <a href="#" class="text-[#0a6d66] font-medium text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    <span><img src="/imgs/row.svg" alt=""></span>
-                    اقرأ المزيد 
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- زر عرض جميع المقالات -->
-    <div class="flex justify-center">
-        <button class="px-10 py-3 border-2 border-[#0a6d66] text-[#0a6d66] rounded-xl font-bold text-sm hover:bg-[#0a6d66] hover:text-white transition-all shadow-sm">
-            عرض جميع المقالات
-        </button>
-    </div>
-</div>
 </section>
 
 
@@ -659,7 +592,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
                     تحميل الملف التعريفي
                 </a>
-                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                <a href="/bankaccount.html" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
                     <img width="20px" height="20px" src="/imgs/company.svg" alt="">
                    الحسابات البنكية
                 </a>

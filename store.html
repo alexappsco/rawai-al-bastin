@@ -26,38 +26,87 @@
 
   <body class="bg-gray-50 min-h-screen">
 
-   <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
-  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg  bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
+  <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
+  <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
 
-    <a href="/home.html" class="shrink-0">
-      <img src="/imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
+    <a href="home.html" class="shrink-0">
+      <img src="imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
     </a>
 
-    <nav class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
-      <a href="/home.html" class="text-xs xl:text-sm font-medium text-[rgba(10,109,102,1)] border-b-2 border-[rgba(10,109,102,1)] pb-1 whitespace-nowrap">الرئيسية</a>
-      <a href="/about.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">من نحن</a>
-      <a href="/sectors.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">القطاعات</a>
-      <a href="/solutions.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">الخدمات</a>
-      <a href="/store.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المتجر</a>
-      <a href="/projects.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المشاريع</a>
-      <a href="/blog.html" class="text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition whitespace-nowrap">المدونة</a>
+    <nav id="desktop-nav" class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
+      
+      <a href="home.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        الرئيسية
+      </a>
+
+      <a href="/about.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        من نحن
+      </a>
+
+      <div class="relative group">
+        <a href="/sectors/index.html" class="nav-link flex items-center gap-1 text-xs xl:text-sm font-medium text-gray-700 group-hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap pb-1">
+          <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+            <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+          </div>
+          القطاعات
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </a>
+        
+        <div class="absolute right-0 mt-0 w-56 bg-white rounded-2xl shadow-xl border border-gray-50 py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+            <a href="/sectors/details/sport.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-[rgba(10,109,102,0.12)] hover:text-[rgba(10,109,102,1)] transition-colors">المنشآت الرياضية</a>
+          <a href="/sectors/details/scape.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-[rgba(10,109,102,0.12)] hover:text-[rgba(10,109,102,1)] transition-colors">تنسيق الحدائق</a>
+          <a href="/sectors/details/scape.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-[rgba(10,109,102,0.12)] hover:text-[rgba(10,109,102,1)] transition-colors">البنية التحتية</a>
+          <a href="/sectors/details/scape.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-[rgba(10,109,102,0.12)] hover:text-[rgba(10,109,102,1)] transition-colors">المقاولات العامة</a>
+          <a href="/sectors/details/greenhouses.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-[rgba(10,109,102,0.12)] hover:text-[rgba(10,109,102,1)] transition-colors">البيوت المحمية</a>
+        </div>
+      </div>
+
+      <a href="/solutions/index.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        الخدمات
+      </a>
+
+      <a href="/store.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        المتجر
+      </a>
+
+      <a href="/projects.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        المشاريع
+      </a>
+
+      <a href="/blog/index.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+        <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
+          <img src="imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
+        </div>
+        المدونة
+      </a>
     </nav>
 
     <div class="flex items-center gap-2 xl:gap-3 shrink-0">
-      
       <div class="hidden xl:flex items-center gap-1 ml-10">
-        <!-- <a href="#" class="text-sm font-medium text-white bg-[rgba(10,109,102,1)] px-4 py-2.5 rounded-md hover:opacity-90 transition shadow-sm whitespace-nowrap">
-          تواصل معنا
-        </a> -->
         <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
           احصل على سعر مشروعك
         </a>
-         <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
-        <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
-      </button>
+        <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
+          <img src="imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+        </button>
       </div>
-
-     
 
       <div class="hidden lg:flex items-center bg-[#f4f7f7] p-1 rounded-full border border-[#eceef2] ml-1 xl:ml-4">
         <button class="px-3 xl:px-4 py-1 text-[10px] xl:text-sm font-medium text-white bg-[rgba(10,109,102,1)] rounded-full shadow-sm">عربي</button>
@@ -74,9 +123,9 @@
 
   <div id="mobile-sidebar" class="fixed inset-0 z-[100] translate-x-full transition-transform duration-300 lg:hidden">
     <div id="mobile-menu-close-overlay" class="absolute inset-0 bg-black/40"></div>
-    <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col">
+    <div class="absolute right-0 top-0 bottom-0 w-72 bg-white p-6 shadow-2xl flex flex-col overflow-y-auto">
       <div class="flex justify-between items-center mb-8 pb-4 border-b">
-        <img src="/imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
+        <img src="imgs/logo.svg" alt="شعار" class="h-10 w-auto" />
         <button id="mobile-menu-close-btn" class="p-2 text-gray-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -84,20 +133,37 @@
         </button>
       </div>
 
-      <nav class="flex flex-col gap-4 mb-auto text-right">
-        <a href="/home.html" class="text-base font-bold text-[rgba(10,109,102,1)]">الرئيسية</a>
-        <a href="/about.html" class="text-base font-medium text-gray-700">من نحن</a>
-        <a href="/sectors/index.html" class="text-base font-medium text-gray-700">القطاعات</a>
-        <a href="/solutions.html" class="text-base font-medium text-gray-700">الخدمات</a>
-        <a href="/store.html" class="text-base font-medium text-gray-700">المتجر</a>
-        <a href="/projects.html" class="text-base font-medium text-gray-700">المشاريع</a>
-        <a href="/blog.html" class="text-base font-medium text-gray-700">المدونة</a>
+      <nav id="mobile-nav" class="flex flex-col gap-4 mb-auto text-right">
+        <a href="home.html" class="nav-link-mobile text-base font-medium text-gray-700">الرئيسية</a>
+        <a href="/about.html" class="nav-link-mobile text-base font-medium text-gray-700">من نحن</a>
+        
+        <div class="flex flex-col border-b border-gray-50 pb-2">
+          <div class="flex items-center justify-between w-full">
+            <a href="/sectors/index.html" class="nav-link-mobile text-base font-medium text-gray-700 flex-1 text-right">القطاعات</a>
+            <button id="mobile-sectors-btn" class="p-2 bg-gray-50 rounded-md">
+              <svg id="sectors-icon" class="w-4 h-4 transition-transform text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="mobile-sectors-menu" class="hidden flex flex-col gap-3 mt-3 pr-4 border-r-2 border-gray-100">
+            <a href="#" class="text-sm font-medium text-gray-600 py-1 hover:text-[rgba(10,109,102,1)]">المنشآت الرياضية</a>
+            <a href="#" class="text-sm font-medium text-gray-600 py-1 hover:text-[rgba(10,109,102,1)]">تنسيق الحدائق</a>
+            <a href="#" class="text-sm font-medium text-gray-600 py-1 hover:text-[rgba(10,109,102,1)]">البنية التحتية</a>
+            <a href="#" class="text-sm font-medium text-gray-600 py-1 hover:text-[rgba(10,109,102,1)]">المقاولات العامة</a>
+            <a href="#" class="text-sm font-medium text-gray-600 py-1 hover:text-[rgba(10,109,102,1)]">البيوت المحمية</a>
+          </div>
+        </div>
+
+        <a href="/solutions/index.html" class="nav-link-mobile text-base font-medium text-gray-700">الخدمات</a>
+        <a href="/store.html" class="nav-link-mobile text-base font-medium text-gray-700">المتجر</a>
+        <a href="/projects.html" class="nav-link-mobile text-base font-medium text-gray-700">المشاريع</a>
+        <a href="/blog/index.html" class="nav-link-mobile text-base font-medium text-gray-700">المدونة</a>
       </nav>
 
-      <div class="pt-6 border-t flex flex-col gap-3">
-        <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg ">تواصل معنا</a>
-        <a href="#" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg ">احصل على سعر مشروعك</a>
-        
+      <div class="pt-6 border-t flex flex-col gap-3 mt-6">
+        <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg">تواصل معنا</a>
+        <a href="#" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg">احصل على سعر مشروعك</a>
         <div class="flex items-center bg-[#f4f7f7] p-0.5 rounded-full border border-[#eceef2] w-28 mx-auto mt-2">
             <button class="flex-1 py-1 text-[10px] font-medium text-white bg-[rgba(10,109,102,1)] rounded-full">عربي</button>
             <button class="flex-1 py-1 text-[10px] font-medium text-gray-500">EN</button>
@@ -106,8 +172,58 @@
     </div>
   </div>
 </header>
+
+<style>
+  .nav-active {
+    color: rgba(10, 109, 102, 1) !important;
+  }
+  
+  .nav-active-mobile {
+    color: rgba(10, 109, 102, 1) !important;
+    font-weight: 700 !important;
+  }
+</style>
+
+<script>
+  const sectorsBtn = document.getElementById('mobile-sectors-btn');
+  const sectorsMenu = document.getElementById('mobile-sectors-menu');
+  const sectorsIcon = document.getElementById('sectors-icon');
+
+  if(sectorsBtn) {
+    sectorsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      sectorsMenu.classList.toggle('hidden');
+      sectorsIcon.classList.toggle('rotate-180');
+    });
+  }
+
+  function updateActiveLinks() {
+    const currentPath = window.location.pathname;
+    
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const href = link.getAttribute('href');
+      
+      if (currentPath.endsWith(href) || (currentPath === '/' && href === 'home.html')) {
+        link.classList.add('nav-active');
+      } else {
+        link.classList.remove('nav-active');
+      }
+    });
+
+    document.querySelectorAll('.nav-link-mobile').forEach(link => {
+      const href = link.getAttribute('href');
+      if (currentPath.endsWith(href) || (currentPath === '/' && href === 'home.html')) {
+        link.classList.add('nav-active-mobile');
+      } else {
+        link.classList.remove('nav-active-mobile');
+      }
+    });
+  }
+
+  window.addEventListener('load', updateActiveLinks);
+</script>
 <!-- Hero Section -->
-<section class="py-16 md:py-24 relative animate-on-scroll"
+<section class="py-16 md:py-24 relative animate-on-scroll mt-6"
     style="background: linear-gradient(180deg, #E6F4F4 0%, #EAF6F6 7.14%, #EDF7F7 14.29%, #F1F9F9 21.43%, #F4FAFA 28.57%, #F8FCFC 35.71%, #FBFDFD 42.86%, #FFFFFF 50%, #FFFFFF 100%);">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
 
@@ -283,9 +399,9 @@ class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-whit
             <button class="flex-1 bg-[rgba(10,109,102,1)] text-white py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-[#08554f] transition shadow-md">
                 أضف للسلة
             </button>
-            <button class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition">
-                التفاصيل
-            </button>
+            <a href="productdetails.html" class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition text-center inline-block">
+    التفاصيل
+</a>
         </div>
 
     </div>
@@ -348,9 +464,9 @@ class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-whit
             <button class="flex-1 bg-[rgba(10,109,102,1)] text-white py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-[#08554f] transition shadow-md">
                 أضف للسلة
             </button>
-            <button class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition">
-                التفاصيل
-            </button>
+            <a href="productdetails.html" class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition text-center inline-block">
+    التفاصيل
+</a>
         </div>
 
     </div>
@@ -413,9 +529,9 @@ class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-whit
             <button class="flex-1 bg-[rgba(10,109,102,1)] text-white py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-[#08554f] transition shadow-md">
                 أضف للسلة
             </button>
-            <button class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition">
+            <a href="productdetails.html" class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition text-center inline-block">
                 التفاصيل
-            </button>
+            </a>
         </div>
 
     </div>
@@ -608,9 +724,9 @@ class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-whit
             <button class="flex-1 bg-[rgba(10,109,102,1)] text-white py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-[#08554f] transition shadow-md">
                 أضف للسلة
             </button>
-            <button class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition">
-                التفاصيل
-            </button>
+           <a href="productdetails.html" class="flex-1 border border-[#eceef2] text-gray-500 py-2 rounded-xl text-[11px] md:text-xs font-semibold hover:bg-gray-50 transition text-center inline-block">
+    التفاصيل
+</a>
         </div>
 
     </div>
@@ -735,7 +851,7 @@ class="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-whit
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
                     تحميل الملف التعريفي
                 </a>
-                <a href="#" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
+                <a href="/bankaccount.html" class="inline-flex items-center justify-center gap-2 border-2 mt-5 border-[#b0d2ce] text-[rgba(10,109,102,1)] px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] hover:text-white hover:border-[rgba(10,109,102,1)] transition-all ">
                     <img width="20px" height="20px" src="/imgs/company.svg" alt="">
                    الحسابات البنكية
                 </a>
