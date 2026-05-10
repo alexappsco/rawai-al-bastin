@@ -172,3 +172,30 @@
 
 
  
+
+
+
+
+
+  /* تعريف حركة الطفو */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px); /* الارتفاع للأعلى */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* تطبيق الحركة على الحاويات */
+.floating-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* إضافة تأخير بسيط للصورة الثانية لتبدو الحركات غير متطابقة (تأثير عشوائي) */
+.delay-anim {
+    animation-delay: 1s;
+}

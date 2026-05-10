@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/png" sizes="32x32" href="imgs/logobastain.png">
         <link rel="shortcut icon" href="imgs/logobastain.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
@@ -282,20 +284,18 @@
 
               
             </div>
-           <div class="hidden lg:block w-full lg:w-1/2 relative h-[420px] md:h-[520px] lg:h-[560px] mt-10 lg:mt-0">
-    <div class="absolute bottom-0 right-2 lg:right-6 w-[50%] h-[78%] rounded-3xl overflow-hidden shadow-xl z-30 hidden-anim slide-right" style="transition-delay: 0.2s;">
+          <div class="hidden lg:block w-full lg:w-1/2 relative h-[420px] md:h-[520px] lg:h-[560px] mt-10 lg:mt-0">
+    
+    <!-- الصورة الأولى: أضفنا كلاس floating-anim -->
+    <div class="absolute bottom-0 right-2 lg:right-6 w-[50%] h-[78%] rounded-3xl overflow-hidden shadow-xl z-30 floating-anim" style="transition-delay: 0.2s;">
         <img src="imgs/hero.jpg" alt="إنشاءات البنية التحتية" class="w-full h-full object-cover" />
     </div>
 
-    <div class="absolute top-0 left-2 lg:left-6 w-[55%] h-[75%] rounded-3xl overflow-hidden shadow-2xl z-20 hidden-anim slide-left" style="transition-delay: 0.4s;">
+    <!-- الصورة الثانية: أضفنا كلاس floating-anim وكلاس delay-anim لكسر التزامن -->
+    <div class="absolute top-0 left-2 lg:left-6 w-[55%] h-[90%] rounded-3xl overflow-hidden shadow-2xl z-20 floating-anim delay-anim" style="transition-delay: 0.4s;">
         <img src="imgs/hero-2.jpg" alt="تنسيق الحدائق" class="w-full h-full object-cover" />
     </div>
-
-   <div class="absolute top-1/2 left-[40%] transform -translate-x-1/2 -translate-y-1/2 z-40 bg-white rounded-2xl shadow-xl p-4 w-32 text-center floating-anim hidden-anim fade-up" style="transition-delay: 0.6s;">
-    <h4 class="text-[32px] text-[rgba(10,109,102,1)] leading-none mb-1 counter" data-target="65">0</h4>
-    <p class="text-xs text-gray-500 ">ملعب رياضي</p>
-</div>
-
+    
 </div>
 
         </div>
@@ -476,7 +476,7 @@
             </div>
 
             <!-- SMALL CARDS -->
-         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:col-span-1 h-full">
+         <div class="grid grid-cols-2 md:grid-cols-2 gap-6 lg:col-span-1 h-full">
                 
     <div 
   class="border p-8 rounded-[28px] shadow-sm hidden-anim fade-up flex flex-col justify-start text-right h-full min-h-[250px]"
@@ -605,10 +605,22 @@
 </div>
 
         </div>
-        <div class="flex flex-wrap justify-center gap-5 mt-14 hidden-anim fade-up opacity-80">
+      <!-- CSS -->
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<div class="flex items-center justify-center gap-1  mt-14 hidden-anim fade-up opacity-80 flex-nowrap overflow-x-auto hide-scrollbar px-2">
 
     <!-- ITEM 1 -->
-    <div class="flex items-center gap-1 text-gray-500 text-[11px] font-normal">
+    <div class="flex items-center gap-1 text-gray-500 text-[10px] sm:text-[11px] font-normal whitespace-nowrap shrink-0">
         <span class="w-4 h-4 flex items-center justify-center">
             <img src="imgs/true.svg" class="w-4 h-4 object-contain">
         </span>
@@ -616,10 +628,10 @@
     </div>
 
     <!-- DIVIDER -->
-    <img src="imgs/column.svg" class="w-1 h-5 ">
+    <img src="imgs/column.svg" class="w-1 h-5 shrink-0">
 
     <!-- ITEM 2 -->
-    <div class="flex items-center gap-1 text-gray-500 text-[11px] font-normal">
+    <div class="flex items-center gap-1 text-gray-500 text-[10px] sm:text-[11px] font-normal whitespace-nowrap shrink-0">
         <span class="w-4 h-4 flex items-center justify-center">
             <img src="imgs/madalia.svg" class="w-4 h-4 object-contain">
         </span>
@@ -627,10 +639,10 @@
     </div>
 
     <!-- DIVIDER -->
-    <img src="imgs/column.svg" class="w-1 h-5">
+    <img src="imgs/column.svg" class="w-1 h-5 shrink-0">
 
     <!-- ITEM 3 -->
-    <div class="flex items-center gap-1 text-gray-500 text-[11px] font-normal">
+    <div class="flex items-center gap-1 text-gray-500 text-[10px] sm:text-[11px] font-normal whitespace-nowrap shrink-0">
         <span class="w-4 h-4 flex items-center justify-center">
             <img src="imgs/plant2.svg" class="w-4 h-4 object-contain">
         </span>
@@ -880,7 +892,7 @@
             </p>
         </div>
 
-    <div class="relative rounded-[32px] overflow-hidden shadow-2xl mb-10 group min-h-[400px] md:h-[460px]">
+    <div class="relative rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl mb-10 group min-h-[300px] sm:min-h-[340px] md:h-[420px]">
 
     <!-- IMAGE -->
     <img 
@@ -892,33 +904,40 @@
     <!-- GREEN OVERLAY -->
     <div class="absolute inset-0 bg-[#0a6d66]/50"></div>
 
-    <!-- ENHANCED BLACK GRADIENT (التعديل هنا) -->
+    <!-- BLACK GRADIENT -->
     <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
     <!-- CONTENT -->
-    <div class="relative h-full z-10 p-8 md:p-16 flex flex-col justify-center items-start text-left text-white">
+    <div class="relative h-full z-10 p-5 sm:p-7 md:p-16 flex flex-col justify-end md:justify-center items-start text-white">
         
-        <div class="absolute top-8 left-8 w-14 h-14 rounded-full border border-white/30 flex items-center justify-center text-xl backdrop-blur-sm">
+        <!-- NUMBER -->
+        <div class="absolute top-5 left-5 sm:top-7 sm:left-7 md:top-8 md:left-8 w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border border-white/30 flex items-center justify-center text-base sm:text-lg md:text-xl backdrop-blur-sm">
             01
         </div>
 
-        <div class="max-w-xl text-justify">
+        <div class="max-w-xl text-right md:text-justify">
 
-            <div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-6"> 
-                <img src="imgs/cup-white.svg" alt="">
+            <!-- ICON -->
+            <div class="w-11 h-11 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-4"> 
+                <img src="imgs/cup-white.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
             </div>
 
-            <h3 class="text-3xl md:text-4xl mb-4 font-bold text-start">
+            <!-- TITLE -->
+            <h3 class="text-2xl sm:text-3xl md:text-4xl mb-3 font-bold leading-snug text-right md:text-start">
                 المنشآت الرياضية
             </h3>
 
-            <p class="text-lg mb-8 leading-loose font-normal text-justify">
+            <!-- DESCRIPTION -->
+            <p class="text-sm sm:text-base md:text-lg mb-5 leading-[1.9] font-normal text-right md:text-justify">
                 تصميم وتنفيذ الملاعب والصالات الرياضية بأحدث المعايير العالمية والمواصفات الدولية المعتمدة.
             </p>
             
-            <a href="#" class="inline-flex items-center gap-3 bg-white text-[#0a6d66] px-6 py-3 rounded-xl hover:bg-[#b8d24b] hover:text-white transition-all transform hover:translate-x-2">
+            <!-- BUTTON -->
+            <a href="#" class="inline-flex items-center gap-2 sm:gap-3 bg-white text-[#0a6d66] px-5 sm:px-6 py-3 rounded-xl hover:bg-[#b8d24b] hover:text-white transition-all transform hover:translate-x-2 text-sm sm:text-base">
                 <span>استكشف المزيد</span>
-                <span><img src="imgs/row.svg" alt=""></span>
+                <span>
+                    <img src="imgs/row.svg" alt="" class="w-4 h-4 sm:w-auto sm:h-auto">
+                </span>
             </a>
 
         </div>
@@ -1118,100 +1137,276 @@
 
 
 
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 <section class="py-20" style="background: rgba(255, 255, 255, 1);">
     <div class="container mx-auto px-4 lg:px-[60px]">
-        
-        <!-- الهيدر الخاص بالسكشن -->
+
+        <!-- الهيدر -->
         <div class="text-center mb-16">
             <div class="inline-flex items-center bg-[#e2f0ee] text-[#0a6d66] px-3 py-2.5 rounded-full text-[14px] mb-5 font-medium">
-               فريق العمل
+                فريق العمل
             </div>
-            <h2 class=" md:text-[48px] text-[#1a1a1a] mb-4 leading-tight font-medium">فريق متخصص ومحترف</h2>
+
+            <h2 class="md:text-[48px] text-[#1a1a1a] mb-4 leading-tight font-medium">
+                فريق متخصص ومحترف
+            </h2>
+
             <p class="text-gray-500 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-normal">
-               فريق متخصص يعمل على تنفيذ مشاريعك بأعلى معايير الجودة والاحترافية
+                فريق متخصص يعمل على تنفيذ مشاريعك بأعلى معايير الجودة والاحترافية
             </p>
         </div>
 
-        <!-- شبكة الكروت -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            
-<div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
-    <div class="relative h-[300px] overflow-hidden">
-        <img src="imgs/team1.jpg" alt="م. عبدالله السعيد" class="w-full h-full object-cover">
-        <!-- الأيقونات في المنتصف -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.02h.003c4.369 0 7.926-3.559 7.93-7.93a7.856 7.856 0 0 0-2.325-5.688zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg></a>
-        </div>
-    </div>
-    <!-- النصوص لليسار -->
-    <div class="p-5 text-right">
-        <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">م. عبدالله السعيد</h3>
-        <p class="text-gray-400 text-sm font-normal">المدير التنفيذي</p>
-    </div>
-</div>
-<div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
-    <div class="relative h-[300px] overflow-hidden">
-        <img src="imgs/team2.jpg" alt="م. عبدالله السعيد" class="w-full h-full object-cover">
-        <!-- الأيقونات في المنتصف -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.02h.003c4.369 0 7.926-3.559 7.93-7.93a7.856 7.856 0 0 0-2.325-5.688zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg></a>
-        </div>
-    </div>
-    <!-- النصوص لليسار -->
-    <div class="p-5 text-right">
-        <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">م. سارة العتيبي</h3>
-        <p class="text-gray-400 text-sm font-normal">مديرة العمليات</p>
-    </div>
-</div>
-<div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
-    <div class="relative h-[300px] overflow-hidden">
-        <img src="imgs/team3.jpg" alt="م. عبدالله السعيد" class="w-full h-full object-cover">
-        <!-- الأيقونات في المنتصف -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.02h.003c4.369 0 7.926-3.559 7.93-7.93a7.856 7.856 0 0 0-2.325-5.688zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg></a>
-        </div>
-    </div>
-    <!-- النصوص لليسار -->
-    <div class="p-5 text-right">
-        <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">م.  خدلد المطيري</h3>
-        <p class="text-gray-400 text-sm font-normal">مدير المشاريع</p>
-    </div>
-</div>
-<div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
-    <div class="relative h-[300px] overflow-hidden">
-        <img src="imgs/team4.jpg" alt="م. عبدالله السعيد" class="w-full h-full object-cover">
-        <!-- الأيقونات في المنتصف -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.02h.003c4.369 0 7.926-3.559 7.93-7.93a7.856 7.856 0 0 0-2.325-5.688zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
-            <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg></a>
-        </div>
-    </div>
-    <!-- النصوص لليسار -->
-    <div class="p-5 text-right">
-        <h3 class="text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">م.   احمد الدوسري</h3>
-        <p class="text-gray-400 text-sm font-normal">مدير التصميم و التنفيذ</p>
-    </div>
-</div>
+        <!-- السلايدر -->
+        <div class="relative">
 
+            <!-- Swiper -->
+            <div class="swiper teamSwiper">
+
+                <div class="swiper-wrapper">
+
+                    <!-- Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
+
+                            <div class="relative h-[260px] sm:h-[320px] overflow-hidden">
+                                <img src="imgs/team1.jpg" alt="م. عبدالله السعيد" class="w-full h-full object-cover">
+
+                                <!-- Social -->
+                                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+
+                                    <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Z"/>
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0"/>
+                                        </svg>
+                                    </a>
+
+                                    <a href="#" class="w-9 h-9 bg-white rounded-md flex items-center justify-center shadow-sm text-[#0a6d66] hover:bg-[#0a6d66] hover:text-white transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063"/>
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="p-4 sm:p-5 text-right">
+                                <h3 class="text-sm sm:text-lg md:text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">
+                                    م. عبدالله السعيد
+                                </h3>
+
+                                <p class="text-gray-400 text-xs sm:text-sm font-normal">
+                                    المدير التنفيذي
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
+
+                            <div class="relative h-[260px] sm:h-[320px] overflow-hidden">
+                                <img src="imgs/team2.jpg" alt="م. سارة العتيبي" class="w-full h-full object-cover">
+                            </div>
+
+                            <div class="p-4 sm:p-5 text-right">
+                                <h3 class="text-sm sm:text-lg md:text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">
+                                    م. سارة العتيبي
+                                </h3>
+
+                                <p class="text-gray-400 text-xs sm:text-sm font-normal">
+                                    مديرة العمليات
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
+
+                            <div class="relative h-[260px] sm:h-[320px] overflow-hidden">
+                                <img src="imgs/team3.jpg" alt="م. خالد المطيري" class="w-full h-full object-cover">
+                            </div>
+
+                            <div class="p-4 sm:p-5 text-right">
+                                <h3 class="text-sm sm:text-lg md:text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">
+                                    م. خالد المطيري
+                                </h3>
+
+                                <p class="text-gray-400 text-xs sm:text-sm font-normal">
+                                    مدير المشاريع
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
+
+                            <div class="relative h-[260px] sm:h-[320px] overflow-hidden">
+                                <img src="imgs/team4.jpg" alt="م. احمد الدوسري" class="w-full h-full object-cover">
+                            </div>
+
+                            <div class="p-4 sm:p-5 text-right">
+                                <h3 class="text-sm sm:text-lg md:text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">
+                                    م. احمد الدوسري
+                                </h3>
+
+                                <p class="text-gray-400 text-xs sm:text-sm font-normal">
+                                    مدير التصميم والتنفيذ
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-[12px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all duration-300 group">
+
+                            <div class="relative h-[260px] sm:h-[320px] overflow-hidden">
+                                <img src="imgs/team5.jpg" alt="م. محمد العتيبي" class="w-full h-full object-cover">
+                            </div>
+
+                            <div class="p-4 sm:p-5 text-right">
+                                <h3 class="text-sm sm:text-lg md:text-xl font-bold text-[#1a1a1a] mb-1 group-hover:text-[#0a6d66] transition-colors duration-300">
+                                    م. محمد العتيبي
+                                </h3>
+
+                                <p class="text-gray-400 text-xs sm:text-sm font-normal">
+                                    مدير التطوير
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- الأسهم -->
+                <div class="swiper-button-next !text-[#0a6d66]"></div>
+                <div class="swiper-button-prev !text-[#0a6d66]"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0"></div>
+
+            </div>
         </div>
 
-        <!-- تذييل القسم -->
-        <div class="text-center">
-            <p class="text-gray-500 mb-6 font-normal">لديك استفسار أو تحتاج لمساعدة؟ تواصل مع فريقنا  مباشرة</p>
-            <a href="#" class="inline-block bg-[#0a6d66] text-white px-6 py-3 rounded-[14px] font-medium shadow-[0_10px_20px_rgba(10,109,102,0.2)] hover:bg-[#085a54] transition-all">
-    تواصل معنا الآن
-</a>
+        <!-- الفوتر -->
+        <div class="text-center mt-16">
+            <p class="text-gray-500 mb-6 font-normal">
+                لديك استفسار أو تحتاج لمساعدة؟ تواصل مع فريقنا مباشرة
+            </p>
+
+            <a href="#"
+               class="inline-block bg-[#0a6d66] text-white px-6 py-3 rounded-[14px] font-medium shadow-[0_10px_20px_rgba(10,109,102,0.2)] hover:bg-[#085a54] transition-all">
+                تواصل معنا الآن
+            </a>
         </div>
 
     </div>
 </section>
+
+<style>
+    .teamSwiper {
+        padding-bottom: 60px !important;
+    }
+
+    .teamSwiper .swiper-button-next,
+    .teamSwiper .swiper-button-prev {
+        width: 44px;
+        height: 44px;
+        background: #fff;
+        border-radius: 999px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        border: 1px solid rgba(229,231,235,1);
+    }
+
+    .teamSwiper .swiper-button-next::after,
+    .teamSwiper .swiper-button-prev::after {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .teamSwiper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .teamSwiper .swiper-pagination-bullet-active {
+        background: #0a6d66;
+    }
+</style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".teamSwiper", {
+
+        loop: true,
+
+        speed: 800,
+
+        spaceBetween: 16,
+
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints: {
+
+            0: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+            },
+
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            }
+        }
+
+    });
+</script>
 
 <section id="projects-section" class="py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,rgba(230,244,244,0.2)_100%)]">
   <div class="container mx-auto px-4 lg:px-[30px]">
@@ -1719,10 +1914,10 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 mb-20">
+        <div class="flex lg:grid lg:grid-cols-4 gap-4 lg:gap-7 mb-20 overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-2 hide-scrollbar">
             
     <!-- كارد -->
-    <div class="bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
+    <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
         
         <div class="relative h-[220px] overflow-hidden">
             
@@ -1749,7 +1944,7 @@
     </div>
 
 
-    <div class="bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
+   <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
         <div class="relative h-[220px] overflow-hidden">
             <img src="imgs/product2.jpg" alt="نجيل طبيعي" class="w-full h-full object-cover rounded-[10px] transition-transform duration-700 group-hover:scale-110">
 
@@ -1770,7 +1965,7 @@
         </div>
     </div>
 
-    <div class="bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
+    <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
         <div class="relative h-[220px] overflow-hidden">
             <img src="imgs/product3.jpg" alt="أشجار" class="w-full h-full object-cover rounded-[10px] transition-transform duration-700 group-hover:scale-110">
 
@@ -1791,7 +1986,7 @@
         </div>
     </div>
 
-    <div class="bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
+    <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(10,109,102,0.08)] transition-all duration-500 group border border-gray-100">
         <div class="relative h-[220px] overflow-hidden">
             <img src="imgs/product4.jpg" alt="نباتات زينة" class="w-full h-full object-cover rounded-[10px] transition-transform duration-700 group-hover:scale-110">
 
@@ -1829,58 +2024,68 @@
     </div>
 
     <div class="relative z-10">
-        <h3 class="text-2xl md:text-[30px] text-white mb-4 leading-tight text-center font-bold">
-          احصل على عرض سعر خاص لمشروعك
-        </h3>
+    
+    <h3 class="text-[20px] sm:text-2xl md:text-[30px] text-white mb-3 md:mb-4 leading-tight text-center font-bold">
+        احصل على عرض سعر خاص لمشروعك
+    </h3>
+    
+    <p class="text-white/90 text-sm sm:text-base font-normal mb-6 md:mb-10 max-w-2xl mx-auto text-center px-2">
+        نوفر أسعارًا تنافسية للمشاريع الكبيرة والطلبات بالجملة
+    </p>
+
+    <!-- الأزرار -->
+    <div class="flex flex-row items-center justify-center gap-3 sm:gap-4 w-full">
         
-        <p class="text-white/90 text-base font-normal mb-10 max-w-2xl mx-auto text-center">
-          نوفر أسعارًا تنافسية للمشاريع الكبيرة والطلبات بالجملة
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          
-          <button class="w-full sm:w-auto bg-white text-[#1c7f8a] px-8 py-3 rounded-xl text-base shadow-md hover:bg-gray-100 transition font-medium">
+        <button class="flex-1 sm:flex-none bg-white text-[#1c7f8a] px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base shadow-md hover:bg-gray-100 transition font-medium whitespace-nowrap">
             زيارة المتجر
-          </button>
+        </button>
 
-          <button class="w-full sm:w-auto border-2 border-white text-white px-8 py-3 rounded-xl text-base hover:bg-white/10 transition font-medium">
+        <button class="flex-1 sm:flex-none border-2 border-white text-white px-5 sm:px-8 py-3 rounded-xl text-sm sm:text-base hover:bg-white/10 transition font-medium whitespace-nowrap">
             طلب عرض سعر
-          </button>
+        </button>
 
-        </div>
     </div>
 
 </div>
 
-  <!-- الكروت -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+</div>
 
-    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col  justify-center text-end">
-      <div class="w-14 h-14 mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a] text-2xl">
+  <!-- الكروت -->
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+  <!-- wrapper موبايل فقط -->
+  <div class="grid grid-cols-2 md:contents gap-4">
+
+    <!-- كارد 1 -->
+    <div class="bg-white rounded-2xl p-5 md:p-6 shadow-md hover:shadow-lg transition flex flex-col justify-center text-end">
+      <div class="w-12 md:w-14 h-12 md:h-14 mb-3 md:mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a]">
         <img src="imgs/price.svg" alt="">
       </div>
-      <h4 class=" text-lg mb-2 font-bold text-start">أسعار تنافسية</h4>
-      <p class="text-gray-500 font-normal text-sm text-start">أفضل الأسعار في السوق</p>
+      <h4 class="text-base md:text-lg mb-1 md:mb-2 font-bold text-start">أسعار تنافسية</h4>
+      <p class="text-gray-500 font-normal text-xs md:text-sm text-start">أفضل الأسعار في السوق</p>
     </div>
 
-    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col  justify-center text-end">
-<div class="w-14 h-14 mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a] text-2xl">        
-    <img src="imgs/true-shield.svg" alt="">
+    <!-- كارد 2 -->
+    <div class="bg-white rounded-2xl p-5 md:p-6 shadow-md hover:shadow-lg transition flex flex-col justify-center text-end">
+      <div class="w-12 md:w-14 h-12 md:h-14 mb-3 md:mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a]">
+        <img src="imgs/true-shield.svg" alt="">
       </div>
-      <h4 class=" text-lg mb-2 font-bold text-start">ضمان الجودة</h4>
-      <p class="text-gray-500 font-normal text-sm text-start">جميع منتجاتنا مضمونة 100%</p>
+      <h4 class="text-base md:text-lg mb-1 md:mb-2 font-bold text-start">ضمان الجودة</h4>
+      <p class="text-gray-500 font-normal text-xs md:text-sm text-start">جميع منتجاتنا مضمونة 100%</p>
     </div>
 
-    
-    <div class="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition flex flex-col  justify-center text-end">
-<div class="w-14 h-14 mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a] text-2xl">        
-    <img src="imgs/van.svg" alt="">
+    <!-- كارد 3 -->
+    <div class="bg-white rounded-2xl p-5 md:p-6 shadow-md hover:shadow-lg transition flex flex-col justify-center text-end col-span-2 mx-auto w-full md:col-span-1">
+      <div class="w-12 md:w-14 h-12 md:h-14 mb-3 md:mb-4 flex items-center justify-center rounded-xl bg-[#e8f5f3] text-[#1c7f8a]">
+        <img src="imgs/van.svg" alt="">
       </div>
-      <h4 class=" text-lg mb-2 font-bold text-start">توصيل سريع</h4>
-      <p class="text-gray-500 font-normal text-sm text-start">خدمة توصيل لجميع مناطق المملكة</p>
+      <h4 class="text-base md:text-lg mb-1 md:mb-2 font-bold text-start">توصيل سريع</h4>
+      <p class="text-gray-500 font-normal text-xs md:text-sm text-start">خدمة توصيل لجميع مناطق المملكة</p>
     </div>
 
   </div>
+
+</div>
 
 </div>
 
@@ -1899,9 +2104,9 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div class="flex lg:grid lg:grid-cols-4 gap-6 mb-16 overflow-x-auto lg:overflow-visible px-4 snap-x snap-mandatory pb-2 hide-scrollbar">
             
-            <div class="bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+           <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                 <div class="relative h-[200px] overflow-hidden">
                     <img src="imgs/news1.jpg" alt="Article Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
@@ -1920,7 +2125,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+            <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                 <div class="relative h-[200px] overflow-hidden">
                     <img src="imgs/news2.jpg" alt="Article Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
@@ -1939,7 +2144,7 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
+           <div class="min-w-[85%] sm:min-w-[48%] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
                 <div class="relative h-[200px] overflow-hidden">
                     <img src="imgs/news3.jpg" alt="Article Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                 </div>
@@ -1958,23 +2163,40 @@
                 </div>
             </div>
 
-            <div class="bg-white rounded-[16px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
-                <div class="relative h-[200px] overflow-hidden">
-                    <img src="imgs/news4.jpg" alt="Article Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                </div>
-                <div class="p-6 flex flex-col h-[calc(100%-200px)]">
-                    <div class="flex items-center justify-end gap-4 text-xs text-gray-400 mb-4 font-light">
-                        <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 8 دقائق</span>
-                        <span class="flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg> 1 مارس 2026</span>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-3 leading-snug group-hover:text-[#0a6d66]  transition-colors">معايير ISO وأثرها على جودة المشاريع الإننشائية</h3>
-                    <p class="text-gray-500 font-normal text-sm mb-6 leading-relaxed font-light flex-grow">كيف تساهم المعايير الدولية في تحسين جودة التنفيذ وإدارة المشاريع</p>
-                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                        <a href="#" class="inline-flex items-center gap-2 text-sm  text-[#0a6d66] hover:gap-3 transition-all">اقرأ المزيد <img src="imgs/row.svg" alt=""></a>
-                        <span class=" text-gray-500 px-3 py-1 rounded-full text-xs font-light">إدارة المشاريع</span>
-                    </div>
-                </div>
-            </div>
+           <!-- تم تقليل العرض الأدنى لـ 280px وتصغير الحواف والتباعد -->
+<div class="min-w-[200px] sm:min-w-[20px] lg:min-w-0 snap-center flex-shrink-0 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100">
+    
+    <!-- تقليل ارتفاع الصورة للموبايل h-[150px] -->
+    <div class="relative h-[150px] sm:h-[200px] overflow-hidden">
+        <img src="imgs/news4.jpg" alt="Article Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+    </div>
+    
+    <!-- تقليل الـ Padding إلى p-4 ليصبح الكارد أرشق -->
+    <div class="p-4 sm:p-6 flex flex-col h-[calc(100%-150px)] sm:h-[calc(100%-200px)]">
+        <div class="flex items-center justify-end gap-3 text-[10px] sm:text-xs text-gray-400 mb-3 font-light">
+            <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> 8 دقائق</span>
+            <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg> 1 مارس</span>
+        </div>
+        
+        <!-- تصغير الخط قليلاً text-base -->
+        <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2 leading-tight group-hover:text-[#0a6d66] transition-colors line-clamp-2">
+            معايير ISO وأثرها على جودة المشاريع الإننشائية
+        </h3>
+        
+        <!-- تحديد عدد الأسطر لمنع تمدد الكارد -->
+        <p class="text-gray-500 text-xs sm:text-sm mb-4 leading-snug font-light line-clamp-2">
+            كيف تساهم المعايير الدولية في تحسين جودة التنفيذ وإدارة المشاريع
+        </p>
+        
+        <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-50">
+            <a href="#" class="inline-flex items-center gap-1.5 text-xs sm:text-sm text-[#0a6d66] font-medium transition-all">
+                اقرأ المزيد 
+                <img src="imgs/row.svg" alt="" class="w-3 h-3 group-hover:translate-x-1 transition-transform">
+            </a>
+            <span class="text-[10px] bg-gray-50 text-gray-500 px-2 py-1 rounded">إدارة مشاريع</span>
+        </div>
+    </div>
+</div>
 
         </div>
 
@@ -2523,5 +2745,6 @@
       closeBtn.addEventListener('click', toggleSidebar);
       overlay.addEventListener('click', toggleSidebar);
     </script>
+    
   </body>
 </html>
