@@ -1,3 +1,13 @@
+::selection {
+  background-color: rgba(179, 210, 52, 1);
+  color: #fff; 
+}
+
+::-moz-selection {
+  background-color: rgba(179, 210, 52, 1);
+  color: #fff;
+}
+
 /* header */
 #main-header.scroll-down {
   transform: translateY(-100%);
@@ -10,7 +20,7 @@
 
 .hidden-anim {
     opacity: 0;
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); /* حركة ناعمة جداً */
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); 
 }
 
 .fade-up {
@@ -169,33 +179,38 @@
         .is-visible .cert-left { transform: translateY(10px) translateX(15px) rotate(-5deg); }
         .is-visible .cert-right { transform: translateY(10px) translateX(-15px) rotate(5deg); }
     }
-
-
- 
-
-
-
-
-
-  /* تعريف حركة الطفو */
 @keyframes float {
     0% {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-20px); /* الارتفاع للأعلى */
+        transform: translateY(-20px); 
     }
     100% {
         transform: translateY(0px);
     }
 }
 
-/* تطبيق الحركة على الحاويات */
 .floating-anim {
     animation: float 4s ease-in-out infinite;
 }
 
-/* إضافة تأخير بسيط للصورة الثانية لتبدو الحركات غير متطابقة (تأثير عشوائي) */
 .delay-anim {
     animation-delay: 1s;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0; 
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
 }
