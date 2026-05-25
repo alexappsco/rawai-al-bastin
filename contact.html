@@ -29,9 +29,13 @@
 <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
   <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
 
-    <a href="home.html" class="shrink-0">
-      <img src="imgs/logo.svg" alt="شعار روائع البساتين" class="h-10 md:h-[50px] xl:h-[60px] w-auto py-2" />
-    </a>
+    <a href="/home.html" class="shrink-0">
+  <img 
+    src="/imgs/logo.svg" 
+    alt="شعار روائع البساتين" 
+    class="h-14 md:h-[50px] xl:h-[60px] w-auto py-2" 
+  />
+</a>
 
     <nav id="desktop-nav" class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
       
@@ -103,8 +107,8 @@
         <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
           احصل على سعر مشروعك
         </a>
-        <button class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
-          <img src="imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
+        <button onClick="location.href='/cart/index.html'" class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
+          <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
         </button>
       </div>
 
@@ -513,7 +517,9 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
                     تحميل الملف التعريفي
                 </a>
-                
+                <a href="/companyregistrationpage.html" class="mt-4 inline-flex items-center justify-center gap-2 bg-[rgba(10,109,102,0.55)] text-white px-6 py-3 rounded-xl font-medium hover:bg-[rgba(10,109,102,1)] transition-all">
+                    تسجيل كمورد
+                </a>
             </div>
 
             <div>
@@ -570,25 +576,30 @@
 
                 <h4 class="text-sm font-bold text-gray-900 mb-4">تابعنا</h4>
                 <div class="flex flex-wrap items-center gap-2 mb-8">
-                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/x.svg" alt="X">
-                    </a>
-                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/instagram.svg" alt="Instagram">
-                    </a>
-                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/linkedin.svg" alt="LinkedIn">
-                    </a>
-                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/youtube.svg" alt="YouTube">
-                    </a>
-                      <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center hover:bg-[rgba(10,109,102,1)] hover:text-white transition-colors">
-                        <img src="/imgs/snapchat.svg" alt="Snapchat">
-                    </a>
-                </div>
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/facebook.svg" alt="Facebook" class="w-5 h-5">
+    </a>
+    
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/x.svg" alt="X" class="w-5 h-5">
+    </a>
+    
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/instagram.svg" alt="Instagram" class="w-5 h-5">
+    </a>
+    
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/linkedin.svg" alt="LinkedIn" class="w-5 h-5">
+    </a>
+    
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/youtube.svg" alt="Youtube" class="w-5 h-5">
+    </a>
+    
+    <a href="#" class="w-8 h-8 rounded-lg bg-[#e6f2f0] text-[rgba(10,109,102,1)] flex items-center justify-center transition-transform duration-300 hover:scale-110">
+        <img src="imgs/snapchat.svg" alt="Snapchat" class="w-5 h-5">
+    </a>
+</div>
 
                 <h4 class="text-sm font-bold text-gray-900 mb-4">حمل التطبيق</h4>
              <div class="flex flex-wrap items-center gap-3">
