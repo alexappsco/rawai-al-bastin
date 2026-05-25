@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalOverlay = document.getElementById('modalOverlay');
     const modalContent = document.getElementById('modalContent');
 
-    const openBtn = document.getElementById('openModal');
+    const openBtn = document.getElementById('openModalmobile');
     const closeBtn = document.getElementById('closeModal');
 
     const nextBtn = document.getElementById('nextBtn');

@@ -232,152 +232,163 @@ linear-gradient(180deg, #E6F4F4 0%, #EAF6F6 7.14%, #EDF7F7 14.29%, #F1F9F9 21.43
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
-                <div class="flex flex-col items-center text-center mb-16 hidden-anim fade-up">
+    <!-- Header -->
+    <div class="flex flex-col items-center text-center mb-16 hidden-anim fade-up">
 
-                    <span
-                        class="inline-block bg-[#0A6D661A] text-[#0A6D66] px-4 py-3 rounded-full text-sm font-[500] mb-6">
-                        المدونة
-                    </span>
+        <span class="inline-block bg-[#0A6D661A] text-[#0A6D66] px-4 py-3 rounded-full text-sm font-[500] mb-6">
+            المدونة
+        </span>
 
-                    <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-[#1A1A1A] mb-4">
-                        آخر الأخبار والمقالات
-                    </h2>
+        <h2 class="text-3xl md:text-4xl lg:text-[48px] font-medium text-[#1A1A1A] mb-4">
+            آخر الأخبار والمقالات
+        </h2>
 
-                    <p class="text-[#6B7280] text-lg md:text-lg font-[400] mb-10">
-                        تابع أحدث المقالات والنصائح في عالم الإنشاءات والتطوير
-                    </p>
+        <p class="text-[#6B7280] text-lg md:text-lg font-[400] mb-10">
+            تابع أحدث المقالات والنصائح في عالم الإنشاءات والتطوير
+        </p>
 
-                    <div class="relative w-full max-w-xl mx-auto">
-                        <input type="text" placeholder="ابحث في المقالات..."
-                            class="w-full bg-white border border-gray-200 rounded-xl py-4 pr-12 pl-6 focus:outline-none focus:ring-2 focus:ring-[#0A6D66] focus:border-transparent text-gray-700 shadow-[0px_4px_10px_rgba(0,0,0,0.03)] transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 text-gray-400 absolute top-1/2 -translate-y-1/2 right-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
+        <div class="relative w-full max-w-xl mx-auto">
+            <input type="text" placeholder="ابحث في المقالات..."
+                class="w-full bg-white border border-gray-200 rounded-xl py-4 pr-12 pl-6 focus:outline-none focus:ring-2 focus:ring-[#0A6D66] focus:border-transparent text-gray-700 shadow-[0px_4px_10px_rgba(0,0,0,0.03)]">
+
+        </div>
+    </div>
+
+    <!-- Section Title -->
+    <div class="flex items-center justify-start gap-2 mb-8">
+        <h3 class="text-xl md:text-2xl font-semibold text-[#1A1A1A]">المقالات المميزة</h3>
+    </div>
+
+    <!-- GRID / SLIDER -->
+    <div class="
+        flex md:grid md:grid-cols-3
+        gap-5 md:gap-6
+        overflow-x-auto md:overflow-visible
+        snap-x md:snap-none
+        pb-4 md:pb-0
+        [-webkit-overflow-scrolling:touch]
+    ">
+
+        <!-- ================= CARD 1 ================= -->
+        <article class="
+            min-w-[72%] max-w-[72%]
+            md:min-w-0 md:max-w-none
+            snap-center md:snap-none
+            flex-shrink-0 md:flex-shrink
+            bg-white rounded-2xl overflow-hidden
+            shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+            border border-gray-50
+            transition-transform duration-300 hover:-translate-y-2
+            flex flex-col
+        ">
+
+            <img src="/imgs/sports-field.svg" class="w-full h-52 object-cover">
+
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+
+                <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4">
+                    <span>5 دقائق</span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span>15 مارس 2026</span>
                 </div>
 
-                <div class="flex items-center justify-start gap-2 mb-8 hidden-anim fade-up">
-                    <h3 class="text-xl md:text-2xl font-semibold text-[#1A1A1A]">المقالات المميزة</h3>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        class="text-[#0A6D66]">
-                        <path d="M21 7L13 15L9 11L3 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M21 13V7H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
+                <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
+                    أفضل ممارسات صيانة الملاعب الرياضية في الصيف
+                </h4>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6">
+                <p class="text-sm text-[#6B7280] leading-relaxed mb-2 flex-grow">
+                    نصائح وإرشادات للحفاظ على جودة الملاعب الرياضية خلال فصل الصيف الحار مع درجات حرارة مرتفعة
+                </p>
 
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 hover:-translate-y-2 flex flex-col hidden-anim fade-up"
-                        style="transition-delay: 100ms;">
-                        <img src="/imgs/sports-field.svg" alt="أفضل ممارسات صيانة الملاعب"
-                            class="w-full h-52 object-cover">
-                        <div class="p-6 md:p-8 flex flex-col flex-grow">
-                            <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4 ">
-                                <span>5 دقائق</span>
-                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span>15 مارس 2026</span>
-                            </div>
-
-                            <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
-                                أفضل ممارسات صيانة الملاعب الرياضية في الصيف
-                            </h4>
-
-                            <p class=" text-sm text-[#6B7280] leading-relaxed mb-2 flex-grow">
-                                نصائح وإرشادات للحفاظ على جودة الملاعب الرياضية خلال فصل الصيف الحار مع درجات حرارة
-                                مرتفعة
-                                </p>
-
-                                <a href="#"
-                                    class="text-[#0A6D66] font-medium text-[14px] text-sm hover:underline self-start flex items-center gap-1 transition-colors">
-                                    اقرأ المزيد <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </a>
-                        </div>
-                    </article>
-
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 hover:-translate-y-2 flex flex-col hidden-anim fade-up"
-                        style="transition-delay: 200ms;">
-                        <img src="/imgs/landscaping.svg" alt="دليل شامل لاختيار النجيل"
-                            class="w-full h-52 object-cover">
-                        <div class="p-6 md:p-8 flex flex-col flex-grow">
-                            <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4">
-                                <span>7 دقائق</span>
-                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span>10 مارس 2026</span>
-                            </div>
-
-                            <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
-                                دليل شامل لاختيار النجيل المناسب لمشروعك
-                            </h4>
-
-                            <p class="text-sm text-gray-500 leading-relaxed mb-2 flex-grow">
-                                كل ما تحتاج معرفته عن أنواع النجيل الطبيعي والصناعي وكيفية اختيار الأنسب لاحتياجاتك
-                            </p>
-
-                            <a href="/blog/article"
-                                class="text-[#0A6D66] font-medium text-[14px] text-sm hover:underline self-start flex items-center gap-1 transition-colors">
-                                اقرأ المزيد <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                        stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-
-                            </a>
-                        </div>
-                    </article>
-
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-50 transition-transform duration-300 hover:-translate-y-2 flex flex-col hidden-anim fade-up"
-                        style="transition-delay: 300ms;">
-                        <img src="/imgs/infrastructure.svg" alt="أهمية البنية التحتية المستدامة"
-                            class="w-full h-52 object-cover">
-                        <div class="p-6 md:p-8 flex flex-col flex-grow">
-                            <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4">
-                                <span>6 دقائق</span>
-                                <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                                <span>5 مارس 2026</span>
-                            </div>
-
-                            <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug"">
-                                أهمية البنية التحتية المستدامة في المشاريع الحديثة
-                            </h4>
-
-                            <p class=" text-sm text-[#6B7280] leading-relaxed mb-2 flex-grow">
-                                تعرف على أحدث الممارسات في تنفيذ مشاريع البنية التحتية المستدامة والصديقة للبيئة
-                                </p>
-
-                                <a href="#"
-                                    class="text-[#0A6D66] font-medium text-[14px] text-sm hover:underline self-start flex items-center gap-1 transition-colors">
-                                    اقرأ المزيد <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </a>
-                        </div>
-                    </article>
-
-                </div>
+                <a href="/blog/article/index.html"
+                    class="text-[#0A6D66] font-medium text-[14px] hover:underline self-start flex items-center gap-1">
+                    اقرأ المزيد
+                </a>
 
             </div>
+        </article>
+
+        <!-- ================= CARD 2 ================= -->
+        <article class="
+            min-w-[72%] max-w-[72%]
+            md:min-w-0 md:max-w-none
+            snap-center md:snap-none
+            flex-shrink-0 md:flex-shrink
+            bg-white rounded-2xl overflow-hidden
+            shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+            border border-gray-50
+            transition-transform duration-300 hover:-translate-y-2
+            flex flex-col
+        ">
+
+            <img src="/imgs/landscaping.svg" class="w-full h-52 object-cover">
+
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+
+                <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4">
+                    <span>7 دقائق</span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span>10 مارس 2026</span>
+                </div>
+
+                <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
+                    دليل شامل لاختيار النجيل المناسب لمشروعك
+                </h4>
+
+                <p class="text-sm text-[#6B7280] leading-relaxed mb-2 flex-grow">
+                    كل ما تحتاج معرفته عن أنواع النجيل الطبيعي والصناعي وكيفية اختيار الأنسب لاحتياجاتك
+                </p>
+
+                <a href="/blog/article"
+                    class="text-[#0A6D66] font-medium text-[14px] hover:underline self-start flex items-center gap-1">
+                    اقرأ المزيد
+                </a>
+
+            </div>
+        </article>
+
+        <!-- ================= CARD 3 ================= -->
+        <article class="
+            min-w-[72%] max-w-[72%]
+            md:min-w-0 md:max-w-none
+            snap-center md:snap-none
+            flex-shrink-0 md:flex-shrink
+            bg-white rounded-2xl overflow-hidden
+            shadow-[0_8px_30px_rgba(0,0,0,0.06)]
+            border border-gray-50
+            transition-transform duration-300 hover:-translate-y-2
+            flex flex-col
+        ">
+
+            <img src="/imgs/infrastructure.svg" class="w-full h-52 object-cover">
+
+            <div class="p-6 md:p-8 flex flex-col flex-grow">
+
+                <div class="flex items-center justify-end gap-2 text-[13px] text-gray-400 font-medium mb-4">
+                    <span>6 دقائق</span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span>5 مارس 2026</span>
+                </div>
+
+                <h4 class="text-[20px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
+                    أهمية البنية التحتية المستدامة في المشاريع الحديثة
+                </h4>
+
+                <p class="text-sm text-[#6B7280] leading-relaxed mb-2 flex-grow">
+                    تعرف على أحدث الممارسات في تنفيذ مشاريع البنية التحتية المستدامة والصديقة للبيئة
+                </p>
+
+                <a href="/blog/article/index.html"
+                    class="text-[#0A6D66] font-medium text-[14px] hover:underline self-start flex items-center gap-1">
+                    اقرأ المزيد
+                </a>
+
+            </div>
+        </article>
+
+    </div>
+
+</div>
         </section>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" dir="rtl">
 
@@ -439,375 +450,240 @@ linear-gradient(180deg, #E6F4F4 0%, #EAF6F6 7.14%, #EDF7F7 14.29%, #F1F9F9 21.43
                     <div class="mb-8">
                         <h1 class="text-gray-500 text-sm">عرض 9 مقالة</h1>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/sports-field.svg" alt="أفضل ممارسات صيانة الملاعب"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        15 مارس 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        5 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
-                                    أفضل ممارسات صيانة الملاعب الرياضية في الصيف
-                                </h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">
-                                    نصائح وإرشادات للحفاظ على جودة الملاعب الرياضية خلال فصل الصيف الحار مع درجات حرارة
-                                    مرتفعة
-                                </p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-6 mb-12">
 
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">اقرأ
-                                        المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">إدارة
-                                        المشاريع</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/landscaping.svg" alt="دليل شامل لاختيار النجيل"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        10 مارس 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        7 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">
-                                    دليل شامل لاختيار النجيل المناسب لمشروعك
-                                </h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">
-                                    كل ما تحتاج معرفته عن أنواع النجيل الطبيعي والصناعي وكيفية اختيار الأنسب لاحتياجاتك
-                                </p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
+    <!-- CARD 1 -->
+    <article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+        <img src="/imgs/sports-field.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+        <div class="p-3 md:p-6 flex flex-col flex-grow">
+            <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+                <span>15 مارس 2026</span>
+                <span>5 دقائق</span>
+            </div>
 
-                                    <a href="/blog/article"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
+            <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+                أفضل ممارسات صيانة الملاعب الرياضية في الصيف
+            </h4>
 
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">البنية
-                                        التحتية</span>
-                                </div>
-                            </div>
-                        </article>
+            <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+                نصائح وإرشادات للحفاظ على جودة الملاعب الرياضية خلال فصل الصيف الحار مع درجات حرارة مرتفعة
+            </p>
 
+            <div class="flex items-center justify-between mt-auto pt-1">
+                <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+                <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                    إدارة المشاريع
+                </span>
+            </div>
+        </div>
+    </article>
 
+    <!-- CARD 2 -->
+    <article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+        <img src="/imgs/landscaping.svg" class="w-full h-[140px] md:h-[220px] object-cover">
 
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/infrastructure.svg" alt="أهمية البنية التحتية المستدامة في المشاريع الحديثة"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        5 مارس 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        6 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">أهمية البنية
-                                    التحتية
-                                    المستدامة في المشاريع الحديثة</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">تعرف على أحدث
-                                    الممارسات في تنفيذ مشاريع البنية التحتية المستدامة والصديقة للبيئة</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">تنسيق
-                                        الحدائق</span>
-                                </div>
-                            </div>
-                        </article>
+        <div class="p-3 md:p-6 flex flex-col flex-grow">
+            <div class="flex justify-end gap-2 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+                <span>10 مارس 2026</span>
+                <span>7 دقائق</span>
+            </div>
 
+            <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+                دليل شامل لاختيار النجيل المناسب لمشروعك
+            </h4>
 
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/roads.jpg" alt="معايير ISO وأثرها على جودة المشاريع الإنشائية"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        1 مارس 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        8 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">معايير ISO وأثرها
-                                    على
-                                    جودة المشاريع الإنشائية</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">كيف تساهم المعايير
-                                    الدولية في تحسين جودة التنفيذ وإدارة المشاريع بشكل احترافي</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">المنشآت
-                                        الرياضية</span>
-                                </div>
-                            </div>
-                        </article>
+            <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+                كل ما تحتاج معرفته عن أنواع النجيل الطبيعي والصناعي وكيفية اختيار الأنسب لاحتياجاتك
+            </p>
 
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/plantgreen.jpg" alt="أنظمة الري الذكية: تقنيات توفير المياه"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        28 فبراير 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        6 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">أنظمة الري
-                                    الذكية:
-                                    تقنيات توفير المياه</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">استكشف أحدث تقنيات
-                                    أنظمة الري الذكية وكيف تساعد في توفير المياه والحفاظ على البيئة</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">إدارة
-                                        المشاريع</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/sports-field.svg" alt="تصميم الملاعب الرياضية وفق معايير FIFA"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        25 فبراير 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        10 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">تصميم الملاعب
-                                    الرياضية
-                                    وفق معايير FIFA</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">شرح مفصل لمتطلبات
-                                    ومعايير FIFA في تصميم وإنشاء ملاعب كرة القدم الاحترافية</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">البنية
-                                        التحتية</span>
-                                </div>
-                            </div>
-                        </article>
+            <div class="flex items-center justify-between mt-auto pt-1">
+                <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+                <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                    البنية التحتية
+                </span>
+            </div>
+        </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+        <img src="/imgs/infrastructure.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+        <div class="p-3 md:p-6 flex flex-col flex-grow">
+            <div class="flex justify-end gap-2 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+                <span>5 مارس 2026</span>
+                <span>6 دقائق</span>
+            </div>
+
+            <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+                أهمية البنية التحتية المستدامة في المشاريع الحديثة
+            </h4>
+
+            <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+                تعرف على أحدث الممارسات في تنفيذ مشاريع البنية التحتية المستدامة والصديقة للبيئة
+            </p>
+
+            <div class="flex items-center justify-between mt-auto pt-1">
+                <a class="text-[#0A6D66] text-[11px] md:text-[14px]">اقرأ المقال</a>
+                <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                    تنسيق الحدائق
+                </span>
+            </div>
+        </div>
+    </article>
+    <article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/plantgreen.jpg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>28 فبراير 2026</span>
+            <span>6 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            أنظمة الري الذكية: تقنيات توفير المياه
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            استكشاف أحدث تقنيات أنظمة الري الذكية ودورها في تقليل استهلاك المياه وتحسين كفاءة الزراعة
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                إدارة المشاريع
+            </span>
+        </div>
+    </div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/sports-field.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>10 فبراير 2026</span>
+            <span>8 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            تصميم الملاعب وفق معايير FIFA
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            شرح شامل لمعايير FIFA في تصميم وإنشاء الملاعب الاحترافية الحديثة
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                البنية التحتية
+            </span>
+        </div>
+    </div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/infrastructure.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>5 فبراير 2026</span>
+            <span>7 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            البنية التحتية المستدامة في المشاريع الحديثة
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            استراتيجيات تطوير البنية التحتية بأسلوب مستدام وصديق للبيئة
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                تنسيق الحدائق
+            </span>
+        </div>
+    </div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/roads.jpg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>1 فبراير 2026</span>
+            <span>8 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            معايير الجودة في المشاريع الإنشائية
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            كيف تساهم معايير الجودة في رفع كفاءة المشاريع وتقليل الأخطاء التنفيذية
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                المنشآت الرياضية
+            </span>
+        </div>
+    </div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/landscaping.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>28 يناير 2026</span>
+            <span>6 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            اختيار المواد المناسبة للمشاريع
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            دليل شامل لاختيار المواد المناسبة حسب نوع المشروع ومتطلبات التنفيذ
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                البنية التحتية
+            </span>
+        </div>
+    </div>
+</article>
+<article class="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+    <img src="/imgs/sports-field.svg" class="w-full h-[140px] md:h-[220px] object-cover">
+
+    <div class="p-3 md:p-6 flex flex-col flex-grow">
+        <div class="flex justify-end gap-2 md:gap-4 text-[10px] md:text-[13px] text-gray-400 mb-2 md:mb-4">
+            <span>20 يناير 2026</span>
+            <span>9 دقائق</span>
+        </div>
+
+        <h4 class="text-[12px] md:text-[18px] font-semibold mb-2">
+            إدارة المشاريع الإنشائية باحترافية
+        </h4>
+
+        <p class="text-[10px] md:text-[14px] text-gray-500 mb-3 md:mb-6 flex-grow">
+            أفضل الطرق لإدارة المشاريع الإنشائية وضمان التسليم في الوقت والميزانية
+        </p>
+
+        <div class="flex items-center justify-between mt-auto pt-1">
+            <a class="text-[#0A6D66] text-[11px] md:text-[14px] font-medium">اقرأ المقال</a>
+            <span class="bg-[#0A6D66] text-white text-[9px] md:text-[12px] px-2 md:px-4 py-1 rounded-full">
+                إدارة المشاريع
+            </span>
+        </div>
+    </div>
+</article>
 
 
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/roads.jpg" alt="إدارة المشاريع الإنشائية: نصائح وأفضل الممارسات"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        20 فبراير 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        9 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">إدارة المشاريع
-                                    الإنشائية: نصائح وأفضل الممارسات</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">دليل شامل لإدارة
-                                    المشاريع الإنشائية بكفاءة وتحقيق أفضل النتائج في الوقت والميزانية المحددة</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">تنسيق
-                                        الحدائق</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article
-                            class="bg-white rounded-2xl  overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 transition-transform duration-300 hover:-translate-y-1 flex flex-col">
-                            <img src="/imgs/infrastructure.svg" alt="الطرق الحديثة في تنفيذ شبكات البنية التحتية"
-                                class="w-full h-[220px] object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-[13px] text-gray-400 font-medium mb-4 justify-end">
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                            </path>
-                                        </svg>
-                                        15 فبراير 2026
-                                    </span>
-                                    <span class="flex items-center gap-1.5">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                        </svg>
-                                        7 دقائق
-                                    </span>
-                                </div>
-                                <h4 class="text-[18px] font-semibold text-[#1A1A1A] mb-3 leading-snug">الطرق الحديثة في
-                                    تنفيذ
-                                    شبكات البنية التحتية</h4>
-                                <p class="text-[14px] text-[#6B7280] leading-relaxed mb-6 flex-grow">تعرف على أحدث
-                                    التقنيات والطرق المستخدمة في تنفيذ شبكات المياه والصرف والكهرباء</p>
-                                <div class="flex items-center justify-between mt-auto pt-2">
-                                    <a href="#"
-                                        class="text-[#0A6D66] font-medium text-[14px] hover:underline flex items-center gap-1 transition-colors">
-                                        اقرأ المقال <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.99998 12.6667L3.33331 8.00004L7.99998 3.33337" stroke="#0A6D66"
-                                                stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12.6666 8H3.33331" stroke="#0A6D66" stroke-width="1.33333"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <span
-                                        class="bg-[#0A6D66] text-white text-[12.5px] font-normal px-4 py-2 rounded-full">المنشآت
-                                        الرياضية</span>
-                                </div>
-                            </div>
-                        </article>
-                     
-
-                    </div>
+</div>
 
                     <div class="flex justify-center mt-10 w-full">
                         <button
