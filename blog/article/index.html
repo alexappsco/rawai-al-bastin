@@ -114,9 +114,9 @@
 
     <div class="flex items-center gap-2 xl:gap-3 shrink-0">
       <div class="hidden xl:flex items-center gap-1 ml-10">
-        <a href="#" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
-          احصل على سعر مشروعك
-        </a>
+        <button id="openModal" class="text-sm font-medium text-[rgba(10,109,102,1)] border border-[rgba(10,109,102,1)] px-3 py-2 rounded-md hover:bg-gray-50 transition whitespace-nowrap">
+            احصل على سعر مشروعك
+        </button>
         <button onClick="location.href='/cart/index.html'" class="p-2 rounded-md hover:bg-gray-100 text-gray-600 transition shrink-0">
           <img src="/imgs/shop.svg" alt="سلة التسوق" class="w-5 h-5 xl:w-6 xl:h-6">
         </button>
@@ -177,7 +177,7 @@
 
       <div class="pt-6 border-t flex flex-col gap-3 mt-6">
         <a href="#" class="w-full text-center py-3 bg-[rgba(10,109,102,1)] text-white rounded-lg">تواصل معنا</a>
-        <a href="#" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg">احصل على سعر مشروعك</a>
+        <a href="#" id="openModalmobile" class="w-full text-center py-3 border border-[rgba(10,109,102,1)] text-[rgba(10,109,102,1)] rounded-lg">احصل على سعر مشروعك</a>
         <div class="flex items-center bg-[#f4f7f7] p-0.5 rounded-full border border-[#eceef2] w-28 mx-auto mt-2">
             <button class="flex-1 py-1 text-[10px] font-medium text-white bg-[rgba(10,109,102,1)] rounded-full">عربي</button>
             <button class="flex-1 py-1 text-[10px] font-medium text-gray-500">EN</button>
@@ -640,6 +640,8 @@
     </div>
 </footer>
     <script src="/script.js"></script>
+    <script src="/dailoag.js"></script>
+    <script src="/dailoagmobile.js"></script>
     <script>
         const sidebar = document.getElementById("mobile-sidebar");
         const openBtn = document.getElementById("mobile-menu-open");
@@ -654,6 +656,7 @@
         if (closeBtn) closeBtn.addEventListener("click", toggleSidebar);
         if (overlay) overlay.addEventListener("click", toggleSidebar);
     </script>
+    
 </body>
 
 </html>
