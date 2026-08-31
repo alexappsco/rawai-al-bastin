@@ -42,7 +42,7 @@
    <header id="main-header" class="mx-auto fixed top-0 left-0 right-0 z-50 transition-transform duration-300">
   <div class="flex min-h-[73px] w-full items-center justify-between rounded-lg bg-white px-4 md:px-[20px] xl:px-[30px] shadow-sm">
 
-    <a href="/home.html" class="shrink-0">
+    <a href="/" class="shrink-0">
   <img 
     src="/imgs/logo.svg" 
     alt="شعار روائع البساتين" 
@@ -52,7 +52,7 @@
 
     <nav id="desktop-nav" class="hidden lg:flex items-center lg:gap-3 xl:gap-6 mx-2 py-6">
       
-      <a href="/home.html" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
+      <a href="/" class="nav-link group flex items-center text-xs xl:text-sm font-medium text-gray-700 hover:text-[rgba(10,109,102,1)] transition-all duration-300 whitespace-nowrap">
         <div class="w-0 overflow-hidden group-hover:w-4 transition-all duration-300 flex items-center">
           <img src="/imgs/row.svg" alt="arrow" class="w-3 h-3 min-w-[12px]" />
         </div>
@@ -151,7 +151,7 @@
       </div>
 
       <nav id="mobile-nav" class="flex flex-col gap-4 mb-auto text-right">
-        <a href="/home.html" class="nav-link-mobile text-base font-medium text-gray-700">الرئيسية</a>
+        <a href="/" class="nav-link-mobile text-base font-medium text-gray-700">الرئيسية</a>
         <a href="/about.html" class="nav-link-mobile text-base font-medium text-gray-700">من نحن</a>
         
         <div class="flex flex-col border-b border-gray-50 pb-2">
@@ -220,7 +220,7 @@
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href');
       
-      if (currentPath.endsWith(href) || (currentPath === '/' && href === 'home.html')) {
+      if (href === '/' ? (currentPath === '/' || currentPath === '/index.html') : currentPath.endsWith(href)) {
         link.classList.add('nav-active');
       } else {
         link.classList.remove('nav-active');
@@ -229,7 +229,7 @@
 
     document.querySelectorAll('.nav-link-mobile').forEach(link => {
       const href = link.getAttribute('href');
-      if (currentPath.endsWith(href) || (currentPath === '/' && href === 'home.html')) {
+      if (href === '/' ? (currentPath === '/' || currentPath === '/index.html') : currentPath.endsWith(href)) {
         link.classList.add('nav-active-mobile');
       } else {
         link.classList.remove('nav-active-mobile');
@@ -245,7 +245,7 @@
 
     <nav class="max-w-7xl mx-auto mb-10 mt-4 flex justify-start items-center text-sm">
         <div class="flex items-center gap-2 text-gray-500">
-            <a href="home.html" class="hover:text-teal-700 transition-colors">الرئيسية</a>
+            <a href="/" class="hover:text-teal-700 transition-colors">الرئيسية</a>
             <span class="text-xs text-gray-400"> <img src="imgs/roow.svg" alt=""> </span>
             <span class="text-gray-800 font-medium">الحسابات البنكية</span>
         </div>

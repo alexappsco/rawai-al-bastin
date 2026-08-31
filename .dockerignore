@@ -1,0 +1,17 @@
+.git
+.gitignore
+.vscode
+.cursor
+.dockerignore
+node_modules
+npm-debug.log
+*.md
+.DS_Store
+Thumbs.db
+package.json
+package-lock.json
+tailwind-input.css
+tailwind.config.js
+build-tailwind.mjs
+Dockerfile
+docker-compose.yml
